@@ -1,3 +1,4 @@
+//Miguel Prego
 #include <SoftwareSerial.h>
 #include "TinyGPS.h"
 
