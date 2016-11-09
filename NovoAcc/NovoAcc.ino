@@ -1,3 +1,5 @@
+// Isto é um teste
+
 const int ACC_X=A0; 
 const int ACC_Y=A1;
 const int ACC_Z=A2;
