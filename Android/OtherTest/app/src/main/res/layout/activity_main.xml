@@ -24,7 +24,7 @@
         android:text="Desligar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="listaEmparelhados"
+        android:onClick="off"
         android:layout_alignTop="@+id/button1"
         android:layout_toLeftOf="@+id/button1"
         android:layout_marginRight="20dp" />
