@@ -10,36 +10,58 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.miguel.othertest.MainActivity">
 
-    <TextView
-        android:text="Texto a mudar"
+    <Button
+        android:id="@+id/button1"
+        android:text="Ligar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/text1"
-        android:layout_alignBaseline="@+id/texto1"
-        android:layout_alignBottom="@+id/texto1"
+        android:onClick="on"
+        android:layout_marginTop="80dp"
         android:layout_centerHorizontal="true" />
 
-    <EditText
+    <Button
+        android:id="@+id/button2"
+        android:text="Desligar"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:layout_marginLeft="21dp"
-        android:layout_marginTop="26dp"
-        android:id="@+id/texto1"
-        android:hint="Name here"
-        android:layout_width="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="21dp" />
+        android:onClick="listaEmparelhados"
+        android:layout_alignTop="@+id/button1"
+        android:layout_toLeftOf="@+id/button1"
+        android:layout_marginRight="20dp" />
 
     <Button
+        android:id="@+id/button3"
         android:text="Botao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:layout_alignTop="@+id/texto1"
-        android:layout_toRightOf="@+id/text1"
-        android:layout_marginLeft="15dp"
-        android:layout_marginStart="15dp" />
+        android:layout_alignTop="@id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:layout_marginLeft="20dp" />
+
+    <ListView
+        android:id="@+id/list1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/button1"
+        android:layout_marginTop="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:text="Este texto vai mudar!!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:text="Actualizar lista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1" />
 </RelativeLayout>
