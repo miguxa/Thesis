@@ -2,6 +2,7 @@ package com.example.miguel.othertest;
 
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.AdapterView;
 import android.view.View.OnClickListener;
 import android.bluetooth.BluetoothDevice;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 
@@ -23,6 +25,8 @@ public class MainActivity extends Activity {
     private BluetoothAdapter BA;
     private Set<BluetoothDevice> emparelhados;
     ListView lv;
+    BluetoothSocket btSocket = null;
+    public static String EXTRA_ADDRESS = "device_address";
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -37,6 +41,7 @@ public class MainActivity extends Activity {
         lv = (ListView)findViewById(R.id.list1);
         ArrayList listaAux = new ArrayList();
         emparelhados = BA.getBondedDevices();
+
 
         if (BA == null) {
             Toast.makeText(getApplicationContext(), "Bluetooth não disponivel", Toast.LENGTH_LONG);
@@ -74,21 +79,6 @@ public class MainActivity extends Activity {
 
     }
 
-    private AdapterView.OnItemClickListener myListClickListener = new AdapterView.OnItemClickListener()
-    {
-        public void onItemClick (AdapterView av, View v, int arg2, long arg3)
-        {
-            // Get the device MAC address, the last 17 chars in the View
-            String info = ((TextView) v).getText().toString();
-            String address = info.substring(info.length() - 17);
-            // Make an intent to start next activity.
-            //Intent i = new Intent(lv.this, ledControl.class);
-            //Change the activity.
-            //i.putExtra(EXTRA_ADDRESS, address); //this will be received at ledControl (class) Activity
-            //startActivity(i);
-        }
-    };
-
     private void pairedDevicesList()
     {
         emparelhados = BA.getBondedDevices();
@@ -108,8 +98,6 @@ public class MainActivity extends Activity {
 
         final ArrayAdapter adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1, list);
         lv.setAdapter(adapter);
-        lv.setOnItemClickListener(myListClickListener); //Method called when the device from the list is clicked
-
     }
 
     public void on (View v) {
@@ -126,5 +114,39 @@ public class MainActivity extends Activity {
     public void off (View v) {
         BA.disable();
         Toast.makeText(getApplicationContext(), "Desligado", Toast.LENGTH_LONG).show();
+    }
+
+    private void msg(String s) {
+        Toast.makeText(getApplicationContext(),s,Toast.LENGTH_LONG).show();
+    }
+
+    private void turnOffLed()
+    {
+        if (btSocket!=null)
+        {
+            try
+            {
+                btSocket.getOutputStream().write("TF".toString().getBytes());
+            }
+            catch (IOException e)
+            {
+                msg("Error");
+            }
+        }
+    }
+
+    private void turnOnLed()
+    {
+        if (btSocket!=null)
+        {
+            try
+            {
+                btSocket.getOutputStream().write("TO".toString().getBytes());
+            }
+            catch (IOException e)
+            {
+                msg("Error");
+            }
+        }
     }
 }
