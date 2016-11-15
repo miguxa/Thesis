@@ -1,0 +1,99 @@
+2016-11-15 11:45:12.4161|INFO|thread:14|DashboardViewModel|Took 0ms to Create RepositoryViewModel for location C:\Users\Prego\Desktop\Thesis
+2016-11-15 11:42:49.0719|INFO|thread: 1|CommandLineHandler|Parsing command line arguments:
+2016-11-15 11:42:49.0949|INFO|thread: 1|CommandLineHandler|Unprocessed args: 
+2016-11-15 11:42:49.0949|INFO|thread: 1|AppInstance|Starting up as master instance of GitHub Desktop
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| #########################################
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| GitHub Desktop started. VERSION: 3.3.3.0
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| Build version: bc4735a097cc8cc1e98a3dddd8ca10ffd83cbb68
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***************************************
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***                                 ***
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***                                 ***
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***        Have a problem?          ***
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***    Email support@github.com     ***
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***      and include this file      ***
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***                                 ***
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***                                 ***
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***************************************
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| OS Version: Windows 10 10.0.14393.0 amd64
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| CLR Version: 4.0.30319.42000
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| Current culture: pt-PT
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| Environment.CurrentDirectory: C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| currentProcess.StartInfo.WorkingDirectory: 
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| Terminal Services session: no
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| Location: C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4\GitHub.exe
+2016-11-15 11:42:49.1279|INFO|thread: 4|StartupLogging| ActivationUri: https://github-windows.s3.amazonaws.com/GitHub.application
+2016-11-15 11:42:49.1279|INFO|thread: 4|StartupLogging| System.Environment.CommandLine: C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4\GitHub.exe
+2016-11-15 11:42:49.1640|INFO|thread: 1|HardwareRenderingHelper|Your video card appears to support hardware rendering. If this isn't the case and you see glitches
+2016-11-15 11:42:49.1640|INFO|thread: 1|HardwareRenderingHelper|set the GH_FORCE_SW_RENDERING environment variable to 1
+2016-11-15 11:42:49.1640|INFO|thread: 4|GitEnvironment|Process set up with this SSH Agent info: (null):(null)
+2016-11-15 11:42:49.1640|INFO|thread: 4|GitEnvironment|PATH is C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd;C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\usr\bin;C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\usr\share\git-tfs;C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4;C:\Users\Prego\AppData\Local\GitHub\lfs-amd64_1.3.1;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\ProgramData\chocolatey\bin;C:\tools\python2;C:\Users\Prego\AppData\Local\Microsoft\WindowsApps;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-11-15 11:42:49.1640|INFO|thread: 4|StartupLogging| =====================================================
+2016-11-15 11:42:49.1640|INFO|thread: 4|StartupLogging|  DIAGNOSTICS                                        |
+2016-11-15 11:42:49.1640|INFO|thread: 4|StartupLogging| =====================================================
+2016-11-15 11:42:49.1720|INFO|thread: 4|StartupLogging| Git Extracted: 'False:
+2016-11-15 11:42:49.1720|INFO|thread: 1|App|Checking whether application is network deployed: True
+2016-11-15 11:42:49.1720|INFO|thread: 1|App|Shortcut C:\Users\Prego\AppData\Local\GitHub\GitHub.appref-ms exists? True
+2016-11-15 11:42:49.1720|ERROR|thread: 4|StartupLogging| MISSING PortableGit Dir: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11'
+2016-11-15 11:42:49.2200|ERROR|thread: 4|PortableGitManager|git.exe doesn't exist at 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd\git.exe'
+2016-11-15 11:42:49.2200|ERROR|thread: 4|StartupLogging| MISSING Git Executable: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd\git.exe'
+2016-11-15 11:42:49.2200|ERROR|thread: 4|StartupLogging| MISSING PATH!!: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd'
+2016-11-15 11:42:49.2200|ERROR|thread: 4|StartupLogging| MISSING PATH!!: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\usr\bin'
+2016-11-15 11:42:49.2200|ERROR|thread: 4|StartupLogging| MISSING PATH!!: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\usr\share\git-tfs'
+2016-11-15 11:42:49.2200|INFO|thread: 4|StartupLogging| ----------------------------------------------------
+2016-11-15 11:42:49.2200|INFO|thread: 4|StartupLogging| PATH: C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\ProgramData\chocolatey\bin;C:\tools\python2;C:\Users\Prego\AppData\Local\Microsoft\WindowsApps
+2016-11-15 11:42:49.2420|INFO|thread: 4|StartupLogger|Proxy information: (None)
+2016-11-15 11:42:49.2420|INFO|thread: 4|StartupLogger|Couldn't fetch creds for proxy
+2016-11-15 11:42:49.2791|INFO|thread: 1|ClickOnceAppIconHelper|Updating registry with our application icon 'C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4\Images\App.ico'
+2016-11-15 11:42:49.3031|INFO|thread: 4|PortablePackageManager|About to cleanup old package 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_63435a79518b44808827aa3194b76bea96231189', current version is 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11'
+2016-11-15 11:42:50.0318|INFO|thread: 4|UrlProtocolInstaller|Registered UrlAppLauncher protocol: "C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4\GitHub.exe" -u="%1"
+2016-11-15 11:42:50.1999|INFO|thread: 4|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4\lib\7za.exe', Args: 'x -y "-oC:\Users\Prego\AppData\Local\GitHub\hkus3yde.yxa.deleteme" "C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4\PortableGit.7z"', Working Directory: 
+2016-11-15 11:42:50.3380|INFO|thread: 4|PortablePackageManager|Extracting PortableGit.7z is (so far) successful
+2016-11-15 11:42:51.3099|INFO|thread: 1|ReactiveScreen|Activating GitHub.ViewModels.ShellViewModel.
+2016-11-15 11:42:51.3099|INFO|thread: 1|ReactiveScreen|Activating GitHub.ViewModels.DashboardViewModel.
+2016-11-15 11:42:54.5348|INFO|thread: 1|PortablePackageManager|Already extracted gitignore.7z, returning 100%
+2016-11-15 11:42:55.3706|WARN|thread:18|LoginCache|Could not get login for host 'GitHub.HostAddress'
+System.Collections.Generic.KeyNotFoundException: The given key 'login:null' was not present in the cache.
+2016-11-15 11:42:56.4356|INFO|thread: 1|RepositoryHost|Log in from cache for login 'miguxa' to host 'https://api.github.com/' SUCCEEDED
+2016-11-15 11:42:59.3662|INFO|thread:16|SoftwareUpdateViewModel|Checking for new version
+2016-11-15 11:43:39.0062|INFO|thread: 1|DashboardViewModel|Received request to clone: 'https://github.com/miguxa/Thesis.git'
+2016-11-15 11:43:43.3812|INFO|thread: 1|RepositoryModel|Cloning repo https://github.com/miguxa/Thesis.git
+2016-11-15 11:43:43.3972|INFO|thread: 1|GitLfsSmudgeTail|Setting Git LFS smudge progress environment variable
+2016-11-15 11:43:43.4092|INFO|thread: 1|RepositoryModel|Cloning 'https://github.com/miguxa/Thesis.git' to 'Thesis' in directory 'C:\Users\Prego\Desktop
+2016-11-15 11:43:43.4092|INFO|thread: 1|GitEnvironment|Process set up with this SSH Agent info: (null):(null)
+2016-11-15 11:43:43.4092|INFO|thread: 1|GitEnvironment|PATH is C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd;C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\usr\bin;C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\usr\share\git-tfs;C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4;C:\Users\Prego\AppData\Local\GitHub\lfs-amd64_1.3.1;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-11-15 11:43:43.4092|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd\git.exe', Args: 'clone --progress --recursive  --  "https://github.com/miguxa/Thesis.git" "Thesis" ', Working Directory: C:\Users\Prego\Desktop
+2016-11-15 11:43:43.4403|ERROR|thread: 1|ProcessWrapper|Exception thrown while running the following command: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd\git.exe clone --progress --recursive  --  "https://github.com/miguxa/Thesis.git" "Thesis" '
+2016-11-15 11:43:43.4573|INFO|thread: 1|GitLfsSmudgeTail|Cleaning up Git LFS smudge progress environment variable
+2016-11-15 11:43:43.4923|INFO|thread:14|DashboardViewModel|Selected repository 'miguxa/Thesis'
+2016-11-15 11:43:43.6284|WARN|thread: 1|StandardUserErrors|Showing user error Please check your log file for more details, or contact out support team if you are still having problems.
+System.ComponentModel.Win32Exception (0x80004005): O sistema não conseguiu localizar o ficheiro especificado
+   em System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   em System.Diagnostics.Process.Start()
+   em GitHub.IO.ProcessWrapper.Start()
+   em GitHub.IO.ObservableProcess..ctor(IProcess process, Boolean throwOnNonZeroExitCode)
+2016-11-15 11:43:44.5493|INFO|thread:14|DashboardViewModel|Took 1ms to Create RepositoryViewModel for location C:\Users\Prego\Desktop\Thesis
+2016-11-15 11:44:18.3820|INFO|thread: 1|ReactiveScreen|Activating GitHub.ViewModels.OptionsViewModel.
+2016-11-15 11:44:43.8021|INFO|thread:18|GitConfig|Saving global git configuration for user.name and user.email
+2016-11-15 11:44:44.1734|INFO|thread: 1|ReactiveScreen|Deactivating GitHub.ViewModels.OptionsViewModel.
+2016-11-15 11:44:44.7239|INFO|thread: 1|ReactiveScreen|Activating GitHub.ViewModels.ScanViewModel.
+2016-11-15 11:44:48.1650|INFO|thread: 1|ReactiveScreen|Deactivating GitHub.ViewModels.ScanViewModel.
+2016-11-15 11:44:48.1650|INFO|thread: 1|ReactiveScreen|Activating GitHub.ViewModels.OptionsViewModel.
+2016-11-15 11:45:05.6209|INFO|thread:40|GitConfig|Saving global git configuration for user.name and user.email
+2016-11-15 11:45:05.6209|INFO|thread: 1|ReactiveScreen|Deactivating GitHub.ViewModels.OptionsViewModel.
+2016-11-15 11:45:05.6209|INFO|thread: 1|ReactiveScreen|Closed GitHub.ViewModels.OptionsViewModel.
+2016-11-15 11:45:09.6275|INFO|thread: 1|DashboardViewModel|Received request to clone: 'https://github.com/miguxa/Thesis.git'
+2016-11-15 11:45:12.2699|INFO|thread: 1|RepositoryModel|Cloning repo https://github.com/miguxa/Thesis.git
+2016-11-15 11:45:12.2699|INFO|thread: 1|GitLfsSmudgeTail|Setting Git LFS smudge progress environment variable
+2016-11-15 11:45:12.2699|INFO|thread: 1|RepositoryModel|Cloning 'https://github.com/miguxa/Thesis.git' to 'Thesis' in directory 'C:\Users\Prego\Desktop
+2016-11-15 11:45:12.2699|INFO|thread: 1|GitEnvironment|Process set up with this SSH Agent info: (null):(null)
+2016-11-15 11:45:12.2699|INFO|thread: 1|GitEnvironment|PATH is C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd;C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\usr\bin;C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\usr\share\git-tfs;C:\Users\Prego\AppData\Local\Apps\2.0\12AME4CM.3JG\69L4VJDO.EZ3\gith..tion_317444273a93ac29_0003.0003_665ccbdbd3c2d8d4;C:\Users\Prego\AppData\Local\GitHub\lfs-amd64_1.3.1;C:\WINDOWS\System32;C:\Windows\Microsoft.NET\Framework\v4.0.30319\
+2016-11-15 11:45:12.2699|INFO|thread: 1|ProcessWrapper|Starting: Process - FileName: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd\git.exe', Args: 'clone --progress --recursive  --  "https://github.com/miguxa/Thesis.git" "Thesis" ', Working Directory: C:\Users\Prego\Desktop
+2016-11-15 11:45:12.2699|ERROR|thread: 1|ProcessWrapper|Exception thrown while running the following command: 'C:\Users\Prego\AppData\Local\GitHub\PortableGit_d7effa1a4a322478cd29c826b52a0c118ad3db11\cmd\git.exe clone --progress --recursive  --  "https://github.com/miguxa/Thesis.git" "Thesis" '
+2016-11-15 11:45:12.2699|INFO|thread: 1|GitLfsSmudgeTail|Cleaning up Git LFS smudge progress environment variable
+2016-11-15 11:45:12.2699|INFO|thread:14|DashboardViewModel|Selected repository 'miguxa/Thesis'
+2016-11-15 11:45:12.2909|WARN|thread: 1|StandardUserErrors|Showing user error Please check your log file for more details, or contact out support team if you are still having problems.
+System.ComponentModel.Win32Exception (0x80004005): O sistema não conseguiu localizar o ficheiro especificado
+   em System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
+   em System.Diagnostics.Process.Start()
+   em GitHub.IO.ProcessWrapper.Start()
+   em GitHub.IO.ObservableProcess..ctor(IProcess process, Boolean throwOnNonZeroExitCode)
