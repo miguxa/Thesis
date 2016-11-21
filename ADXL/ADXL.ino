@@ -16,8 +16,7 @@ void setup()
 {
   Serial.begin(9600);
   pinMode(2, INPUT);
-  Addr.setRangeSettings(2);
-  //Wire.end();
+  Wire.end();
   // Initialise I2C communication as MASTER
   Wire.begin();
   
@@ -43,10 +42,11 @@ void setup()
 
 void loop()
 {
-  if (digitalRead(2) == HIGH) {
+  /*if (digitalRead(2) == HIGH) {
     //Wire.end();
     exit(1);
-  }
+  }*/
+  
   if (timer == 1000) {
     //Wire.end();
     exit(2);
@@ -69,9 +69,7 @@ void loop()
     // Read 6 bytes of data
     // xAccl lsb, xAccl msb, yAccl lsb, yAccl msb, zAccl lsb, zAccl msb
     if(Wire.available() == 1)
-    {
       data[i] = Wire.read();
-    }
   }
   
   // Convert the data to 10-bits
@@ -118,7 +116,7 @@ void loop()
   if (yAccl < 0 && yAccl > -100)
     yAccl = yAccl * -1;
   Serial.print(yAccl);
-/*  
+  
   if (xAccl >= 0)
     Serial.print("+");
   if (xAccl == 0)
@@ -150,8 +148,8 @@ void loop()
   if (zAccl < 0 && zAccl > -100)
     zAccl = zAccl * -1;
   Serial.print(zAccl);
-*/ 
-  Serial.println("");
+ 
+  Serial.println();
   delay(10);
   timer = timer + dly;
 }
