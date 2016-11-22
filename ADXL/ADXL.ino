@@ -38,28 +38,28 @@ void setup()
   Wire.write(0x08);
   // Stop I2C transmission
   Wire.endTransmission();
-
-  if( SD.begin())
+  
+  /*if( SD.begin())
     Serial.println("Cartao pronto");
   else
     Serial.println("Cartao com erro");
 
   myFile = SD.open("test.txt", FILE_WRITE);
-  
+  */
   delay(300);
 }
 
 void loop()
 {
-  /*if (digitalRead(2) == HIGH) {
+  if (digitalRead(2) == HIGH) {
     //Wire.end();
     exit(1);
-  }*/
+  }
   
-  if (timer == 1000) {
+  /*if (timer == 1000) {
     //Wire.end();
     exit(2);
-  }
+  }*/
  
   unsigned int data[6];
   
