@@ -5,22 +5,23 @@
 // https://www.controleverything.com/content/Accelorometer?sku=ADXL345_I2CS#tabs-0-product_tabset-2
 
 #include <Wire.h>
+#include <SD.h>
 
 // ADXL345 I2C address is 0x53(83)
 #define Addr 0x53
 
 long int timer = 0;
 int dly = 1;
+File myFile;
 
 void setup()
 {
   Serial.begin(9600);
   pinMode(2, INPUT);
+  
   Wire.end();
   // Initialise I2C communication as MASTER
-  Wire.begin();
-  
-  
+  Wire.begin(); 
   // Start I2C Transmission
   Wire.beginTransmission(Addr);
   // Select bandwidth rate register
@@ -37,6 +38,14 @@ void setup()
   Wire.write(0x08);
   // Stop I2C transmission
   Wire.endTransmission();
+
+  if( SD.begin())
+    Serial.println("Cartao pronto");
+  else
+    Serial.println("Cartao com erro");
+
+  myFile = SD.open("test.txt", FILE_WRITE);
+  
   delay(300);
 }
 
