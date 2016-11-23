@@ -10,14 +10,6 @@
 // ADXL345 I2C address is 0x53(83)
 #define Addr 0x53
 
-class Str {
-  public:
-    int X;
-    int Y;
-    int Z;
-    int T;    
-};
-
 long int timer = 0;
 int dly = 1;
 File myFile;
@@ -42,39 +34,47 @@ void setup()
 
 void loop()
 {
-  Str string;
+
+  int S[300];
+  int S1[4];
+  int i=0;
+  int j=0;
   
   if (digitalRead(2) == HIGH) {
     //Wire.end();
     exit(1);
   }
   
-  /*if (timer == 1000) {
+  if (timer == 1000) {
     //Wire.end();
     exit(2);
-  }*/
- 
-  string = LerValores();
-    
-  PrintTimer();
-  PrintSinal(string.X);
-  PrintSinal(string.Y);
-  PrintSinal(string.Z);
-  Serial.println();
+  }
+
+  for (i=0; i<300; i=i+4) { 
+    LerValores(S[i], S[i+1], S[i+2], S[i+3]);
+    timer = timer + dly;
+  }
+
+  for (i=0; i<300; i=i+4) {
+    PrintTimer(S[i]);
+    PrintSinal(S[i+1]);
+    PrintSinal(S[i+2]);
+    PrintSinal(S[i+3]);
+    Serial.println();
+  }
 }
 
-void PrintTimer () {
-  if (timer < 10)
+void PrintTimer (int tmr) {
+  if (tmr < 10)
     Serial.print("0000");
-  else if (timer < 100)
+  else if (tmr < 100)
     Serial.print("000");
-  else if (timer < 1000)
+  else if (tmr < 1000)
     Serial.print("00");
-  else if (timer < 10000)
+  else if (tmr < 10000)
     Serial.print("0");
-  Serial.print(timer);
+  Serial.print(tmr);
   Serial.print(" ");
-  timer = timer + dly;
 }
 
 void PrintSinal (int val) {
@@ -96,9 +96,9 @@ void PrintSinal (int val) {
   Serial.print(" ");
 }
 
-Str LerValores() {
+void LerValores(int &T, int &X, int &Y, int &Z) {
   unsigned int data[6];
-  Str string;
+  int string[4];
   
   for(int i = 0; i < 6; i++)
   {
@@ -119,24 +119,23 @@ Str LerValores() {
   }
   
   // Convert the data to 10-bits
-  int xAccl = (((data[1] & 0x03) * 256) + data[0]);
+  int xAccl = (data[0] + ((data[1] & 0x03) * 256));
+  int yAccl = (data[2] + ((data[3] & 0x03) * 256));
+  int zAccl = (data[4] + ((data[5] & 0x03) * 256));
+
   if(xAccl > 511)
     xAccl -= 1024;
-  
-  int yAccl = (((data[3] & 0x03) * 256) + data[2]);
+    
   if(yAccl > 511)
     yAccl -= 1024;
   
-  int zAccl = (((data[5] & 0x03) * 256) + data[4]);
   if(zAccl > 511)
     zAccl -= 1024;
 
-  string.X = xAccl;
-  string.Y = yAccl;
-  string.Z = zAccl;
-  string.T = timer;
-  
-  return string;
+  T = timer;
+  X = xAccl;
+  Y = yAccl;
+  Z = zAccl;
 }
 
 void InitAcel() {
