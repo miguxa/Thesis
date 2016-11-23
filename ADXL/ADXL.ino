@@ -20,7 +20,7 @@ void setup()
   pinMode(2, INPUT);
   
   InitAcel();
-  Serial.println("Timer   X    Y    Z");  
+  Serial.println("Press to start");  
   
   /*if( SD.begin())
     Serial.println("Cartao pronto");
@@ -34,33 +34,38 @@ void setup()
 
 void loop()
 {
-
-  int S[300];
-  int S1[4];
+  int S[400];
   int i=0;
-  int j=0;
   
   if (digitalRead(2) == HIGH) {
-    //Wire.end();
+    Serial.println("Leitura iniciada");
+    
+    for (i=0; i<400; i=i+4) { 
+      LerValores(S[i], S[i+1], S[i+2], S[i+3]);
+      timer = timer + dly;
+      delay(50);
+    }
+    
+    Serial.println("Leitura terminada");
+    delay(1000);
+    Serial.println("Timer   X    Y    Z");  
+  
+    for (i=0; i<400; i=i+4) {
+      PrintTimer(S[i]);
+      PrintSinal(S[i+1]);
+      PrintSinal(S[i+2]);
+      PrintSinal(S[i+3]);
+      Serial.println();
+    }
+    
+    delay(100);
+    Serial.print("!");
     exit(1);
   }
   
   if (timer == 1000) {
     //Wire.end();
     exit(2);
-  }
-
-  for (i=0; i<300; i=i+4) { 
-    LerValores(S[i], S[i+1], S[i+2], S[i+3]);
-    timer = timer + dly;
-  }
-
-  for (i=0; i<300; i=i+4) {
-    PrintTimer(S[i]);
-    PrintSinal(S[i+1]);
-    PrintSinal(S[i+2]);
-    PrintSinal(S[i+3]);
-    Serial.println();
   }
 }
 
