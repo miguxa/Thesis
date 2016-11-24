@@ -20,7 +20,7 @@ void setup()
   pinMode(2, INPUT);
   
   InitAcel();
-  Serial.println("Press to start");  
+  
   
   /*if( SD.begin())
     Serial.println("Cartao pronto");
@@ -29,13 +29,17 @@ void setup()
 
   myFile = SD.open("test.txt", FILE_WRITE);
   */
-  delay(300);
 }
 
 void loop()
 {
   int S[400];
   int i=0;
+
+  Serial.println("Press to start");
+
+  while(digitalRead(2) == LOW)
+    ;
   
   if (digitalRead(2) == HIGH) {
     Serial.println("Leitura iniciada");
@@ -60,7 +64,6 @@ void loop()
     
     delay(100);
     Serial.print("!");
-    exit(1);
   }
   
   if (timer == 1000) {
