@@ -16,7 +16,7 @@ File myFile;
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(4800);
   pinMode(2, INPUT);
   
   InitAcel();
@@ -45,9 +45,9 @@ void loop()
     Serial.println("Leitura iniciada");
     
     for (i=0; i<400; i=i+4) { 
-      LerValores(S[i], S[i+1], S[i+2], S[i+3]);
+      LerValores(&S[i], &S[i+1], &S[i+2], &S[i+3]);
       timer = timer + dly;
-      delay(50);
+      delay(5);
     }
     
     Serial.println("Leitura terminada");
@@ -104,7 +104,7 @@ void PrintSinal (int val) {
   Serial.print(" ");
 }
 
-void LerValores(int &T, int &X, int &Y, int &Z) {
+void LerValores(int *T, int *X, int *Y, int *Z) {
   unsigned int data[6];
   int string[4];
   
@@ -140,10 +140,10 @@ void LerValores(int &T, int &X, int &Y, int &Z) {
   if(zAccl > 511)
     zAccl -= 1024;
 
-  T = timer;
-  X = xAccl;
-  Y = yAccl;
-  Z = zAccl;
+  *T = timer;
+  *X = xAccl;
+  *Y = yAccl;
+  *Z = zAccl;
 }
 
 void InitAcel() {
@@ -155,7 +155,7 @@ void InitAcel() {
   // Select bandwidth rate register
   Wire.write(0x2C);
   // Normal mode, Output data rate = 100 Hz
-  Wire.write(0x0A);
+  Wire.write(0x0F);
   // Select power control register
   Wire.write(0x2D);
   // Auto-sleep disable
