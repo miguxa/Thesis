@@ -14,9 +14,11 @@ ADXL345 adxl = ADXL345();             // USE FOR I2C COMMUNICATION
 /*          Configure ADXL345 Settings         */
 void setup(){
   Serial.begin(9600);                 // Start the serial terminal
-  if(!Serial.available())
-    
-  Serial.println("SparkFun ADXL345 Accelerometer Hook Up Guide Example");
+  delay(10000);
+  //if(!Serial.available())
+   
+   Serial.println("SparkFun ADXL345 Accelerometer Hook Up Guide Example");
+   
   Serial.println();
   
   adxl.powerOn();                     // Power on the ADXL345
