@@ -2,8 +2,8 @@
 
 /*********** COMMUNICATION SELECTION ***********/
 /*    Comment Out The One You Are Not Using    */
-ADXL345 adxl = ADXL345(10);           // USE FOR SPI COMMUNICATION, ADXL345(CS_PIN);
-//ADXL345 adxl = ADXL345();             // USE FOR I2C COMMUNICATION
+//ADXL345 adxl = ADXL345(10);           // USE FOR SPI COMMUNICATION, ADXL345(CS_PIN);
+ADXL345 adxl = ADXL345();             // USE FOR I2C COMMUNICATION
 
 /****************** INTERRUPT ******************/
 /*      Uncomment If Attaching Interrupt       */
@@ -20,7 +20,7 @@ void setup(){
   
   adxl.powerOn();                     // Power on the ADXL345
 
-  adxl.setRangeSetting(16);           // Give the range settings
+  adxl.setRangeSetting(2);           // Give the range settings
                                       // Accepted values are 2g, 4g, 8g or 16g
                                       // Higher Values = Wider Measurement Range
                                       // Lower Values = Greater Sensitivity
