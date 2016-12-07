@@ -13,7 +13,6 @@ ADXL345 adxl = ADXL345();             // USE FOR I2C COMMUNICATION
 /******************** SETUP ********************/
 /*          Configure ADXL345 Settings         */
 void setup(){
-  delay(20000);
   Serial.begin(9600);                 // Start the serial terminal
   if(!Serial.available())
     
