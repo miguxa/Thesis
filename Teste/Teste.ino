@@ -2,12 +2,16 @@
 #include <SparkFun_ADXL345.h>
 
 ADXL345 adxl = ADXL345();
-int timer;
+int TAPS[120]={0};
 
 void setup()
 {
-  Serial.begin(9600);
+  int aux;
+
+  for (aux=0; aux<30; aux++)
+    TAPS[aux]=-1;
   
+  Serial.begin(9600);  
   Serial.println("Initializing SD card...");
   if (!SD.begin(10))
     Serial.println("Card failed, or not present");
@@ -39,8 +43,7 @@ void setup()
 void loop()
 {
   int x, y, z, inc, aux;
-  int TAPS[120]={0};
-  int VALS[60]={0};
+  //int VALS[60]={0};
   int ret;
   
   for(inc=0; inc<120; inc = inc+3) {
@@ -48,14 +51,12 @@ void loop()
     TAPS[inc+0]=x;
     TAPS[inc+1]=y;
     TAPS[inc+2]=z;
-    ret = ADXL_INTS();
     delay(5);
+    ret = ADXL_INTS();
     
-    if (ret == 2) {
-      Serial.println("TAP");
-      inc = inc - 30;
-      
-      for (aux=0 ; aux<30; aux=aux+3) {
+    if (ret == 2) { 
+      Serial.println(inc);    
+      /*for (aux=0 ; aux<30; aux=aux+3) {
         adxl.readAccel(&x, &y, &z);
         VALS[30+aux]=x;
         VALS[31+aux]=y;
@@ -63,12 +64,12 @@ void loop()
         delay(5);
       }
       
-      for (aux=0; aux<30; aux=aux+3) {
+      for (aux=27; aux>=0; aux=aux-3) {
         VALS[0+aux]=TAPS[inc+0];
         VALS[1+aux]=TAPS[inc+1];
         VALS[2+aux]=TAPS[inc+2];
       }
-
+      Serial.print(inc);
       for (aux=0; aux<60; aux=aux+3) {
         Serial.print(VALS[aux+0]);
         Serial.print("  ");
@@ -76,10 +77,19 @@ void loop()
         Serial.print("  ");
         Serial.print(VALS[aux+2]);
         Serial.println();
-      }
-    }    
+      }*/
+    }  
   }
 
+  /*for (aux=0; aux<120; aux=aux+3) {
+        Serial.print(TAPS[aux+0]);
+        Serial.print("  ");
+        Serial.print(TAPS[aux+1]);
+        Serial.print("  ");
+        Serial.print(TAPS[aux+2]);
+        Serial.println();
+      }
+  Serial.println("----------");*/
   
   
   /*File fich = SD.open("datalog.txt", FILE_WRITE);
@@ -99,7 +109,6 @@ void loop()
   }
   else 
     Serial.println("error opening datalog.txt");*/
-  delay(2000);
 }
 
 int ADXL_INTS() {
