@@ -1,4 +1,4 @@
-2016-11-15 11:45:12.4161|INFO|thread:14|DashboardViewModel|Took 0ms to Create RepositoryViewModel for location C:\Users\Prego\Desktop\Thesis
+﻿2016-11-15 11:45:12.4161|INFO|thread:14|DashboardViewModel|Took 0ms to Create RepositoryViewModel for location C:\Users\Prego\Desktop\Thesis
 2016-11-15 11:42:49.0719|INFO|thread: 1|CommandLineHandler|Parsing command line arguments:
 2016-11-15 11:42:49.0949|INFO|thread: 1|CommandLineHandler|Unprocessed args: 
 2016-11-15 11:42:49.0949|INFO|thread: 1|AppInstance|Starting up as master instance of GitHub Desktop
@@ -8,7 +8,7 @@
 2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***************************************
 2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***                                 ***
 2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***                                 ***
-2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***        Have a problem?          ***
+2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***        Have a problem?          *** 
 2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***    Email support@github.com     ***
 2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***      and include this file      ***
 2016-11-15 11:42:49.1159|INFO|thread: 4|StartupLogging| ***                                 ***
