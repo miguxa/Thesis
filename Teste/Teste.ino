@@ -74,7 +74,27 @@ void loop()
         VALS[2+aux]=TAPS[inc+aux+2];
       }
       
+      /**************************************************/
+      
+      File fich = SD.open("datalog.txt", FILE_WRITE);
+      if (fich) {
+        for (aux=0; aux<60; aux=aux+3) {
+          fich.print(VALS[aux+0]);
+          fich.print("  ");
+          fich.print(VALS[aux+1]);
+          fich.print("  ");
+          fich.print(VALS[aux+2]);
+          fich.println("");
+        }
+        fich.close();
+      }
+      else 
+        Serial.println("error opening datalog.txt");
+
+      /**************************************************/
+      
       break;
+      
     }  
   }
 
@@ -87,27 +107,7 @@ void loop()
   }
   
   Serial.println("----------");
-
-   
   
-  /*File fich = SD.open("datalog.txt", FILE_WRITE);
-  if (fich) {
-    for (aux=0; aux<60; aux=aux+3) {
-      Serial.print(VALS[aux+0]);
-      /*Serial.print("  ");
-      Serial.print(VALS[aux+1]);
-      Serial.print("  ");
-      Serial.print(VALS[aux+2]);
-      Serial.println("");
-    }
-    Serial.println();
-    Serial.println();
-    Serial.println();
-    fich.close();
-  }
-  else 
-    Serial.println("error opening datalog.txt");*/
-
   if (ret == 2) {
     delay(1000);
     exit(1);  
