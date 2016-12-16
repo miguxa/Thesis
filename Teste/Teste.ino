@@ -6,10 +6,7 @@ int TAPS[120]={0};
 
 void setup()
 {
-  int aux;
-
-  for (aux=0; aux<30; aux++)
-    TAPS[aux]=-1;
+  int x, y, z, inc;
   
   Serial.begin(9600);  
   Serial.println("Initializing SD card...");
@@ -38,15 +35,22 @@ void setup()
   //adxl.doubleTapINT(1);
   adxl.singleTapINT(1);
   Serial.println("Accelerometer initialized");
+
+  for (inc=0; inc<30; inc=inc+3) {
+    adxl.readAccel(&x, &y, &z);
+    TAPS[inc+0]=x;
+    TAPS[inc+1]=y;
+    TAPS[inc+2]=z;
+  }
 }
 
 void loop()
 {
   int x, y, z, inc, aux;
-  //int VALS[60]={0};
+  int VALS[60]={0};
   int ret;
   
-  for(inc=0; inc<120; inc = inc+3) {
+  for(inc=30; inc<120; inc = inc+3) {
     adxl.readAccel(&x, &y, &z);
     TAPS[inc+0]=x;
     TAPS[inc+1]=y;
@@ -56,7 +60,7 @@ void loop()
     
     if (ret == 2) { 
       Serial.println(inc);    
-      /*for (aux=0 ; aux<30; aux=aux+3) {
+      for (aux=0 ; aux<30; aux=aux+3) {
         adxl.readAccel(&x, &y, &z);
         VALS[30+aux]=x;
         VALS[31+aux]=y;
@@ -69,7 +73,7 @@ void loop()
         VALS[1+aux]=TAPS[inc+1];
         VALS[2+aux]=TAPS[inc+2];
       }
-      Serial.print(inc);
+      
       for (aux=0; aux<60; aux=aux+3) {
         Serial.print(VALS[aux+0]);
         Serial.print("  ");
@@ -77,20 +81,23 @@ void loop()
         Serial.print("  ");
         Serial.print(VALS[aux+2]);
         Serial.println();
-      }*/
+      }
+      break;
     }  
   }
 
-  /*for (aux=0; aux<120; aux=aux+3) {
-        Serial.print(TAPS[aux+0]);
-        Serial.print("  ");
-        Serial.print(TAPS[aux+1]);
-        Serial.print("  ");
-        Serial.print(TAPS[aux+2]);
-        Serial.println();
-      }
-  Serial.println("----------");*/
+  for (aux=0; aux<30; aux=aux+3) {
+    TAPS[aux+0] = TAPS[aux+90];
+    TAPS[aux+1] = TAPS[aux+91];
+    TAPS[aux+2] = TAPS[aux+92];
+  }
   
+  Serial.println("----------");
+  if (ret == 2) {
+    delay(1000);
+    exit(1);  
+  }
+   
   
   /*File fich = SD.open("datalog.txt", FILE_WRITE);
   if (fich) {
