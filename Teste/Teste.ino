@@ -60,43 +60,34 @@ void loop()
     
     if (ret == 2) { 
       Serial.println(inc);    
-      for (aux=0 ; aux<30; aux=aux+3) {
+      for (aux=0 ; aux<45; aux=aux+3) {
         adxl.readAccel(&x, &y, &z);
-        VALS[30+aux]=x;
-        VALS[31+aux]=y;
-        VALS[32+aux]=z;
+        VALS[15+aux]=x;
+        VALS[16+aux]=y;
+        VALS[17+aux]=z;
         delay(5);
       }
       
-      for (aux=27; aux>=0; aux=aux-3) {
-        VALS[0+aux]=TAPS[inc+0];
-        VALS[1+aux]=TAPS[inc+1];
-        VALS[2+aux]=TAPS[inc+2];
+      for (aux=0; aux<15; aux=aux+3) {
+        VALS[0+aux]=TAPS[inc+aux+0];
+        VALS[1+aux]=TAPS[inc+aux+1];
+        VALS[2+aux]=TAPS[inc+aux+2];
       }
       
-      for (aux=0; aux<60; aux=aux+3) {
-        Serial.print(VALS[aux+0]);
-        Serial.print("  ");
-        Serial.print(VALS[aux+1]);
-        Serial.print("  ");
-        Serial.print(VALS[aux+2]);
-        Serial.println();
-      }
       break;
     }  
   }
 
-  for (aux=0; aux<30; aux=aux+3) {
-    TAPS[aux+0] = TAPS[aux+90];
-    TAPS[aux+1] = TAPS[aux+91];
-    TAPS[aux+2] = TAPS[aux+92];
+  if (ret != 2) {
+    for (aux=0; aux<30; aux=aux+3) {
+      TAPS[aux+0] = TAPS[aux+90];
+      TAPS[aux+1] = TAPS[aux+91];
+      TAPS[aux+2] = TAPS[aux+92];
+    }
   }
   
   Serial.println("----------");
-  if (ret == 2) {
-    delay(1000);
-    exit(1);  
-  }
+
    
   
   /*File fich = SD.open("datalog.txt", FILE_WRITE);
@@ -116,6 +107,11 @@ void loop()
   }
   else 
     Serial.println("error opening datalog.txt");*/
+
+  if (ret == 2) {
+    delay(1000);
+    exit(1);  
+  }
 }
 
 int ADXL_INTS() {
