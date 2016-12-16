@@ -39,20 +39,19 @@ void setup()
 void loop()
 {
   int x, y, z, inc, aux;
-  int TAPS[300];
-  int VALS[60];
-  char ret;
-  String frase = ("HELLO");
+  int TAPS[120]={0};
+  int VALS[60]={0};
+  int ret;
   
-  for(inc=0; inc<300; inc = inc+3) {
+  for(inc=0; inc<120; inc = inc+3) {
     adxl.readAccel(&x, &y, &z);
     TAPS[inc+0]=x;
     TAPS[inc+1]=y;
     TAPS[inc+2]=z;
     ret = ADXL_INTS();
     delay(5);
-      
-    if (ret == "S") {
+    
+    if (ret == 2) {
       Serial.println("TAP");
       inc = inc - 30;
       
@@ -61,6 +60,7 @@ void loop()
         VALS[30+aux]=x;
         VALS[31+aux]=y;
         VALS[32+aux]=z;
+        delay(5);
       }
       
       for (aux=0; aux<30; aux=aux+3) {
@@ -68,18 +68,28 @@ void loop()
         VALS[1+aux]=TAPS[inc+1];
         VALS[2+aux]=TAPS[inc+2];
       }
-      
+
+      for (aux=0; aux<60; aux=aux+3) {
+        Serial.print(VALS[aux+0]);
+        Serial.print("  ");
+        Serial.print(VALS[aux+1]);
+        Serial.print("  ");
+        Serial.print(VALS[aux+2]);
+        Serial.println();
+      }
     }    
   }
+
   
-  File fich = SD.open("datalog.txt", FILE_WRITE);
+  
+  /*File fich = SD.open("datalog.txt", FILE_WRITE);
   if (fich) {
     for (aux=0; aux<60; aux=aux+3) {
       Serial.print(VALS[aux+0]);
       /*Serial.print("  ");
       Serial.print(VALS[aux+1]);
       Serial.print("  ");
-      Serial.print(VALS[aux+2]);*/
+      Serial.print(VALS[aux+2]);
       Serial.println("");
     }
     Serial.println();
@@ -88,25 +98,25 @@ void loop()
     fich.close();
   }
   else 
-    Serial.println("error opening datalog.txt");
+    Serial.println("error opening datalog.txt");*/
   delay(2000);
 }
 
-char ADXL_INTS() {
+int ADXL_INTS() {
   byte interrupts = adxl.getInterruptSource();
   
   // Free Fall Detection
   if(adxl.triggered(interrupts, ADXL345_FREE_FALL)){
     Serial.println("*** FREE FALL ***");
-    return "F";
+    return 1;
   } 
   
   // Tap Detection
   if(adxl.triggered(interrupts, ADXL345_SINGLE_TAP)){
     Serial.println("*** TAP ***");
-    return "S";
+    return 2;
   }
 
   else
-    return NULL;
+    return 3;
 }
