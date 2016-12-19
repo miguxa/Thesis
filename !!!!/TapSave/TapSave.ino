@@ -14,8 +14,8 @@ void setup()
     Serial.println("Card failed, or not present");
   else {
     Serial.println("card initialized.");
-    if (SD.exists("datalog.csv"))
-      SD.remove("datalog.csv");
+    if (SD.exists("datalog.txt"))
+      SD.remove("datalog.txt");
   }
   
   Serial.println();
@@ -76,20 +76,20 @@ void loop()
       
       /**************************************************/
       
-      File fich = SD.open("datalog.csv", FILE_WRITE);
+      File fich = SD.open("datalog.txt", FILE_WRITE);
       if (fich) {
         for (aux=0; aux<60; aux=aux+3) {
-          fich.print(VALS[aux+0],DEC);
-          fich.print("; ");
-          fich.print(VALS[aux+1],DEC);
-          fich.print("; ");
-          fich.print(VALS[aux+2],DEC);
+          fich.print(VALS[aux+0]);
+          fich.print("  ");
+          fich.print(VALS[aux+1]);
+          fich.print("  ");
+          fich.print(VALS[aux+2]);
           fich.println("");
         }
         fich.close();
       }
       else 
-        Serial.println("error opening datalog.csv");
+        Serial.println("error opening datalog.txt");
 
       /**************************************************/
       
