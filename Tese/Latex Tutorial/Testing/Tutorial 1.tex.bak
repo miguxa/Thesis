@@ -1,0 +1,9 @@
+ \documentclass[11pt]{article}
+ 
+ \begin{document}
+ Este é o meu primeiro documento em LaTeX.\\
+ % Enter entre linhas separa-as
+ % \\ faz o mesmo efeito
+ Suponhamos que é dado um retângulo com lados $(x+1)$ e $(x+3)$
+ % $ TEXTO $ -> notação matemática 
+ \end{document}

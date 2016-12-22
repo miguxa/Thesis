@@ -1,0 +1,3 @@
+Fazer secções respeitando par e impar
+Atribuir estilos
+Indice de assuntos criado até ao nivel 3

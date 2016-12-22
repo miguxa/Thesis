@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% chapter2.tex
+%% UNL thesis document file
+%%
+%% Chapter with the template manual
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Trabalhos relacionados}
+\label{cha:trabalhos_relacionados}
+
+\section{Principais metodologias} % (fold)
+\label{sec:principais_metodologias}
+
+Visto que todas as tecnologias a ser utilizadas não são muito recentes, já surgiram implementações para o problema aqui apresentado, sempre com variantes entre os vários trabalhos, cada uma delas com as suas vantagens e desvantagens, sendo este capítulo direcionado à enumeração dessas diferenças de modo a justificar a abordagem que será tomada na implementação da solução apresentada.
+
+Depois de ler vários artigos relacionados, começa a surgir um padrão de diferentes metodologias e soluções que são bastante semelhantes entre si, sendo os principais:
+\begin{enumerate}
+	
+	\item \textbf{Camera vídeo}
+	\item \textbf{Camera vídeo com iluminação artificial}
+	\item \textbf{Ultrassom}
+	\item \textbf{Acelerómetro}
+\end{enumerate}
+
+\subsection{Camera vídeo}
+\label{subsec: camera_video}
+No que toca às cameras de vídeo, estes trabalhos não são diretamente comparáveis com aquele que será aqui apresentado, uma vez que utiliza uma tecnologia para a deteção e reconhecimento dos buracos bastante diferente, embora a parte da comunicação de alguns casos seja interessante e poderá propor uma abordagem semelhante ao assunto. Dos artigos disponíveis, três são aqueles que mostram abordagens mais interessantes, sendo que apresentam soluções diferentes. Em {XXX} [1] e [2] são utilizadas duas cameras e apresentados algoritmos muito semelhantes e com resultados bastante positivos, sendo possível determinar uma relação entre estes trabalhos devido às várias colaborações já existentes entre os autores.
+Numa solução diferente, em {XXX} [3] é descrito um processo de deteção de buracos utilizando um sensor Kinect \footnote{https://developer.microsoft.com/en-us/windows/kinect} que só tem uma camera mas tem um sensor de infravermelhos para determinar a distância a que se encontra um objeto. Esta solução tem resultados semelhantes e para a sua implementação são necessários menos cálculos, uma vez que o software Kinect o faz de origem. Além disso, embora não seja apresentado, é de esperar que esta opção seja menos dispendiosa que as anteriormente apresentadas.
+
+\subsection{Camera vídeo com iluminação artificial}
+\label{subsec: camera_video_com_iluminacao_artificial}
+Apesar dos artigos apresentados nesta secção utilizarem também cameras, é interessante separá-los dos anteriores uma vez que a deteção dos buracos é feita de forma segmentada, consoante a passagem pelo próprio buraco. Em {XXX} [4] e [5] são projetadas linhas vermelhas no solo, perpendiculares à estrada, que deixam de ser retas sempre que existe uma perturbação na estrada. À medida que o sistema de deteção avança pela estrada, várias linhas são detetadas e é feito um mapeamento do buraco a analisar. A partir da análise da deformação das várias linhas é possível determinar a profundidade do buraco bem como as suas dimensões reais.
+
+Não serão feitas comparações entre os casos já apresentados pois processamento de imagem não será o método a apresentar neste documento.
+
+\subsection{Ultrassom}
+\label{subsec: ultrassom}
+Outra abordagem completamente diferente é a utilização de sensores ultrassom. É uma opção semelhante à que será tomada neste projeto na medida em que é quase obrigatório passar por um buraco para fazer a sua deteção, ao contrário da análise de imagens em que é possível evitá-los. Em {XXX}[6] é mostrado um protótipo que permite a deteção de buracos através da análise do tempo de retorno de um ultrassom emitido e onde são determinados os valores a utilizar. {XXX}[7] é um projeto mais elaborado, em que uma montagem semelhante é utilizada num veículo e o conceito é testado em estradas reais. É possível elaborar uma relação entre os dois projetos em que {XXX}[6] é um protótipo para {XXX}[7] visto os autores comuns a ambos e as suas referências.
+
+\subsection{Acelerómetro}
+\label{subsec: acelerometro}
+Esta será a abordagem a ser utilizada e aquela em que os artigos analisados se mostram mais relevantes, devido à semelhança com o projeto que se pretende desenvolver. Em {XXX}[8] é utilizado o acelerómetro do telefone e são apresentados vários algoritmos para a determinação do que é ou não um buraco na estrada. São também feitas algumas comparações sobre os resultados que diferentes telefones apresentam, dependendo do seu acelerómetro. No que diz respeito a {XXX}[9], é um documento semelhante ao anterior mas adiciona um giroscópio para melhor deteção de buracos. Embora os resultados apresentados sejam bons, terá que ser tido em conta o processamento extra necessário para os dados do giroscópio. Em {XXX}[10] foi criado um elemento que contém GPS e acelerómetro e ainda um microprocessador para processar os dados adquiridos. É um sistema muito bem construido e que apresenta vários resultados em estradas de diferentes condições mas poderá ser mais caro do que o pretendido desenvolver neste projeto. No artigo apresentado em {XXX}[11] é apresentada a comunicação entre vários veículos quanto à sua deteção de buracos. É uma ideia que poderá vir a ser implementada neste pelo que foi considerado um artigo bastante importante, apesar dos resultados apresentados serem relativos à comunicação e não quanto à deteção dos buracos especificamente. Por fim, é ainda de salientar o trabalho em {XXX}[12] que apresenta uma metodologia semelhante à desejada tomar no que diz respeito à comunicação para uma base de dados mas com pouco desenvolvimento e testes, pelo que será uma boa base para continuação deste trabalho.
+
+\section{Comparação de resultados} % (fold)
+\label{sec:comapracao_de_resultados}
+
+Comparando todos os artigos apresentados, é de notar que cada um tem os seus pontos fortes e fracos, como seria de esperar. Para o trabalho que será desenvolvido as qualidades mais importantes a ter em conta são o preço do material utilizado bem como o tempo de processamento que o método consome. A tabela \ref{tab:comparacao_de_resultados_de_artigos} mostra as características que serão tidas em conta bem como quais as metodologias que as apresentam.
+
+\begin{table}[htb]
+\centering
+\caption{Comparação de resultados de artigos}
+\label{tab:comparacao_de_resultados_de_artigos}
+\begin{tabular}{lcccc}
+\multicolumn{1}{c}{} & \begin{tabular}[c]{@{}c@{}}Qualidade de \\ resultados\end{tabular} & \begin{tabular} [c] {@{}c@{}}Preço de \\ material \end{tabular} & \begin{tabular}[c]{@{}c@{}}Tempo de \\ processamento\end{tabular} & \begin{tabular}[c]{@{}c@{}}Processador \\ já incluído\end{tabular} \\
+Camera vídeo & \cmark & \xmark & \xmark & \xmark \\
+Camera + iluminação & \cmark& \xmark & \xmark & \xmark \\
+Ultrassom & \cmark & \cmark & \cmark & \xmark \\
+Acelerómetro & \cmark & \cmark & \cmark & \cmark
+\end{tabular}
+\end{table}
+
+Desta forma, a utilização de um acelerómetro é a mais indicada. Dentro desta metodologia, ainda é possível fazer uma comparação dos vários artigos analisados e tirar algumas conclusões. Os resultados destas comparações são apresnetados na tablea \ref{tab:comparacao_de_resultados_com_utilizacao_de_acelerometro}.
+
+\begin{table}[htb]
+\centering
+\caption{Comparação de resultados com utilização de acelerómetro}
+\label{tab:comparacao_de_resultados_com_utilizacao_de_acelerometro}
+\begin{tabular}{lccccc}
+\multicolumn{1}{c}{} & \begin{tabular}[c]{@{}c@{}}Acelerómetro\\ do telefone\end{tabular} & \begin{tabular}[c]{@{}c@{}}GPS do\\ telefone\end{tabular} & \begin{tabular}[c]{@{}c@{}}Giroscópio\\ do telefone\end{tabular} & \begin{tabular}[c]{@{}c@{}}Processador\\ do telefone\end{tabular} & \begin{tabular}[c]{@{}c@{}}Custos além\\ do telefone\end{tabular} \\
+{[}8{]} & \cmark & \cmark & \xmark & \cmark & \xmark                                                            \\
+{[}9{]} & \cmark & \cmark & \cmark & \cmark & \xmark                                                            \\
+{[}10{]} & \xmark & \xmark & \xmark & \xmark & \cmark                                                           
+\end{tabular}
+\end{table}
+
+Embora os resultados de trabalhos em que todos os componentes fazem parte do telefone sejam mais promissores em termos de preço de materiais, a sua viabilidade é mais baixa, uma vez que um sistema que seja para o público em geral necessita de apresentar resultados consistentes, independentemente da situação e se o acelerómetro não estiver sempre no mesmo sítio (neste caso, o telefone) as leituras de cada buraco detetado são alteradas a cada passagem, dependendo do local em que o telefone se encontra, seja no bolso do casaco, no banco ou no tablier de um veículo. Desta forma, a solução que será apresentada num projeto futuro terá a um smartphone do utilizador como componente obrigatório, bem como um acelerómetro externo que será fixado no veículo, em princípio no amortecedor, algo que será ainda testado para obtenção de melhores resultados. 

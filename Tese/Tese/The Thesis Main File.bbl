@@ -1,0 +1,546 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.7 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nyt/global/}
+  \entry{Chan2014}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=CCK}{%
+         family={Chan},
+         family_i={C\bibinitperiod},
+         given={Chee\bibnamedelima Kin},
+         given_i={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=GY}{%
+         family={Gao},
+         family_i={G\bibinitperiod},
+         given={Yuan},
+         given_i={Y\bibinitperiod},
+      }}%
+      {{hash=ZZ}{%
+         family={Zhang},
+         family_i={Z\bibinitperiod},
+         given={Zhen},
+         given_i={Z\bibinitperiod},
+      }}%
+      {{hash=DN}{%
+         family={Dahnoun},
+         family_i={D\bibinitperiod},
+         given={Naim},
+         given_i={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CCK+1}
+    \strng{fullhash}{CCKGYZZDN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Cha+14}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{EDERC 2014 - Proceedings of the 6th European Embedded
+  Design in Education and Research Conference}
+    \field{title}{{Implementation and evaluation of a pothole detection system
+  on TI C6678 digital signal processor}}
+    \field{annotation}{%
+    [2]%
+    }
+    \field{year}{2014}
+  \endentry
+
+  \entry{Chen2011}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=CK}{%
+         family={Chen},
+         family_i={C\bibinitperiod},
+         given={Kongyang},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Lu},
+         family_i={L\bibinitperiod},
+         given={Mingming},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=FX}{%
+         family={Fan},
+         family_i={F\bibinitperiod},
+         given={Xiaopeng},
+         given_i={X\bibinitperiod},
+      }}%
+      {{hash=WM}{%
+         family={Wei},
+         family_i={W\bibinitperiod},
+         given={Mingming},
+         given_i={M\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wu},
+         family_i={W\bibinitperiod},
+         given={Jinwu},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CK+1}
+    \strng{fullhash}{CKLMFXWMWJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Che+11}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{booktitle}{Proceedings of the 2011 6th International ICST Conference
+  on Communications and Networking in China, CHINACOM 2011}
+    \field{title}{{Road condition monitoring using on-board three-axis
+  accelerometer and GPS sensor}}
+    \field{annotation}{%
+    [10]%
+    }
+    \field{year}{2011}
+  \endentry
+
+  \entry{Fouad}{article}{}
+    \name{author}{5}{}{%
+      {{hash=FMM}{%
+         family={Fouad},
+         family_i={F\bibinitperiod},
+         given={Mohamed\bibnamedelima Mostafa},
+         given_i={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MMA}{%
+         family={Mahmood},
+         family_i={M\bibinitperiod},
+         given={Mahmood\bibnamedelima A},
+         given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Mahmoud},
+         family_i={M\bibinitperiod},
+         given={Hamdi},
+         given_i={H\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={Mohamed},
+         family_i={M\bibinitperiod},
+         given={Adham},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=HAE}{%
+         family={Hassanien},
+         family_i={H\bibinitperiod},
+         given={Aboul\bibnamedelima Ella},
+         given_i={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{FMM+1}
+    \strng{fullhash}{FMMMMAMHMAHAE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Fou+14}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{title}{{Intelligent road surface quality evaluation using rough
+  mereology}}
+    \field{journaltitle}{2014 14th International Conference on Hybrid
+  Intelligent Systems}
+    \field{annotation}{%
+    [9]%
+    }
+    \field{year}{2014}
+  \endentry
+
+  \entry{He2011}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=HY}{%
+         family={He},
+         family_i={H\bibinitperiod},
+         given={Youquan},
+         given_i={Y\bibinitperiod},
+      }}%
+      {{hash=WJ}{%
+         family={Wang},
+         family_i={W\bibinitperiod},
+         given={Jian},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=QH}{%
+         family={Qiu},
+         family_i={Q\bibinitperiod},
+         given={Hanxing},
+         given_i={H\bibinitperiod},
+      }}%
+      {{hash=ZW}{%
+         family={Zhang},
+         family_i={Z\bibinitperiod},
+         given={Wei},
+         given_i={W\bibinitperiod},
+      }}%
+      {{hash=XJ}{%
+         family={Xie},
+         family_i={X\bibinitperiod},
+         given={Jianfang},
+         given_i={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HY+1}
+    \strng{fullhash}{HYWJQHZWXJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{He+11}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{booktitle}{Proceedings - 4th International Congress on Image and
+  Signal Processing, CISP 2011}
+    \field{title}{{A research of pavement potholes detection based on
+  three-dimensional projection transformation}}
+    \field{annotation}{%
+    [5]%
+    }
+    \field{year}{2011}
+  \endentry
+
+  \entry{Hegde2015}{inproceedings}{}
+    \name{author}{3}{}{%
+      {{hash=HS}{%
+         family={Hegde},
+         family_i={H\bibinitperiod},
+         given={Shambhu},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Mekali},
+         family_i={M\bibinitperiod},
+         given={Harish},
+         given_i={H\bibinitperiod},
+      }}%
+      {{hash=VG}{%
+         family={Varaprasad},
+         family_i={V\bibinitperiod},
+         given={Golla},
+         given_i={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HS+1}
+    \strng{fullhash}{HSMHVG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Heg+15}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{booktitle}{2014 IEEE International Conference on Vehicular
+  Electronics and Safety, ICVES 2014}
+    \field{title}{{Pothole detection and inter vehicular communication}}
+    \field{annotation}{%
+    [6]%
+    }
+    \field{year}{2015}
+  \endentry
+
+  \entry{Jang}{inproceedings}{}
+    \name{author}{4}{}{%
+      {{hash=JJ}{%
+         family={Jang},
+         family_i={J\bibinitperiod},
+         given={Jinwoo},
+         given_i={J\bibinitperiod},
+      }}%
+      {{hash=SAW}{%
+         family={Smyth},
+         family_i={S\bibinitperiod},
+         given={Andrew\bibnamedelima W},
+         given_i={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yang},
+         family_i={Y\bibinitperiod},
+         given={Yong},
+         given_i={Y\bibinitperiod},
+      }}%
+      {{hash=CD}{%
+         family={Cavalcanti},
+         family_i={C\bibinitperiod},
+         given={Dave},
+         given_i={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{JJ+1}
+    \strng{fullhash}{JJSAWYYCD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Jan+15}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{booktitle}{2015 IEEE Conference on Computer Communications Workshops
+  (INFOCOM WKSHPS)}
+    \field{title}{{Road surface condition monitoring via multiple
+  sensor-equipped vehicles}}
+    \field{annotation}{%
+    [11]%
+    }
+    \field{year}{2015}
+  \endentry
+
+  \entry{Kattan2014}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=KA}{%
+         family={Kattan},
+         family_i={K\bibinitperiod},
+         given={Ali},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=AMF}{%
+         family={Aboalmaaly},
+         family_i={A\bibinitperiod},
+         given={Mohammed\bibnamedelima Faiz},
+         given_i={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KAAMF1}
+    \strng{fullhash}{KAAMF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{KA14}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{booktitle}{Proceedings of the 11th International Conference on
+  Electronics, Computer and Computation, ICECCO 2014}
+    \field{title}{{A smartphone-cloud application as an aid for street safety
+  inventory}}
+    \field{annotation}{%
+    [12]%
+    }
+    \field{year}{2014}
+  \endentry
+
+  \entry{Madli2015}{article}{}
+    \name{author}{4}{}{%
+      {{hash=MR}{%
+         family={Madli},
+         family_i={M\bibinitperiod},
+         given={Rajeshwari},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Hebbar},
+         family_i={H\bibinitperiod},
+         given={Santosh},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Pattar},
+         family_i={P\bibinitperiod},
+         given={Praveenraj},
+         given_i={P\bibinitperiod},
+      }}%
+      {{hash=GV}{%
+         family={Golla},
+         family_i={G\bibinitperiod},
+         given={Varaprasad},
+         given_i={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MR+1}
+    \strng{fullhash}{MRHSPPGV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Mad+15}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{title}{{Automatic Detection and Notification of Potholes and Humps
+  on Roads to Aid Drivers}}
+    \field{journaltitle}{IEEE Sensors Journal}
+    \field{annotation}{%
+    [7]%
+    }
+    \field{year}{2015}
+  \endentry
+
+  \entry{Mednis2011}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=MA}{%
+         family={Mednis},
+         family_i={M\bibinitperiod},
+         given={Artis},
+         given_i={A\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Strazdins},
+         family_i={S\bibinitperiod},
+         given={Girts},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=ZR}{%
+         family={Zviedris},
+         family_i={Z\bibinitperiod},
+         given={Reinholds},
+         given_i={R\bibinitperiod},
+      }}%
+      {{hash=KG}{%
+         family={Kanonirs},
+         family_i={K\bibinitperiod},
+         given={Georgijs},
+         given_i={G\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Selavo},
+         family_i={S\bibinitperiod},
+         given={Leo},
+         given_i={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MA+1}
+    \strng{fullhash}{MASGZRKGSL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Med+11}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{2011 International Conference on Distributed Computing in
+  Sensor Systems and Workshops, DCOSS'11}
+    \field{title}{{Real time pothole detection using Android smartphones with
+  accelerometers}}
+    \field{annotation}{%
+    [8]%
+    }
+    \field{year}{2011}
+  \endentry
+
+  \entry{Moazzam2013}{inproceedings}{}
+    \name{author}{5}{}{%
+      {{hash=MI}{%
+         family={Moazzam},
+         family_i={M\bibinitperiod},
+         given={I.},
+         given_i={I\bibinitperiod},
+      }}%
+      {{hash=KK}{%
+         family={Kamal},
+         family_i={K\bibinitperiod},
+         given={K.},
+         given_i={K\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Mathavan},
+         family_i={M\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=US}{%
+         family={Usman},
+         family_i={U\bibinitperiod},
+         given={S.},
+         given_i={S\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Rahman},
+         family_i={R\bibinitperiod},
+         given={M.},
+         given_i={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MI+1}
+    \strng{fullhash}{MIKKMSUSRM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Moa+13}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{booktitle}{IEEE Conference on Intelligent Transportation Systems,
+  Proceedings, ITSC}
+    \field{title}{{Metrology and visualization of potholes using the microsoft
+  kinect sensor}}
+    \field{annotation}{%
+    [3]%
+    }
+    \field{year}{2013}
+  \endentry
+
+  \entry{Yu2011}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=YX}{%
+         family={Yu},
+         family_i={Y\bibinitperiod},
+         given={X.},
+         given_i={X\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Salari},
+         family_i={S\bibinitperiod},
+         given={E.},
+         given_i={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YXSE1}
+    \strng{fullhash}{YXSE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{YS11}
+    \field{sortinit}{Y}
+    \field{sortinithash}{Y}
+    \field{booktitle}{IEEE International Conference on Electro Information
+  Technology}
+    \field{title}{{Pavement pothole detection and severity measurement using
+  laser imaging}}
+    \field{annotation}{%
+    [4]%
+    }
+    \field{year}{2011}
+  \endentry
+
+  \entry{Zhang}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZZ}{%
+         family={Zhang},
+         family_i={Z\bibinitperiod},
+         given={Zhen},
+         given_i={Z\bibinitperiod},
+      }}%
+      {{hash=AX}{%
+         family={Ai},
+         family_i={A\bibinitperiod},
+         given={Xiao},
+         given_i={X\bibinitperiod},
+      }}%
+      {{hash=CCK}{%
+         family={Chan},
+         family_i={C\bibinitperiod},
+         given={C\bibnamedelima K},
+         given_i={C\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=DN}{%
+         family={Dahnoun},
+         family_i={D\bibinitperiod},
+         given={Naim},
+         given_i={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZZ+1}
+    \strng{fullhash}{ZZAXCCKDN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelalpha}{Zha+14}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{title}{{An efficient algorithm for pothole detection using stereo
+  vision}}
+    \field{journaltitle}{IEEE International Conference on Acoustic, Speech and
+  Signal Processing (ICASSP)}
+    \field{annotation}{%
+    [1]%
+    }
+    \field{year}{2014}
+  \endentry
+\endsortlist
+\endinput

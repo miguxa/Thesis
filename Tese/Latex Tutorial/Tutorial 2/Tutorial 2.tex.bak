@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+%como escrever índices superiores e inferiores
+
+\begin{document}
+
+índices em cima:
+$$2x^3$$
+$$2x^{34}$$
+$$2x^34$$
+%ver a diferença entre ter chavetas ou não
+$$2x^{3x+4}$$
+$$2x^{3x^4+5}$$
+
+índices em baixo:
+$$x_1$$
+$$x_{12}$$
+$${x_1}_{12}$$
+
+itálico:
+$$\pi$$
+$$\alpha$$
+$$\gamma$$
+$$A=\pi \times r^2$$
+
+funções trigonométricas:
+$$y=\sin (x)$$
+$$y=\tan (x)$$
+$$y=\cos (x)$$
+$$y=\log (x)$$
+$$y=\ln (x)$$
+$$y=\sqrt{2}$$
+$$y=\sqrt[3]{8}$$
+
+frações:
+
+Cerca de $\frac{2}{3}$ do copo está cheio.
+
+Isto é texto $\displaystyle{\frac{2}{5}}$ que continua aqui.
+%o comando acima torna a fração do tamanho do texto
+
+$$\frac{x}{x^2+x+1}$$
+$$\frac{\sqrt[2]{x+1}}{x+2}$$
+$$\frac{\frac{1}{1+x}}{2-3x}$$
+\end{document}
