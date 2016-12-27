@@ -1,0 +1,2 @@
+PrintSinal KEYWORD1
+PrintTimer KEYWORD2

@@ -1,7 +1,10 @@
-#include <SD.h>
 #include <SparkFun_ADXL345.h>
+#include <Lib.h>
+
 
 ADXL345 adxl = ADXL345();
+Prints P;
+int tmr=0;
 int TAPS[120]={0};
 
 void setup()
@@ -9,14 +12,6 @@ void setup()
   int x, y, z, inc;
   
   Serial.begin(9600);  
-  Serial.println("Initializing SD card...");
-  if (!SD.begin(10))
-    Serial.println("Card failed, or not present");
-  else {
-    Serial.println("card initialized.");
-    if (SD.exists("datalog.csv"))
-      SD.remove("datalog.csv");
-  }
   
   Serial.println();
   
@@ -48,7 +43,7 @@ void loop()
 {
   int x, y, z, inc, aux;
   int VALS[60]={0};
-  int ret;
+  int ret=0;
   
   for(inc=30; inc<120; inc = inc+3) {
     adxl.readAccel(&x, &y, &z);
@@ -74,27 +69,15 @@ void loop()
         VALS[2+aux]=TAPS[inc+aux+2];
       }
       
-      /**************************************************/
-      
-      File fich = SD.open("datalog.csv", FILE_WRITE);
-      if (fich) {
-        for (aux=0; aux<60; aux=aux+3) {
-          fich.print(VALS[aux+0],DEC);
-          fich.print("; ");
-          fich.print(VALS[aux+1],DEC);
-          fich.print("; ");
-          fich.print(VALS[aux+2],DEC);
-          fich.println("");
-        }
-        fich.close();
+      for (aux=0; aux<60; aux=aux+3) {
+        P.PrintTimer(tmr);
+        P.PrintSinal(VALS[aux+0]);
+        P.PrintSinal(VALS[aux+1]);
+        P.PrintSinal(VALS[aux+2]);
+        Serial.println("");
       }
-      else 
-        Serial.println("error opening datalog.csv");
-
-      /**************************************************/
       
       break;
-      
     }  
   }
 
