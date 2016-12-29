@@ -20,21 +20,7 @@ void setup()
   
   Serial.println();
   
-  Serial.println("Initializing accelerometer...");
-  adxl.powerOn(); 
-  adxl.setRangeSetting(2);   
-  adxl.setSpiBit(0);                
-  adxl.setTapDetectionOnXYZ(0, 0, 1); 
-  adxl.setTapThreshold(250);         
-  adxl.setTapDuration(40);           
-  //adxl.setDoubleTapLatency(80);      
-  //adxl.setDoubleTapWindow(200);       
-  adxl.setFreeFallThreshold(7);       
-  adxl.setFreeFallDuration(30);       
-  adxl.FreeFallINT(1);
-  //adxl.doubleTapINT(1);
-  adxl.singleTapINT(1);
-  Serial.println("Accelerometer initialized");
+  AccelInit();
 
   for (inc=0; inc<30; inc=inc+3) {
     adxl.readAccel(&x, &y, &z);
@@ -112,6 +98,24 @@ void loop()
     delay(1000);
     exit(1);  
   }
+}
+
+void AccelInit() {
+  Serial.println("Initializing accelerometer...");
+  adxl.powerOn(); 
+  adxl.setRangeSetting(2);   
+  adxl.setSpiBit(0);                
+  adxl.setTapDetectionOnXYZ(0, 0, 1); 
+  adxl.setTapThreshold(250);         
+  adxl.setTapDuration(40);           
+  //adxl.setDoubleTapLatency(80);      
+  //adxl.setDoubleTapWindow(200);       
+  adxl.setFreeFallThreshold(7);       
+  adxl.setFreeFallDuration(30);       
+  adxl.FreeFallINT(1);
+  //adxl.doubleTapINT(1);
+  adxl.singleTapINT(1);
+  Serial.println("Accelerometer initialized");
 }
 
 int ADXL_INTS() {
