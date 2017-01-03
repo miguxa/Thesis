@@ -26,25 +26,29 @@ void loop()
     TAPS[inc+0]=x;
     TAPS[inc+1]=y;
     TAPS[inc+2]=z;
-    delay(5);
-    if (ret == 0) {
-      ret = ADXL_INTS();
+    delay(10);
+    if (ret == 0 && inc >2) {
+      ret = ADXL_INTS(TAPS[inc-3], TAPS[inc-2], TAPS[inc-1], x, y, z);
+      if(ret != 0) 
+        ret=(inc/3);
     }
   }
 
   if (ret) {
-    Serial.println("Timer X   Y   Z");
+    Serial.println(ret);
+    Serial.println("Timer   X   Y   Z");
     for(inc=0; inc<450; inc = inc+3) {
       P.PrintTimer(tmr);
       P.PrintSinal(TAPS[inc+0]);
       P.PrintSinal(TAPS[inc+1]);
       P.PrintSinal(TAPS[inc+2]);
+      Serial.println();
     }
   }
   
   Serial.println("----------");
   
-  if (ret == 2) {
+  if (ret != 0) {
     delay(1000);
     exit(1);  
   }
@@ -68,21 +72,10 @@ void AccelInit() {
   Serial.println("Accelerometer initialized");
 }
 
-int ADXL_INTS() {
-  byte interrupts = adxl.getInterruptSource();
-  
-  // Free Fall Detection
-  if(adxl.triggered(interrupts, ADXL345_FREE_FALL)){
-    Serial.println("*** FREE FALL ***");
-    return 1;
-  } 
-  
-  // Tap Detection
-  if(adxl.triggered(interrupts, ADXL345_SINGLE_TAP)){
-    Serial.println("*** TAP ***");
+int ADXL_INTS(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) {  
+  if( abs(oldX-newX)>300 && abs(oldZ-newZ)>300 && abs(oldZ-newZ)>300 ) 
     return 2;
-  }
 
   else
-    return 3;
+    return 0;
 }

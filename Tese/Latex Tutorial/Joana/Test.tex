@@ -1,6 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
+\usepackage{amsmath}
 \setlength{\columnsep}{2cm}
 %Este é o pacote dos acentos.
 %Muito necessário ter!!
@@ -53,4 +54,176 @@ b) $2x-\frac{4-x}{3}<=5x$
 \begin{center} 
 {\large $\frac{5^{\frac{1}{6}}\times5^{\frac{1}{2}}}{(\sqrt[3]{5})^{-2}}$}
 \end{center}
+
+\break
+{\large 1-}
+
+\vspace{5mm}
+a)\hspace{5mm} $ \frac {(3 - \sqrt{12})^{2} }  {(2 + 3 \sqrt{3} )}=$
+   $ \frac{(3-\sqrt{12})(3-\sqrt{12})}{(2+3\sqrt{3})}=$
+   $ \frac{(9-6\sqrt{12}+12)}{(2+3\sqrt{3})}=$
+   $ \frac{(21-6\sqrt{12})}{(2+3\sqrt{3})}=$
+   $ \frac{(21-6\sqrt{12})(2-3\sqrt{3})}{(2+3\sqrt{3})(2-3\sqrt{3})}=$
+   $= \frac{42-63\sqrt{3}-12\sqrt{12}+18\sqrt{36}}{4-9\times3}=$
+   $ \frac{42-63\sqrt{3}-12\sqrt{4\times3}+18\times6}{4-27}=$
+   $ \frac{42+108-63\sqrt{3}-12\times2\sqrt{3}}{-23}=$
+   $= \frac{150-87\sqrt{3}}{-23}=$
+   $\frac{87 \sqrt{3} - 150}{23}$ 
+
+\vspace{5mm}
+b)\hspace{5mm} $\frac{(1+\sqrt{27})^2}{(1+5\sqrt{3})}=$
+	$ \frac{1+2\sqrt{27}+27}{(1+5\sqrt{3})}=$
+	$ \frac{(28+2\sqrt{27})}{(1+5\sqrt{3})}=$
+	$ \frac{(28+2\sqrt{27})(1-5\sqrt{3})}{(1+5\sqrt{3})(1-5\sqrt{3})}=$
+	$ \frac{28-140\sqrt{3}+2\sqrt{27}-10\sqrt{81}}{1-25\times3}=$
+	$= \frac{28-140\sqrt{3}+2\sqrt{9\times3}-10\times9}{1-75}=$
+	$ \frac{28-90-140\sqrt{3}+2\times3\sqrt{3}}{-74}=$
+	$ \frac{-62-134\sqrt{3}}{-74}=$
+	$ \frac{31+67\sqrt{3}}{37}$
+
+\vspace{5mm}
+{\large 2-}
+
+a)
+
+\begin{table}[htbp]
+\centering
+\label{my-label}
+\begin{tabular}{c|cccc}
+  & 1 & J                        & M                           & 56         \\
+2 &   & 2                        & 4+2J                        & 8+4J+2M    \\ \hline
+  & 1 & 2+J                      & \multicolumn{1}{c|}{4+2J+M} & 64+4J+2M=0 \\ \cline{5-5} 
+4 &   & 4                        & 24+4J                       &            \\ \cline{1-4}
+  & 1 & \multicolumn{1}{c|}{6+J} & 28+6J+M=0                   &            \\ \cline{4-4}
+\end{tabular}
+\end{table}
+
+\begin{minipage}{0.3\textwidth}
+	\[\left\{
+		\begin{array}{lr}
+    		64+4J+2M=0\\
+    		28+6J+M=0
+  		\end{array}
+	\right.
+	\]
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		-------\\
+    		M=-28-6J
+  		\end{array}
+	\right.
+	\]					
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		64+4J-56-12J=0\\
+    		-----------
+  		\end{array}
+	\right.
+	\]			
+\end{minipage}
+
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		8=8J\\
+    		----
+  		\end{array}
+	\right.
+	\]
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		J=1\\
+    		28+6+M=0
+  		\end{array}
+	\right.
+	\]					
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		J=1\\
+    		M=-34
+  		\end{array}
+	\right.
+	\]			
+\end{minipage}
+
+\vspace{5mm}
+Substituindo J no ultimo resultado do Ruffini vem:
+$x + (6 +1) = 0$ \hspace{1mm} $(=)$ \hspace{1mm} $x = -7$
+e obtém-se a ultima raiz.
+\vspace{5mm}
+
+b)
+\begin{table}[htbp]
+\centering
+\label{my-label}
+\begin{tabular}{c|cccc}
+   & 1 & -7                      & -J                         & -M         \\
+5  &   & 5                       & -10                        & -5J-50     \\ \hline
+   & 1 & -2                      & \multicolumn{1}{c|}{-J-10} & -M-5J-50=0 \\ \cline{5-5} 
+-1 &   & -1                      & 4                          &            \\ \cline{1-4}
+   & 1 & \multicolumn{1}{c|}{-3} & -J-7=0                     &            \\ \cline{4-4}
+\end{tabular}
+\end{table}
+\break
+
+\begin{minipage}{0.3\textwidth}
+	\[\left\{
+		\begin{array}{lr}
+    		-M-5J-50=0\\
+    		-j-7=0
+  		\end{array}
+	\right.
+	\]
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		-------\\
+    		J=-7
+  		\end{array}
+	\right.
+	\]					
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		-M+35-50\\
+    		-----------
+  		\end{array}
+	\right.
+	\]			
+\end{minipage}
+
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		-M-15=0\\
+    		------
+  		\end{array}
+	\right.
+	\]
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+	\[(=)\left\{
+		\begin{array}{lr}
+    		M=-15\\
+    		J=-7
+  		\end{array}
+	\right.
+	\]					
+\end{minipage}
+
+\vspace{5mm}
+A partir do último resultado do Ruffini, aparece:
+$x-3=0$ \hspace{1mm} $(=)$ \hspace{1mm} $x=3$
+
+
 \end{document}

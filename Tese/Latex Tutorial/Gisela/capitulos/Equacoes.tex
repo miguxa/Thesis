@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{commath}
+\begin{document}
+	{\footnotesize
+	\begin{equation}
+	\begin{array}{cc}
+		Q^{\phi 2}_{C_1}+Q^{\phi 2}_{C_0}+Q^{\phi 2}_{C_{P1}}+\Delta I_{out} = Q^{\phi 1}_{C_1}+Q^{\phi 1}_{C_0}+Q^{\phi 1}_{C_{P1}}\\ [1em]	
+		
+		V_{out}[n-\frac{1}{2}]\times(C_1+C_{P1}+C_0)+(\frac{T_{clock}}{2})\times I_{out} = Vin\times(C_1+C_{P1})+V_{out}[n-1]\times(C_0-C_1)
+	\end{array}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+	\begin{array}{cc}
+		-Q^{\phi 1}_{C_1}+Q^{\phi 1}_{C_0}+Q^{\phi 1}_{C_{P2}}+\Delta I_{out} = -Q^{\phi 2}_{C_1}+Q^{\phi 2}_{C_0}\\ [1em]	
+		
+		-(Vin-V_{out}[n])\times C_1+V_{out}[n]\times (C_0+C_{P2})+(\frac{T_{clock}}{2})\times I_{out} = V_{out}][n-\frac{1}{2}]\times(-C_1+C_0)
+	\end{array}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+	V_{out}=\frac{\frac{1}{2}(C_1+C_{_{out}}+C_{P1})(-I_{out}T_{clock}+2C_1V_{in})+(C_1-C_{out})(\frac{I_{out}T_{clock}}{2}-(C_1+C_{P1})V_{in})}
+	{-(C_1-C_{out})(C_1-C_{out})+(C_1+C_{out}+C_{P1})(C_1+C_{out}+C_{P2})}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+	V_{out}=\frac{-I_{out}\times T_{clock}+(2\times C_1+C_{P2})\times V_{in}}
+	{4C_1+C_{P1}+C_{P2}}
+	\end{equation}
+	
+	{\footnotesize
+	\begin{equation}
+	F_{clock}=\frac{I_{out}}{2\times C_1\times	V_{in}+C_{P2}\times (V_{in}-2\times V_{out})-C_1\times V_0-3\times C_1\times V_{out}}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+	\begin{array}{cccc}
+	(V_{in}-V_{out})C_1+V_{in}C_{P1}=V_{out}(C_1+C_{P1})+\Delta Q^{\phi 2}_{out}\\ [1em]
+	0=\Delta Q^{\phi 2}_{in}\\ [1em]
+	-V_{out}C_1=(V_{out}-V_{in})C_1+V_{out}C_{P2}+\Delta Q^{\phi 1}_{out}\\ [1em]
+	V_{out}(C_1+C_{P1})=(V_{in}-V_{out})C_1+V_{in}C_{P1}+\Delta Q^{\phi 1}_{in}
+	\end{array}
+	\end{equation} }
+	||||||||||||||||||||||||||||||||||||||
+	
+	{\footnotesize
+	\begin{equation}
+	\begin{array}{cccc}
+	\Delta Q^{\phi 1}_{in}=-C_1V_{in}-C_{P1}V_{in}+2C_1V_{out}+C_{P1}V_{out}\\ [1em]
+	\Delta Q^{\phi 2}_{in}=0\\ [1em]
+	Q^{\phi 1}_{out}=C_1V_{in}-2C_1V_{out}-C_{P2}V_{out}\\ [1em]
+	\Delta Q^{\phi 2}_{out}=C_1V_{in}+C_{P1}V_{in}-2C_1V_{out}-C_{P1}V_{out}
+	\end{array}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+	\begin{array}{ccc}
+	\eta=\frac{|P_{out}|}{|P_{in}|}=\\ [1em]
+	\frac{|V_{out}\times (C_1V_{in}-2C_1V_{out}-C_{P2}V_{out}+C_1V_{in}+C_{P1}V_{in}-2C_1V_{out}-C_{P1}V_{out})|}{|V_{in}\times(-C_1V_{in}-C_{P1}V_{in}+2C_1V_{out}+C_{P1}V_{out}+0)|}=\\[1em]
+	\abs{\frac{V_{out}\times (-(2C_1+C_{P1})V_{in}+V_{out}(4C_1+C_{P1}+C_{P2}))}{V_{in}\times ((C_1+C_{P1})V_{in}-(2C_1+C_{P1})V_{out})}}
+	\end{array}
+	\end{equation} }
+	
+	%ACABA AQUI A PRIMEIRA IMAGEM
+	
+	{\footnotesize
+	\begin{equation}
+	\begin{array}{cc}
+		Q^{\phi 2}_{C1}+Q^{\phi 2}_{C2}+Q^{\phi 2}_{C0}+\Delta R = Q^{\phi 1}_{C1}+Q^{\phi 1}_{C2}+Q^{\phi 1}_{C0}\\ [1em]
+		V_{out}[n-\frac{1}{2}](C_1+C_2+C_0+\frac{T_{clock}}{2\times R_L})=(V_{in}-V_a)C_1+(V_a-V_{out}[n-1])C_2+V_{out}[n-1]C_0
+	\end{array}
+	\end{equation} }
+	
+	{\footnotesize	
+	\begin{equation}
+	\begin{array}{cc}
+		-Q^{\phi 1}_{C1}+Q^{\phi 1}_{C2}=-Q^{\phi 2}_{C1}+Q^{\phi 2}_{C2}\\ [1em]
+		-(V_{in}-V_a)C_1+(V_a-V_{out}[n])C_2=V_{out}[n-\frac{1}{2}](-C_1+C_2)
+	\end{array}
+	\end{equation} }
+	
+	{\footnotesize	
+	\begin{equation}
+	\begin{array}{cc}
+		-Q^{\phi 1}_{C2}+Q^{\phi 1}_{C0}+\Delta R=-Q^{\phi 2}_{C2}+Q^{\phi 2}_{C0}\\ [1em]
+		-(V_{a}-V_{out}[n])C_2+V_{out}[n]\times (C_0+\frac{T_{clock}}{2\times R_L})=V_{out}[n-\frac{1}{2}](-C_2+C_0)
+	\end{array}
+	\end{equation} }
+	
+	{\footnotesize	
+	\begin{equation}
+		\frac{V_{out}}{V_{in}}=\frac{2\times C_1\times C_2\times F_{clock}\times R_L\times (1+6\times C_0\times F_{clock}\times R_L)}{C_2+4C_2C_0F_{clock}R_L+C_1(1+4C_0F_{clock}R_L+2C_2F_{clock}R_L(5+18C_0F_{clock}R_L))}
+	\end{equation}
+	
+	{\footnotesize
+	\begin{equation}
+		\frac{V_{out}}{V_{in}}=\frac{3\times C_1\times C_2\times F_{clock}\times R_L}{C_1+C_2+9\times C_1\times C_2\times F_{clock}\times R_L}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+		F_{clock}=\frac{(C_1+C_2)V_{out}}{3\times C_1\times C_2\times R_L\times V_{in}-9\times C_1\times C_2\times R_L\times V_{out}}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+		F_{clock}=\frac{2\times V_{out}}{3\times C\times R_L\times V_{in}-9\times C\times R_L\times V_{out}}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+	\begin{array}{ccccc}
+		(V_{in}-V_a)\times C_1-(V_a-V_{out})\times C_2 = V_{out}\times (C_1+C_2)+\Delta Q^{\phi 2}_{out}\\ [1em]
+		-(V_{in}-V_a)\times C_1+(V_a-V_{out})\times C_2 = V_{out}\times (C_2-C_1)\\ [1em]
+		\Delta Q^{\phi 2}_{in}=0\\ [1em]
+		-V_{out}\times C_2 = (V_{out}-V_a)\times C_2+\Delta^{\phi 1}_{out} \\ [1em]
+		V_{out}\times C_1=(V_{in}-V_a)\times C_1+\Delta^{\phi 1}_{out}
+	\end{array}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+	\begin{array}{cccc}
+	\Delta Q^{\phi 2}_{out}=(V_{in}-3\times V_{out})\times C \\ [1em]
+	\Delta Q^{\phi 2}_{in}=0 \\ [1em]
+	\Delta Q^{\phi 1}_{out}=\frac{1}{2}\times (V_{in}-3\times V_{out})\times C \\ [1em]
+	\Delta Q^{\phi 1}_{in}=-\frac{1}{2}\times(V_{in}-3\times V_{out})\times C
+	\end{array}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+	\eta=\frac{\abs{P_{out}}}{\abs{P_{in}}}=
+	\frac{\abs{V_{out}\times (\frac{1}{2}\times(V_{in}-3\times V_{out})\times C+(V_{in}-3\times V_{out})\times C)}}
+	{\abs{V_{in}\times (-\frac{1}{2}\times (V_{in}-3\times V_{out})\times C+0)}}=
+	\abs{-\frac{3\times V_{out}}{V_{in}}}
+	\end{equation} }
+	
+	{\footnotesize
+	\begin{equation}
+		\eta=\frac{3\times V_{out}}{V_{in}}
+	\end{equation} }
+	
+\end{document}

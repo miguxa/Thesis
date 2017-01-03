@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\graphicspath{ {fig/} }
+\usepackage{subcaption}
+\usepackage{subfiles}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{xr}
+\geometry{top = 30mm}
+\graphicspath{ {fig/} }
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabela}
+\renewcommand{\contentsname}{Índice}
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\listtablename}{Índice de tabelas}
+
+\begin{document}
+	\subfile{capitulos/Capa}
+	\break
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\break
+	\subfile{capitulos/Conversor}
+	\break
+	\subfile{capitulos/Comparador}	
+	\break
+	
+	\subfile{capitulos/Malha}
+
+\end{document}
