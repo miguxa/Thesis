@@ -41,6 +41,6 @@ int Prints::PrintTimer(int &tmr){
   else if (tmr < 10000)
     Serial.print("0");
   Serial.print(tmr);
-  Serial.print(" ");
+  Serial.print("; ");
   return tmr;
 }

@@ -19,7 +19,7 @@ void loop()
 {
   int x, y, z, inc, aux;
   int TAPS[450]={0};
-  int ret=0;
+  int ret=0, T=0;
   
   for(inc=0; inc<450; inc = inc+3) {
     adxl.readAccel(&x, &y, &z);
@@ -30,13 +30,16 @@ void loop()
     if (ret == 0 && inc >2) {
       ret = ADXL_INTS(TAPS[inc-3], TAPS[inc-2], TAPS[inc-1], x, y, z);
       if(ret != 0) 
-        ret=(inc/3);
+        T=(inc/3);
     }
   }
 
   if (ret) {
+    Serial.print(T);
+    Serial.print("  ");
     Serial.println(ret);
-    Serial.println("Timer   X   Y   Z");
+    
+    Serial.println("Timer  ; X  ; Y  ; Z");
     for(inc=0; inc<450; inc = inc+3) {
       P.PrintTimer(tmr);
       P.PrintSinal(TAPS[inc+0]);
@@ -73,8 +76,20 @@ void AccelInit() {
 }
 
 int ADXL_INTS(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) {  
-  if( abs(oldX-newX)>300 && abs(oldZ-newZ)>300 && abs(oldZ-newZ)>300 ) 
+  if( abs(oldX-newX)>500 && abs(oldY-newY)>500 && abs(oldZ-newZ)>500 ) 
+    return 5;
+
+  else if( abs(oldX-newX)>400 && abs(oldY-newY)>400 && abs(oldZ-newZ)>400 ) 
+    return 4;
+
+  else if( abs(oldX-newX)>300 && abs(oldY-newY)>300 && abs(oldZ-newZ)>300 ) 
+    return 3;
+
+  else if( abs(oldX-newX)>200 && abs(oldY-newY)>200 && abs(oldZ-newZ)>200 ) 
     return 2;
+
+  else if( abs(oldX-newX)>100 && abs(oldY-newY)>100 && abs(oldZ-newZ)>100 ) 
+    return 1;
 
   else
     return 0;
