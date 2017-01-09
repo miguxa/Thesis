@@ -1,5 +1,6 @@
 #include <SparkFun_ADXL345.h>
 #include <Lib.h>
+#include <SD.h>
 
 
 ADXL345 adxl = ADXL345();
@@ -11,6 +12,17 @@ void setup()
   int x, y, z, inc;
   
   Serial.begin(9600);  
+  
+  Serial.println("Initializing SD card...");
+  if (!SD.begin(10))
+    Serial.println("Card failed, or not present");
+  else {
+    Serial.println("card initialized.");
+    if (SD.exists("datalog.txt"))
+      SD.remove("datalog.txt");
+  }
+  
+  Serial.println();
   
   AccelInit();
 }
@@ -38,15 +50,24 @@ void loop()
     Serial.print(T);
     Serial.print("  ");
     Serial.println(ret);
+    File fich = SD.open("Ficheiro.xls", FILE_WRITE);
     
     Serial.println("Timer  ; X  ; Y  ; Z");
+    fich.println("Timer  ; X  ; Y  ; Z");
     for(inc=0; inc<450; inc = inc+3) {
       P.PrintTimer(tmr);
       P.PrintSinal(TAPS[inc+0]);
       P.PrintSinal(TAPS[inc+1]);
       P.PrintSinal(TAPS[inc+2]);
       Serial.println();
+      fich.print(TAPS[inc+0]);
+      fich.print(";");
+      fich.print(TAPS[inc+0]);
+      fich.print(";");
+      fich.print(TAPS[inc+0]);
+      fich.println();
     }
+    fich.close();
   }
   
   Serial.println("----------");
