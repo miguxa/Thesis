@@ -7,8 +7,8 @@ class Prints
 {
   public:
     Prints();
-    void PrintSinal(int val);
-	int PrintTimer(int &tmr);
+	String Timer(int tmr);
+	String Sinal(int val);
 };
 
 #endif

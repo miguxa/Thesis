@@ -23,10 +23,10 @@ void setup()
 void loop()
 {
   int x, y, z, aux;
-  int TAPS[120]={0};
+  int TAPS[123]={0};
   int ret=0, T=0;
   
-  for(tmr=0; tmr<120; tmr = tmr+3) {
+  for(tmr=0; tmr<123; tmr = tmr+3) {
     adxl.readAccel(&x, &y, &z);
     TAPS[tmr+0]=x;
     TAPS[tmr+1]=y;
@@ -44,13 +44,13 @@ void loop()
     Serial.print("  ");
     Serial.println(ret);
     
-    Serial.println("Timer  ; X  ; Y  ; Z");
+    Serial.println("Tempo ;  X   ;  Y   ; Z");
     
-    for(tmr=0; tmr<40; tmr++) {
-      P.PrintTimer(tmr);
-      P.PrintSinal(TAPS[(tmr*3)+1]);
-      P.PrintSinal(TAPS[(tmr*3)+2]);
-      P.PrintSinal(TAPS[(tmr*3)+3]);
+    for(tmr=0; tmr<41; tmr++) {
+      Serial.print(P.Timer(tmr));
+      Serial.print(P.Sinal(TAPS[(tmr*3)+0]));
+      Serial.print(P.Sinal(TAPS[(tmr*3)+1]));
+      Serial.print(P.Sinal(TAPS[(tmr*3)+2]));
       Serial.println();
     }
     delay(1000);
@@ -67,7 +67,7 @@ void loop()
 }
 
 void AccelInit() {
-  Serial.println("Initializing accelerometer...");
+  Serial.println("A inicializar acelerometro");
   adxl.powerOn(); 
   adxl.setRangeSetting(2);   
   adxl.setSpiBit(0);                
@@ -81,7 +81,7 @@ void AccelInit() {
   adxl.FreeFallINT(1);
   //adxl.doubleTapINT(1);
   adxl.singleTapINT(1);
-  Serial.println("Accelerometer initialized");
+  Serial.println("Acelerometro inicializado");
 }
 
 int ADXL_INTS(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) {  
@@ -105,12 +105,12 @@ int ADXL_INTS(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) 
 }
 
 void SD_init() {
-  Serial.print("Initializing SD card...");
+  Serial.println("A inicializar cartao SD");
   // see if the card is present and can be initialized:
   if (!SD.begin(10))
-    Serial.println("Card failed, or not present");
+    Serial.println("Falha na leitura do cartao");
   else {
-    Serial.println("card initialized.");
+    Serial.println("Cartao inicializado");
     if (SD.exists("datalog.txt"))
       SD.remove("datalog.txt");
   }
@@ -119,17 +119,16 @@ void SD_init() {
 void WriteSD (int TAPS[]) {  
   File fich = SD.open("datalog.txt", FILE_WRITE);
   if (fich){
-    Serial.println("HELLO");
-    for(tmr=0; tmr<40; tmr++) {
-      fich.print(tmr);
-      fich.print("; ");
-      fich.print(TAPS[tmr*3]+1);
-      fich.print("; ");
-      fich.print(TAPS[tmr*3]+2);
-      fich.print("; ");
-      fich.print(TAPS[tmr*3]+3);
+    Serial.println("A escrever no cartao SD");
+    fich.println("Tempo ;  X   ;  Y   ; Z");
+    for(tmr=0; tmr<41; tmr++) {
+      fich.print(P.Timer(tmr));
+      fich.print(P.Sinal(TAPS[(tmr*3)+0]));
+      fich.print(P.Sinal(TAPS[(tmr*3)+1]));
+      fich.print(P.Sinal(TAPS[(tmr*3)+2]));
       fich.println();
     }
+    Serial.println("Escrita no cartao SD concluida");
     fich.close();
   }
   else

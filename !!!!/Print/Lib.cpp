@@ -9,38 +9,36 @@
 
 Prints::Prints(){}
 
-
-void Prints::PrintSinal(int val)
-{
-  if (val >= 0)
-    Serial.print("+");
-  if (val == 0)
-    Serial.print("00");
-  else if (val > 0 && val < 10)
-    Serial.print("00");
-  else if (val >= 10 && val < 100)
-    Serial.print("0");
-  else if (val < 0 && val > -10)
-    Serial.print("-00");
-  else if (val <= -10 && val > -100)
-    Serial.print("-0");
-  if (val < 0 && val > -100)
-    val = val * -1;
-  Serial.print(val);
-  Serial.print(" "); 
+String Prints::Timer(int tmr) {
+	String S;
+	if (tmr < 10)
+		S="0000";
+	  else if (tmr < 100)
+		S="000";
+	  else if (tmr < 1000)
+		S="00";
+	  else if (tmr < 10000)
+		S="0";
+	S = S + tmr;
+	return S;
 }
 
-int Prints::PrintTimer(int &tmr){
-	tmr = tmr + 1;
-  if (tmr < 10)
-    Serial.print("0000");
-  else if (tmr < 100)
-    Serial.print("000");
-  else if (tmr < 1000)
-    Serial.print("00");
-  else if (tmr < 10000)
-    Serial.print("0");
-  Serial.print(tmr);
-  Serial.print("; ");
-  return tmr;
+String Prints::Sinal(int val) {
+  String S = " ; ";
+  if (val >= 0)
+    S=S+"+";
+  if (val == 0)
+    S=S+"00";
+  else if (val > 0 && val < 10)
+    S=S+"00";
+  else if (val >= 10 && val < 100)
+    S=S+"0";
+  else if (val < 0 && val > -10)
+    S=S+"-00";
+  else if (val <= -10 && val > -100)
+    S=S+"-0";
+  if (val < 0 && val > -100)
+    val = val * -1;
+  S=S+val;
+  return S;
 }
