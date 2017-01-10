@@ -111,13 +111,13 @@ void SD_init() {
     Serial.println("Falha na leitura do cartao");
   else {
     Serial.println("Cartao inicializado");
-    if (SD.exists("datalog.txt"))
-      SD.remove("datalog.txt");
+    if (SD.exists("datalog.csv"))
+      SD.remove("datalog.csv");
   }
 }
   
 void WriteSD (int TAPS[]) {  
-  File fich = SD.open("datalog.txt", FILE_WRITE);
+  File fich = SD.open("datalog.csv", FILE_WRITE);
   if (fich){
     Serial.println("A escrever no cartao SD");
     fich.println("Tempo ;  X   ;  Y   ; Z");
