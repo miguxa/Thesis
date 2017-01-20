@@ -48,7 +48,7 @@
     \strng{fullhash}{CCKGYZZDN1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Cha+14}
+    \field{labelyear}{2014}
     \field{sortinit}{C}
     \field{sortinithash}{C}
     \field{booktitle}{EDERC 2014 - Proceedings of the 6th European Embedded
@@ -98,7 +98,7 @@
     \strng{fullhash}{CKLMFXWMWJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Che+11}
+    \field{labelyear}{2011}
     \field{sortinit}{C}
     \field{sortinithash}{C}
     \field{booktitle}{Proceedings of the 2011 6th International ICST Conference
@@ -148,7 +148,7 @@
     \strng{fullhash}{FMMMMAMHMAHAE1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Fou+14}
+    \field{labelyear}{2014}
     \field{sortinit}{F}
     \field{sortinithash}{F}
     \field{title}{{Intelligent road surface quality evaluation using rough
@@ -198,7 +198,7 @@
     \strng{fullhash}{HYWJQHZWXJ1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{He+11}
+    \field{labelyear}{2011}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{booktitle}{Proceedings - 4th International Congress on Image and
@@ -236,7 +236,7 @@
     \strng{fullhash}{HSMHVG1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Heg+15}
+    \field{labelyear}{2015}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{booktitle}{2014 IEEE International Conference on Vehicular
@@ -279,7 +279,7 @@
     \strng{fullhash}{JJSAWYYCD1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Jan+15}
+    \field{labelyear}{2015}
     \field{sortinit}{J}
     \field{sortinithash}{J}
     \field{booktitle}{2015 IEEE Conference on Computer Communications Workshops
@@ -311,7 +311,7 @@
     \strng{fullhash}{KAAMF1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{KA14}
+    \field{labelyear}{2014}
     \field{sortinit}{K}
     \field{sortinithash}{K}
     \field{booktitle}{Proceedings of the 11th International Conference on
@@ -355,7 +355,7 @@
     \strng{fullhash}{MRHSPPGV1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Mad+15}
+    \field{labelyear}{2015}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{title}{{Automatic Detection and Notification of Potholes and Humps
@@ -404,7 +404,7 @@
     \strng{fullhash}{MASGZRKGSL1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Med+11}
+    \field{labelyear}{2011}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{booktitle}{2011 International Conference on Distributed Computing in
@@ -454,7 +454,7 @@
     \strng{fullhash}{MIKKMSUSRM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Moa+13}
+    \field{labelyear}{2013}
     \field{sortinit}{M}
     \field{sortinithash}{M}
     \field{booktitle}{IEEE Conference on Intelligent Transportation Systems,
@@ -486,7 +486,7 @@
     \strng{fullhash}{YXSE1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{YS11}
+    \field{labelyear}{2011}
     \field{sortinit}{Y}
     \field{sortinithash}{Y}
     \field{booktitle}{IEEE International Conference on Electro Information
@@ -530,7 +530,7 @@
     \strng{fullhash}{ZZAXCCKDN1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelalpha}{Zha+14}
+    \field{labelyear}{2014}
     \field{sortinit}{Z}
     \field{sortinithash}{Z}
     \field{title}{{An efficient algorithm for pothole detection using stereo

@@ -12,19 +12,16 @@ Prints::Prints(){}
 String Prints::Timer(int tmr) {
 	String S;
 	if (tmr < 10)
-		S="0000";
-	  else if (tmr < 100)
-		S="000";
-	  else if (tmr < 1000)
 		S="00";
-	  else if (tmr < 10000)
+	else if (tmr < 100)
 		S="0";
 	S = S + tmr;
+	S=S+"; ";
 	return S;
 }
 
 String Prints::Sinal(int val) {
-  String S = " ; ";
+  String S = "";
   if (val >= 0)
     S=S+"+";
   if (val == 0)
@@ -40,5 +37,6 @@ String Prints::Sinal(int val) {
   if (val < 0 && val > -100)
     val = val * -1;
   S=S+val;
+  S=S+"; ";
   return S;
 }
