@@ -6,27 +6,38 @@
 ADXL345 adxl = ADXL345();
 Prints P;
 int TAPS[6]={0};
+int ligado=0;
+String aux;
 
 void setup()
 {
   int x, y, z;
   
   Serial.begin(9600);
-  pinMode(2, INPUT);  
-  //SD_init();  
+  pinMode(2, INPUT);
+  pinMode(3, OUTPUT);
+  digitalWrite(3, LOW);
   AccelInit();
 }
 
 void loop()
 {  
   int ret=0;
-  
+
+  while (Serial.available() > 0) {
+    ligado = Serial.read();
+
+    if (ligado == 73)
+      digitalWrite(3, HIGH);
+
+    if (ligado == 79)
+      digitalWrite(3, LOW);
+  }
+      
   adxl.readAccel(&TAPS[3], &TAPS[4], &TAPS[5]);
   ret = ADXL_INTS(TAPS[0], TAPS[1], TAPS[2], TAPS[3], TAPS[4], TAPS[5]);
-
+  
   if (ret) {
-    Serial.println("Tempo ;  X   ;  Y   ; Z");
-
     String S;
     S = S + P.Sinal(TAPS[0]);
     S = S + P.Sinal(TAPS[1]);
@@ -34,17 +45,24 @@ void loop()
     S = S + P.Sinal(TAPS[3]);
     S = S + P.Sinal(TAPS[4]);
     S = S + P.Sinal(TAPS[5]);
-    Serial.println(S);
-    S = "";
+    S = S + ret;
+    S = S + "\n";
+
+    if (ligado == 79) {
+      aux = aux + S;
+    }
+
+    if (ligado == 73) {
+      Serial.print(aux);
+      aux = "";
+      Serial.print(S);
+    }
     
-    Serial.print(ret);
-    Serial.print(" ");
-    //WriteSD(TAPS);
-    Serial.println("----------");
     TAPS[3]=0;
     TAPS[4]=0;
     TAPS[5]=0;
-  }  
+    delay(300);
+  }
 
   TAPS[0]=TAPS[3];
   TAPS[1]=TAPS[4];
@@ -52,7 +70,7 @@ void loop()
 }
 
 void AccelInit() {
-  Serial.println("A inicializar acelerometro");
+  //Serial.println("A inicializar acelerometro");
   adxl.powerOn(); 
   adxl.setRangeSetting(4);   
   adxl.setSpiBit(0);                
@@ -63,7 +81,10 @@ void AccelInit() {
   adxl.setFreeFallDuration(30);       
   adxl.FreeFallINT(1);
   adxl.singleTapINT(1);
-  Serial.println("Acelerometro inicializado");
+  //Serial.println("Acelerometro inicializado");
+  digitalWrite(3, HIGH);
+  delay(1000);
+  digitalWrite(3, LOW);
 }
 
 int ADXL_INTS(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) {  
