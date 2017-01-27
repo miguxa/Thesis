@@ -1,11 +1,11 @@
 #include <SparkFun_ADXL345.h>
 #include <Lib.h>
-#include <SD.h>
+//#include <SD.h>
 
 
 ADXL345 adxl = ADXL345();
 Prints P;
-int tmr=1;
+int TAPS[6]={0};
 
 void setup()
 {
@@ -13,60 +13,48 @@ void setup()
   
   Serial.begin(9600);
   pinMode(2, INPUT);  
-  SD_init();  
+  //SD_init();  
   AccelInit();
 }
 
 void loop()
-{
-  int x, y, z;
-  int TAPS[120]={0};
-  int ret=0, T=0;
+{  
+  int ret=0;
   
-  for(tmr=0; tmr<120; tmr = tmr+3) {
-    adxl.readAccel(&x, &y, &z);
-    TAPS[tmr+0]=x;
-    TAPS[tmr+1]=y;
-    TAPS[tmr+2]=z;
-    delay(10);
-    if (ret == 0 && tmr >2) {
-      ret = ADXL_INTS(TAPS[tmr-3], TAPS[tmr-2], TAPS[tmr-1], x, y, z);
-      if(ret != 0) 
-        T=(tmr/3);
-    }
-  }
+  adxl.readAccel(&TAPS[3], &TAPS[4], &TAPS[5]);
+  ret = ADXL_INTS(TAPS[0], TAPS[1], TAPS[2], TAPS[3], TAPS[4], TAPS[5]);
 
   if (ret) {
     Serial.println("Tempo ;  X   ;  Y   ; Z");
 
     String S;
-    for(tmr=0; tmr<40; tmr++) {
-      S = S + P.Sinal(TAPS[(tmr*3)+0]);
-      S = S + P.Sinal(TAPS[(tmr*3)+1]);
-      S = S + P.Sinal(TAPS[(tmr*3)+2]);
-      Serial.println(S);
-      S = "";
-    }
+    S = S + P.Sinal(TAPS[0]);
+    S = S + P.Sinal(TAPS[1]);
+    S = S + P.Sinal(TAPS[2]);
+    S = S + P.Sinal(TAPS[3]);
+    S = S + P.Sinal(TAPS[4]);
+    S = S + P.Sinal(TAPS[5]);
+    Serial.println(S);
+    S = "";
+    
     Serial.print(ret);
     Serial.print(" ");
-    if(T<10)
-      Serial.print("0");
-    Serial.println(T);
-    WriteSD(TAPS);
+    //WriteSD(TAPS);
     Serial.println("----------");
+    TAPS[3]=0;
+    TAPS[4]=0;
+    TAPS[5]=0;
   }  
-  
-  while (ret != 0) {
-    if(digitalRead(2) == HIGH){
-      ret = 0;
-    }
-  }
+
+  TAPS[0]=TAPS[3];
+  TAPS[1]=TAPS[4];
+  TAPS[2]=TAPS[5];
 }
 
 void AccelInit() {
   Serial.println("A inicializar acelerometro");
   adxl.powerOn(); 
-  adxl.setRangeSetting(2);   
+  adxl.setRangeSetting(4);   
   adxl.setSpiBit(0);                
   adxl.setTapDetectionOnXYZ(0, 0, 1); 
   adxl.setTapThreshold(250);         
@@ -98,7 +86,7 @@ int ADXL_INTS(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) 
     return 0;
 }
 
-void SD_init() {
+/*void SD_init() {
   Serial.println("A inicializar cartao SD");
   if (!SD.begin(10)) {
     Serial.println("Falha na leitura do cartao");
@@ -115,7 +103,7 @@ void WriteSD (int TAPS[]) {
   if (fich){
     Serial.println("A escrever no cartao SD");
     fich.println("Tempo ;  X   ;  Y   ; Z");
-    for(tmr=0; tmr<40; tmr++) {
+    for(tmr=0; tmr<2; tmr++) {
       fich.print(P.Timer(tmr));
       fich.print(P.Sinal(TAPS[(tmr*3)+0]));
       fich.print(P.Sinal(TAPS[(tmr*3)+1]));
@@ -128,5 +116,4 @@ void WriteSD (int TAPS[]) {
   else
     Serial.print("ERROR");
 
-}
-
+}*/
