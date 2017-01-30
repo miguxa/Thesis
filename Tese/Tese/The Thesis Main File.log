@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6100 64-bit) (preloaded format=pdflatex 2016.12.20)  19 JAN 2017 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.30)  30 JAN 2017 15:21
 entering extended mode
 **"./The Thesis Main File.tex"
 ("The Thesis Main File.tex"
-LaTeX2e <2016/03/31> patch level 3
+LaTeX2e <2017/01/01> patch level 1
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 (unlthesis.cls
 Document Class: unlthesis 2016/02/22 unlthesis template
@@ -90,7 +90,7 @@ citenames=2,mincitenames=1,firstinits=true,uniquename=init,sortcites=true,
 'linkscolor'=black
 'printcommittee'=true
 'spine'=false
-'biblatex'=style=alphabetic, sorting=nyt, firstinits=true, sortcites=true, hype
+'biblatex'=style=authoryear, sorting=nyt, firstinits=true, sortcites=true, hype
 rref=false
 'memoir'=a4paper, 11pt, final,
 'media'=screen
@@ -427,10 +427,10 @@ Package: mempatch 2009/07/24 v6.0f Patches for memoir class v1.6180339
 
 (unlthesis-files/packages.clo
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
-Package: fontenc 2016/06/19 v1.99m Standard LaTeX package
+Package: fontenc 2017/01/24 v2.0c Standard LaTeX package
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
-File: t1enc.def 2016/06/19 v1.99m Standard LaTeX file
+File: t1enc.def 2017/01/24 v2.0c Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
@@ -758,7 +758,7 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
-Language: english 2012/08/20 v3.3p English support from the babel system
+Language: english 2017/01/24 v3.3q English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2016/04/23 3.9r Babel common definitions
@@ -778,10 +778,10 @@ Package babel Info: Making " an active character on input line 145.
 f
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
-Language: english 2012/08/20 v3.3p English support from the babel system
+Language: english 2017/01/24 v3.3q English support from the babel system
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
-Language: english 2012/08/20 v3.3p English support from the babel system
+Language: english 2017/01/24 v3.3q English support from the babel system
 ))
 (C:\Users\migue\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\microtype.sty
 Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
@@ -849,7 +849,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
@@ -860,7 +860,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
-File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
@@ -976,7 +976,7 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 Package: kpfonts  2010/08/20 v3.31
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
-Package: textcomp 2016/06/19 v1.99m Standard LaTeX package
+Package: textcomp 2017/01/24 v2.0c Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
 (textcomp)               4 = 5 + \texteuro
@@ -1133,7 +1133,7 @@ Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2016/06/28 v2.15d AMS math features
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip193
 
 For additional information on amsmath, use the `?' option.
@@ -1153,20 +1153,20 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count169
-LaTeX Info: Redefining \frac on input line 199.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count170
 \leftroot@=\count171
-LaTeX Info: Redefining \overline on input line 297.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count172
 \DOTSCASE@=\count173
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box32
 \strutbox@=\box33
 \big@size=\dimen169
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count174
 \c@MaxMatrixCols=\count175
 \dotsspace@=\muskip10
@@ -1187,8 +1187,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip194
 \multlinetaggap=\skip256
 \mathdisplay@stack=\toks37
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
 \c@mv@rm=\count181
 \c@mv@boldrm=\count182
@@ -1652,7 +1652,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 
 (C:\Users\migue\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\blx-dm.def)
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'alphabetic.dbx' not found.
+Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count310
@@ -1756,12 +1756,12 @@ File: biblatex.def 2016/12/05 v3.7 biblatex compatibility (PK/JW/AB)
 \c@biburllcpenalty=\count381
 \c@smartand=\count382
 )
-Package biblatex Info: Trying to load bibliography style 'alphabetic'...
-Package biblatex Info: ... file 'alphabetic.bbx' found.
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
 
-(C:\Users\migue\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\alphabetic.bb
+(C:\Users\migue\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\bbx\authoryear.bb
 x
-File: alphabetic.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
+File: authoryear.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
@@ -1770,12 +1770,12 @@ File: standard.bbx 2016/12/05 v3.7 biblatex bibliography style (PK/JW/AB)
 \c@bbx:relatedcount=\count383
 \c@bbx:relatedtotal=\count384
 ))
-Package biblatex Info: Trying to load citation style 'alphabetic'...
-Package biblatex Info: ... file 'alphabetic.cbx' found.
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
 
-(C:\Users\migue\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\cbx\alphabetic.cb
+(C:\Users\migue\AppData\Roaming\MiKTeX\2.9\tex\latex\biblatex\cbx\authoryear.cb
 x
-File: alphabetic.cbx 2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
+File: authoryear.cbx 2016/12/05 v3.7 biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1783,9 +1783,6 @@ Package biblatex Info: Redefining '\footcitetext'.
 Package biblatex Info: Redefining '\smartcite'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
@@ -2805,11 +2802,16 @@ Package babel Info: Redefining portuges shorthand "|
  [9 <./Chapters/Figures/ultrassom.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 64.
+
+Overfull \hbox (10.92998pt too wide) in paragraph at lines 88--94
+ [][] 
+ []
+
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 97.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 97.
- [10 <./Chapters/Figures/eixos_acelerometro.jpg>]
+[10 <./Chapters/Figures/eixos_acelerometro.jpg>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 98.
 
@@ -2867,11 +2869,11 @@ Package logreq Info: Writing requests to '"The Thesis Main File".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40177 strings out of 493333
- 718267 string characters out of 3139193
- 1306455 words of memory out of 3000000
- 42691 multiletter control sequences out of 15000+200000
- 176844 words of font info for 268 fonts, out of 3000000 for 9000
+ 40209 strings out of 493333
+ 718787 string characters out of 3139194
+ 1309543 words of memory out of 3000000
+ 42731 multiletter control sequences out of 15000+200000
+ 175938 words of font info for 262 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,16n,96p,1970b,1907s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-ex
@@ -2885,7 +2887,7 @@ fb><C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmsc
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on "The Thesis Main File.pdf" (22 pages, 730388 bytes).
+Output written on "The Thesis Main File.pdf" (22 pages, 730063 bytes).
 PDF statistics:
  326 PDF objects out of 1000 (max. 8388607)
  64 named destinations out of 1000 (max. 500000)
