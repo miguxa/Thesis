@@ -127,6 +127,5 @@ void WriteSD (int TAPS[]) {
   }
   else
     Serial.print("ERROR");
-
 }
 

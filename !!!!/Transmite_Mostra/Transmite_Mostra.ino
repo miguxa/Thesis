@@ -5,7 +5,7 @@ ADXL345 adxl = ADXL345();
 Prints P;
 int TAPS[6] = {0};
 int ligado = 0;
-String aux;
+String aux="";
 
 void setup()
 {
@@ -14,7 +14,9 @@ void setup()
   Serial.begin(9600);
   pinMode(2, INPUT);
   pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
   digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
   AccelInit();
 }
 
@@ -25,17 +27,25 @@ void loop()
   while (Serial.available() > 0) {
     ligado = Serial.read();
 
-    if (ligado == 73)
+    if (ligado == 73){
       digitalWrite(3, HIGH);
+      if (aux.length() != 0) {
+        Serial.print(aux);
+        aux="";
+      }
+    }
 
     if (ligado == 79)
       digitalWrite(3, LOW);
   }
 
   adxl.readAccel(&TAPS[3], &TAPS[4], &TAPS[5]);
-  ret = ADXL_INTS(TAPS[0], TAPS[1], TAPS[2], TAPS[3], TAPS[4], TAPS[5]);
+  ret = Accel(TAPS[0], TAPS[1], TAPS[2], TAPS[3], TAPS[4], TAPS[5]);
 
   if (ret) {
+    digitalWrite(4, HIGH);
+    delay(300);
+    digitalWrite(4, LOW);
     String S;
     S = S + P.Sinal(TAPS[0]);
     S = S + P.Sinal(TAPS[1]);
@@ -46,15 +56,11 @@ void loop()
     S = S + ret;
     S = S + "=\n";
 
-    if (ligado == 79) {
+    if (ligado == 79)
       aux = aux + S;
-    }
 
-    if (ligado == 73) {
-      Serial.print(aux);
-      aux = "";
+    if (ligado == 73)
       Serial.print(S);
-    }
 
     TAPS[3] = 0;
     TAPS[4] = 0;
@@ -85,7 +91,7 @@ void AccelInit() {
   digitalWrite(3, LOW);
 }
 
-int ADXL_INTS(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) {
+int Accel(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) {
   if ( abs(oldX - newX) > 500 && abs(oldY - newY) > 500 && abs(oldZ - newZ) > 500 )
     return 5;
 
