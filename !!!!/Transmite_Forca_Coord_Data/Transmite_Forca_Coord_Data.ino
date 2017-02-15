@@ -55,7 +55,6 @@ void loop()
 
     int Lon1 = random(7, 9);
     int Lat1 = random(37, 42);
-    Lon1 = Lon1 * -1;
     int Lon2 = random(0, 10000);
     int Lat2 = random(0, 10000);
     int dia = random(1, 32);
@@ -63,25 +62,25 @@ void loop()
     int hora = random(0, 25);
     int minutos = random(0, 61);
 
-    S = S + ret + " " + Lon1 + ".";
+    S = S + ret + " +" + Lat1 + ".";
 
-    if (Lon2 < 10)
-      S = S + "0";
-    if (Lon2 < 100)
-      S = S + "0";
-    if (Lon2 < 1000)
-      S = S + "0";
-
-    S = S + Lon2 + " " + Lat1 + ".";
-    
     if (Lat2 < 10)
       S = S + "0";
     if (Lat2 < 100)
       S = S + "0";
     if (Lat2 < 1000)
       S = S + "0";
+
+    S = S + Lat2 + " -0" + Lon1 + ".";
     
-    S = S + Lat2 + " " + "2017" + "-";
+    if (Lon2 < 10)
+      S = S + "0";
+    if (Lon2 < 100)
+      S = S + "0";
+    if (Lon2 < 1000)
+      S = S + "0";
+    
+    S = S + Lon2 + " " + "2017" + "-";
     
     if (mes < 10)
       S = S + "0";
