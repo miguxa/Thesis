@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-SoftwareSerial ss(3,4);
+SoftwareSerial ss(9,8);
 char c;
 void setup() {
   Serial.begin(115200);

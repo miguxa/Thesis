@@ -1,6 +1,6 @@
 #include <SparkFun_ADXL345.h>
 #include <Lib.h>
-#include <SD.h>
+//#include <SD.h>
 #include <SoftwareSerial.h>
 
 #define FILE_WRITE (O_READ | O_APPEND |O_WRITE | O_CREAT)
@@ -9,7 +9,6 @@ const int sentenceSize = 80;
 char sentence[sentenceSize];
 
 ADXL345 adxl = ADXL345();
-Prints P;
 int TAPS[6] = {0};
 int ligado = 79;
 int aberto = 0;
@@ -25,16 +24,14 @@ void setup()
   digitalWrite(3, LOW);
   digitalWrite(4, LOW);
   randomSeed(analogRead(A0)); 
-  SD_init();
+  //SD_init();
   AccelInit();
 }
 
 void loop()
 {
-  displayGPS();
-  delay(1000);
-  int ret = 0;
-
+  static int ret = 1;
+  /*
   while (Serial.available() > 0) {
     ligado = Serial.read();
 
@@ -50,26 +47,19 @@ void loop()
       aberto=0;
     }
   }
-
-  adxl.readAccel(&TAPS[3], &TAPS[4], &TAPS[5]);
-  ret = Accel(TAPS[0], TAPS[1], TAPS[2], TAPS[3], TAPS[4], TAPS[5]);
-
+  */
+  //adxl.readAccel(&TAPS[3], &TAPS[4], &TAPS[5]);
+  //ret = Accel(TAPS[0], TAPS[1], TAPS[2], TAPS[3], TAPS[4], TAPS[5]);
+  
   if (ret) {
-    digitalWrite(4, HIGH);
-    delay(300);
-    digitalWrite(4, LOW);
+    //digitalWrite(4, HIGH);
+    //delay(300);
+    //digitalWrite(4, LOW);
+    //delay(300);
     
     String S;
-
-    int Lon1 = random(7, 9);
-    int Lat1 = random(37, 42);
-    int Lon2 = random(0, 10000);
-    int Lat2 = random(0, 10000);
-    int dia = random(1, 32);
-    int mes = random(1, 13);
-    int hora = random(0, 25);
-    int minutos = random(0, 61);
-
+    
+    /*
     S = S + ret + " +" + Lat1 + ".";
 
     if (Lat2 < 10)
@@ -109,16 +99,16 @@ void loop()
       S = S + "0";
       
     S = S + minutos + "=\n";
-
-    if (ligado == 79)
-      WriteSD(S);
+    */
+    //if (ligado == 79)
+      //WriteSD(S);
     if (ligado == 73)
       Serial.print(S);
-
+    
     TAPS[3] = 0;
     TAPS[4] = 0;
     TAPS[5] = 0;
-    delay(300);
+    displayGPS();
   }
 
   TAPS[0] = TAPS[3];
@@ -142,7 +132,7 @@ void AccelInit() {
   digitalWrite(3, LOW);
   delay(500);
 }
-
+/*
 void SD_init() {
   if (!SD.begin(10)) {
     Serial.println("Falha na leitura do cartao");
@@ -191,7 +181,7 @@ void ReadSD () {
     SD.remove("datalog.txt");
   }
 }
-
+*/
 int Accel(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) {
   if ( abs(oldX - newX) > 500 && abs(oldY - newY) > 500 && abs(oldZ - newZ) > 500 )
     return 5;
@@ -214,8 +204,7 @@ int Accel(int &oldX, int &oldY, int &oldZ, int &newX, int &newY, int &newZ) {
 
 void displayGPS()
 {
-  Serial.print("1");
-  int i = 0;
+  static int i = 0;
   if (gpsSerial.available())
   {   
     char ch = gpsSerial.read();
@@ -223,7 +212,6 @@ void displayGPS()
     {
       sentence[i] = ch;
       i++;
-      Serial.print("3");
     }
     else
     {
@@ -257,7 +245,6 @@ void displayGPS()
       }
     }
   }
-  Serial.println("2");
 }
 
 void getField(char* buffer, int index)
