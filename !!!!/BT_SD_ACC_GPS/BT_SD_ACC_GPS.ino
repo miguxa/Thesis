@@ -12,6 +12,7 @@ int ctrl = 0;
 ADXL345 adxl = ADXL345();
 int TAPS[6] = {0};
 int ligado = 79;
+int aberto = 0;
 String aux = "";
 
 void setup()
@@ -37,10 +38,14 @@ void loop()
 
     if (ligado == 73) {
       digitalWrite(3, HIGH);
-      ReadSD();
+      if (aberto == 0) {
+        //ReadSD();
+        aberto = 1;
+      }
     }
     if (ligado == 79) {
       digitalWrite(3, LOW);
+      aberto = 0;
     }
   }
 
@@ -96,7 +101,10 @@ void AccelInit() {
 }
 
 void SD_init() {
-  if (SD.begin(10)) {
+  if (!SD.begin(10)) {
+    Serial.println("Falha na leitura do cartao");
+  }
+  else {
     digitalWrite(3, HIGH);
     delay(500);
     digitalWrite(3, LOW);

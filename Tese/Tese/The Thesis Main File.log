@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.30)  30 JAN 2017 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.30)  23 FEB 2017 01:03
 entering extended mode
 **"./The Thesis Main File.tex"
 ("The Thesis Main File.tex"
@@ -2871,7 +2871,7 @@ Package logreq Info: Writing requests to '"The Thesis Main File".run.xml'.
 Here is how much of TeX's memory you used:
  40209 strings out of 493333
  718787 string characters out of 3139194
- 1309543 words of memory out of 3000000
+ 1309542 words of memory out of 3000000
  42731 multiletter control sequences out of 15000+200000
  175938 words of font info for 262 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2887,7 +2887,7 @@ fb><C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmsc
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on "The Thesis Main File.pdf" (22 pages, 730063 bytes).
+Output written on "The Thesis Main File.pdf" (22 pages, 730061 bytes).
 PDF statistics:
  326 PDF objects out of 1000 (max. 8388607)
  64 named destinations out of 1000 (max. 500000)
