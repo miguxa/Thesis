@@ -1,18 +1,17 @@
 #include <SparkFun_ADXL345.h>
-#include <Lib.h>
+//#include <Lib.h>
 #include <SD.h>
 #include <SoftwareSerial.h>
 
 #define FILE_WRITE (O_READ | O_APPEND |O_WRITE | O_CREAT)
 SoftwareSerial ss (9, 8);
+ADXL345 adxl = ADXL345();
+
 const int sentenceSize = 80;
 char sentence[sentenceSize];
 int ctrl = 0;
-
-ADXL345 adxl = ADXL345();
 int TAPS[6] = {0};
 int ligado = 79;
-String aux = "";
 
 void setup()
 {
@@ -23,7 +22,6 @@ void setup()
   pinMode(4, OUTPUT);
   digitalWrite(3, LOW);
   digitalWrite(4, LOW);
-  randomSeed(analogRead(A0));
   SD_init();
   AccelInit();
 }

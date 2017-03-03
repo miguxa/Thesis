@@ -6,6 +6,7 @@ void setup() {
   ss.begin(9600);
   Serial.println("Begin...");
   delay(1000);
+  Serial.println("Miguxa");
 }
 
 void loop() {

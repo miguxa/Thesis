@@ -12,42 +12,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Lista de Tabelas}{vii}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
+\contentsline {chapter}{\chapternumberline {1}Trabalho desenvolvido}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Uma curta apresenta\IeC {\c c}\IeC {\~a}o}{1}{section.1.1}
+\contentsline {section}{\numberline {1.1}Funcionamendo do Arduino}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Montagem do sistema}{2}{section.1.2}
+\contentsline {section}{\numberline {1.2}Fun\IeC {\c c}\IeC {\~o}es}{3}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}Componentes montados no ve\IeC {\'\i }culo}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.1}SD\textunderscore init}{3}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}Componentes do telem\IeC {\'o}vel}{2}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.2}WriteSD}{3}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}Utiliza\IeC {\c c}\IeC {\~a}o de dados}{2}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.3}ReadSD}{3}{subsection.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Descri\IeC {\c c}\IeC {\~a}o de especifica\IeC {\c c}\IeC {\~o}es}{3}{section.1.3}
+\contentsline {subsection}{\numberline {1.2.4}AccelInit}{3}{subsection.1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.1}Aceler\IeC {\'o}metro}{3}{subsection.1.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.2}Bluetooth}{4}{subsection.1.3.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.3}Wi-fi}{4}{subsection.1.3.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.4}GPS}{5}{subsection.1.3.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Estado da arte}{7}{chapter.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Principais metodologias}{7}{section.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Camera v\IeC {\'\i }deo}{7}{subsection.2.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Camera v\IeC {\'\i }deo com ilumina\IeC {\c c}\IeC {\~a}o artificial}{8}{subsection.2.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Ultrassom}{9}{subsection.2.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.4}Aceler\IeC {\'o}metro}{9}{subsection.2.1.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Compara\IeC {\c c}\IeC {\~a}o de resultados}{10}{section.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Planeamento de trabalhos a desenvolver}{11}{section.2.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{13}{section*.15}
+\contentsline {chapter}{Bibliografia}{5}{section*.4}

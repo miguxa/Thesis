@@ -1,0 +1,45 @@
+\chapter{Trabalho desenvolvido}
+\label{cha:trabalho desenvolvido}
+
+A solução proposta para a resolução do problema apresentado em XXX é um sistema separado em três fases, cada uma delas ligada a um elemento físico: o Arduino, o telemóvel e a base de dados (alocada num computador). Assim surgem as seguintes secções, referentes às três fases do sistema.
+
+\section{Funcionamendo do Arduino}
+\label{sec:funcionamento_do_arduino}
+
+Para que o código Arduino possa ser executado, este deve estar separado em três grupos chave: \textbf{uma zona de declarações} e \textbf{duas funções}, sendo que as duas funções têm os nomes de \emph{setup} e \emph{loop}.
+\begin{itemize}
+\item Na \textbf{zona de declarações} devem ser declaradas as bibliotecas que vão ser utilizadas durante o código. Estas bibliotecas são conjuntos de funções previamente definidas por um utilizador, que são habitualmente  utilizadas e portanto são agrupadas num ficheiro para que outros as possam executar sempre que necessário. Também na zona de inicialização são declaradas variáveis globais, as quais conseguem armazenar um valor durante as várias execuções da função \emph{loop} que será descrita mais à frente.
+
+\item Tal como o nome indica, a \textbf{função \emph{setup}} é a função de preparação e inicialização do código. É aqui que se devem fazer declarações elementos físicos que serão utilizados como \emph{leds} ou botões ou executar funções que apenas devem correr uma vez, por exemplo, para activar sistemas ou dispositivos.
+
+\item A \textbf{função \emph{loop}} é uma função que é executada enquanto o Arduino estiver ligado e onde devem ser chamadas as funções centrais do código. No caso de existirem variáveis criadas dentro desta função, elas são inicializadas sempre que a função chega ao fim, pelo que é benéfico que existam algumas variáveis globais no sistema de modo a acompanhar a evolução do mesmo e transportar informação entre os vários ciclos de execução da função \emph{loop}
+\end{itemize}
+
+No caso específico desta dissertação a utilização dos três grupos chave é a seguinte:
+
+\begin{itemize}
+\item Na zona de declarações são incluídas as bibliotecas referentes ao acelerómetro, ao cartão de memória e ao GPS. São também definidos os modos de escrita no cartão de memória, os portos de ligação de comunicação do GPS e criadas variáveis globais referentes ao GPS e ao acelerómetro. Além disso, são criadas variáveis globais de controlo do código, variáveis de passagem de parâmetros entre vários ciclos da função \emph{loop} e declaração de constantes que serão utilizadas diversas vezes ao longo do código, facilitando a alteração do seu valor, caso tal se mostre necessário.
+
+\item Na função \emph{setup} são declaradas as bandas de comunicação entre o Arduino e o telemóvel e entre o GPS e o Arduino. São também inicializados dois \emph{leds} como elementos de saída de informação e um botão como entrada de informação e é atribuído o estado de “desligado” a ambos os \emph{leds}. Por fim, são executadas as funções de inicialização do leitor do cartão de memória e do acelerómetro, SD\textunderscore init e AccelInit respectivamente, ambas explicadas mais á frente.
+
+\item A função \emph{loop}, embora executada de uma forma constante, contém um código bastante simples mas deveras preciso. A função começa por verificar se existe informação disponível para leitura no módulo Bluetooth. Caso tal se verifique, essa informação é lida e comparada, para que seja possível determinar se a ligação ao módulo Bluetooth do Arduino sofreu alguma alteração, nomeadamente, quanto à ligação com a aplicação desenvolvida para esta dissertação. Na hipótese desta alteração se verificar, é avaliada se a ligação foi estabelecida ou cortada, sendo que no caso de ser estabelecida, é chamada a função ReadSD para leitura do cartão de memória (explicada mais à frente) e um \emph{led} de controlo é aceso. Caso contrário, o mesmo \emph{led} de controlo é desligado. Se não se verificar nenhuma alteração na ligação, o \emph{led} mantém o estado em que se encontra. De seguida são lidos os valores de aceleração dos eixos X, Y e Z, provenientes do acelerómetro, armazenados e comparados com a leitura anterior para verificação da existência de alguma irregularidade no asfalto. A maneira como esta comparação será explicada mais à frente. Caso seja detectada alguma irregularidade, um dos \emph{leds} de controlo pisca e são armazenados, numa variável \textbf{S}, os valores do nível da irregularidade, bem como o grupo data-hora proveniente do GPS. Seguidamente é verificada a ligação à aplicação e caso esta exista, os valores de \textbf{S} são enviados directamente para o telemóvel. Se a ligação não existir, os valores de \textbf{S} são transferidos para o cartão de memória para que possam ser transmitidos para o telemóvel assim que exista uma ligação estável com o mesmo. Por fim, os valores actuais do acelerómetro são armazenados para que possam ser comparados na próxima execução da função \emph{loop}.
+\end{itemize}
+
+\section{Funções adicionais}
+\label{sec: funcoes_adicionais}
+
+\subsection{SD\textunderscore init}
+\label{sub: sd_init}
+
+Esta função serve para inicializar o leitor de cartões SD. Nela é chamada a função \emph{begin} da biblioteca \emph{SD} e verificada a resposta dessa mesma função. Caso a resposta seja o valor 10, um \emph{led} de controlo pisca para que o utilizador saiba que a inicialização ocorreu com sucesso e é verificada a existência de um ficheiro com informação previamente armazenada sobre irregularidades detetadas anteriormente. Caso exista esse ficheiro, este é aberto de modo a que se possam juntar novos valores de irregularidades detetadas, caso contrário, o ficheiro é criado para futuros armazenamentos.
+
+\subsection{WriteSD}
+\label{sub: writesd}
+
+\subsection{ReadSD}
+\label{sub: readsd}
+
+\subsection{AccelInit}
+\label{sub: accelInit}
+
+Nesta função o acelerómetro é ligado e são determinados os valores de sensibilidade do mesmo. É também feita uma inicialização de valores para queda livre e batida que não são utilizados para esta dissertação. Esta funcionalidade foi mantida para possíveis aplicações futuras e uma deteção mais pormenorizada das irregularidades. Seguidamente, um \emph{led} de controlo pisca para o utilizador saber que a inicialização foi bem sucedida.

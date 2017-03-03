@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.30)  23 FEB 2017 01:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.30)  1 MAR 2017 21:00
 entering extended mode
 **"./The Thesis Main File.tex"
 ("The Thesis Main File.tex"
@@ -2554,7 +2554,7 @@ LaTeX Font Info:    Try loading font information for U+jkpsyc on input line 220
 (C:\Users\migue\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-<unlthesis-files/Schools/unl/fct/Images/cover-msc-std.pdf, id=94, 597.23125pt x
+<unlthesis-files/Schools/unl/fct/Images/cover-msc-std.pdf, id=34, 597.23125pt x
  845.1575pt>
 File: unlthesis-files/Schools/unl/fct/Images/cover-msc-std.pdf Graphic file (ty
 pe pdf)
@@ -2635,218 +2635,71 @@ Package glossaries Warning: Empty glossary for \printnoidxglossary[type={acrony
 m}]. Rerun may be required (or you may have forgotten to use commands like \gls
 ) on input line 229.
 
-(Chapters/introducao.tex
+(Chapters/trabalho_desenvolvido.tex
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 9.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 17.
+(babel)             in language  on input line 6.
+LaTeX Font Info:    Try loading font information for TS1+jkp on input line 11.
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--21
-[][] [][][]\T1/jkp/m/n/9 (+10) http://www.pordata.pt/Portugal/Assinantes+++equi
-pamentos+de+utilizadores+do+servi%C3
- []
+(C:\Users\migue\AppData\Roaming\MiKTeX\2.9\tex\latex\kpfonts\ts1jkp.fd
+File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `jkp' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 16.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 16.
+
+[1
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
-[][] [][][]\T1/jkp/m/n/9 (+10) http://www.pordata.pt/Portugal/Popula%C3%A7%C3%A
-3o+residente+total+e+por+grupo+et
- []
 
+
+]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 28.
-
-Underfull \vbox (badness 2951) has occurred while \output is active []
-
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 31.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 32.
- [1
-
-
-
-
-]
+(babel)             in language  on input line 35.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 33.
+(babel)             in language  on input line 35.
+ [2]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 38.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 43.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 47.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 47.
-
-[2]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 48.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 51.
- <Chapters/Figures/acelerometro.jpg, id=205, 468.75125pt x 313.17pt>
-File: Chapters/Figures/acelerometro.jpg Graphic file (type jpg)
-
-<use Chapters/Figures/acelerometro.jpg>
-Package pdftex.def Info: Chapters/Figures/acelerometro.jpg used on input line 5
-6.
-(pdftex.def)             Requested size: 212.94597pt x 142.26378pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 61.
-
-<Chapters/Figures/bluetooth.jpg, id=206, 225.84375pt x 225.84375pt>
-File: Chapters/Figures/bluetooth.jpg Graphic file (type jpg)
-
-<use Chapters/Figures/bluetooth.jpg>
-Package pdftex.def Info: Chapters/Figures/bluetooth.jpg used on input line 66.
-(pdftex.def)             Requested size: 142.27196pt x 142.26378pt.
-
-Underfull \vbox (badness 1881) has occurred while \output is active []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 70.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 70.
- [3 <./Chapters/Figures/acelerometro.jpg>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 71.
-
-<Chapters/Figures/wi-fi.jpg, id=211, 526.96875pt x 702.625pt>
-File: Chapters/Figures/wi-fi.jpg Graphic file (type jpg)
-
-<use Chapters/Figures/wi-fi.jpg>
-Package pdftex.def Info: Chapters/Figures/wi-fi.jpg used on input line 76.
-(pdftex.def)             Requested size: 106.6945pt x 142.26378pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 81.
-
-<Chapters/Figures/gps.jpg, id=212, 268.00125pt x 189.70876pt>
-File: Chapters/Figures/gps.jpg Graphic file (type jpg)
-
-<use Chapters/Figures/gps.jpg>
-Package pdftex.def Info: Chapters/Figures/gps.jpg used on input line 86.
-(pdftex.def)             Requested size: 200.97998pt x 142.26378pt.
-) (Chapters/estado_da_arte.tex
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
- [4 <./Chapters/Figures/bluetooth.jpg> <./Chapters/Figures/wi-fi.jpg>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
- [5 <./Chapters/Figures/gps.jpg>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
- [6
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 5.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 8.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 21.
-
-<Chapters/Figures/duas_cameras.jpg, id=226, 459.96844pt x 270.25969pt>
-File: Chapters/Figures/duas_cameras.jpg Graphic file (type jpg)
-
-<use Chapters/Figures/duas_cameras.jpg>
-Package pdftex.def Info: Chapters/Figures/duas_cameras.jpg used on input line 2
-6.
-(pdftex.def)             Requested size: 290.55368pt x 170.71652pt.
-
-<Chapters/Figures/kinect.png, id=228, 430.60875pt x 222.07968pt>
-File: Chapters/Figures/kinect.png Graphic file (type png)
-
-<use Chapters/Figures/kinect.png>
-Package pdftex.def Info: Chapters/Figures/kinect.png used on input line 33.
-(pdftex.def)             Requested size: 331.01782pt x 170.71652pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 37.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 37.
- [7]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 38.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 41.
- [8 <./Chapters/Figures/duas_cameras.jpg> <./Chapters/Figures/kinect.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 44.
-
-<Chapters/Figures/ultrassom.jpg, id=244, 1204.5pt x 1204.5pt>
-File: Chapters/Figures/ultrassom.jpg Graphic file (type jpg)
-
-<use Chapters/Figures/ultrassom.jpg>
-Package pdftex.def Info: Chapters/Figures/ultrassom.jpg used on input line 49.
-(pdftex.def)             Requested size: 170.70569pt x 170.71652pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 54.
-
-<Chapters/Figures/eixos_acelerometro.jpg, id=245, 368.37625pt x 390.45876pt>
-File: Chapters/Figures/eixos_acelerometro.jpg Graphic file (type jpg)
-
-<use Chapters/Figures/eixos_acelerometro.jpg>
-Package pdftex.def Info: Chapters/Figures/eixos_acelerometro.jpg used on input 
-line 59.
-(pdftex.def)             Requested size: 161.06302pt x 170.71652pt.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 63.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 63.
- [9 <./Chapters/Figures/ultrassom.jpg>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
-
-Overfull \hbox (10.92998pt too wide) in paragraph at lines 88--94
- [][] 
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 97.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 97.
-[10 <./Chapters/Figures/eixos_acelerometro.jpg>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 98.
-
-<Chapters/Figures/planeamento.png, id=257, 293.59688pt x 758.08218pt>
-File: Chapters/Figures/planeamento.png Graphic file (type png)
-
-<use Chapters/Figures/planeamento.png>
-Package pdftex.def Info: Chapters/Figures/planeamento.png used on input line 10
-5.
-(pdftex.def)             Requested size: 242.43095pt x 625.96062pt.
+(babel)             in language  on input line 42.
 )
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 236.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 236.
- [11]
+ [3]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 236.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 236.
- [12 <./Chapters/Figures/planeamento.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 236.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 236.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 236.
- [13
+ [4
 
 ]
 Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 236.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 236.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 236.
+ [5]
+Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 244.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 244.
- [14]
+ [6]
 \tf@toc=\write8
 \openout8 = `"The Thesis Main File.toc"'.
 
@@ -2861,35 +2714,44 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 244.
  ("The Thesis Main File.aux")
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 244.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 244.
-Package rerunfilecheck Info: File `"The Thesis Main File".out' has not changed.
 
-(rerunfilecheck)             Checksum: 8D49FA722B47A180ACE38A4F63959765;1528.
+
+Package rerunfilecheck Warning: File `"The Thesis Main File".out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"The Thesis Main File".out':
+(rerunfilecheck)             Before: B1BD323B38423328C61C33B24833C858;407
+(rerunfilecheck)             After:  5485CE4FC2ACF0F6BFF942105E4B02E8;592.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to '"The Thesis Main File".run.xml'.
 \openout1 = `"The Thesis Main File.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 40209 strings out of 493333
- 718787 string characters out of 3139194
- 1309542 words of memory out of 3000000
- 42731 multiletter control sequences out of 15000+200000
- 175938 words of font info for 262 fonts, out of 3000000 for 9000
+ 40025 strings out of 493333
+ 715277 string characters out of 3139194
+ 1304539 words of memory out of 3000000
+ 42641 multiletter control sequences out of 15000+200000
+ 156760 words of font info for 220 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,16n,96p,1970b,1907s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,14n,96p,2016b,1901s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/kpfonts/kpfonts-ex
 pert.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/mig
-ue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Users/
-migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C:/Us
-ers/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmit8a.pfb><C
-:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmn8a.pfb
-><C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmne.p
-fb><C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmsc
-8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on "The Thesis Main File.pdf" (22 pages, 730061 bytes).
+ue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbit8a.pfb><C:/Users
+/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbn8a.pfb><C:/Us
+ers/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpbsc8a.pfb><C
+:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmit8a.pf
+b><C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpmn8a
+.pfb><C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jkpm
+ne.pfb><C:/Users/migue/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/kpfonts/jk
+pmsc8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on "The Thesis Main File.pdf" (14 pages, 221267 bytes).
 PDF statistics:
- 326 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 55535 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 166 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 48714 words of extra memory for PDF output out of 51595 (max. 10000000)
 
