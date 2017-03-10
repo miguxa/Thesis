@@ -12,18 +12,52 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Lista de Tabelas}{vii}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {1}Trabalho desenvolvido}{1}{chapter.1}
+\contentsline {chapter}{\chapternumberline {1}Estado da arte}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Funcionamendo do Arduino}{1}{section.1.1}
+\contentsline {section}{\numberline {1.1}Principais metodologias}{1}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Fun\IeC {\c c}\IeC {\~o}es}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.1.1}Camera v\IeC {\'\i }deo}{1}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}SD\textunderscore init}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.1.2}Camera v\IeC {\'\i }deo com ilumina\IeC {\c c}\IeC {\~a}o artificial}{3}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.2}WriteSD}{3}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.1.3}Sensor ultrass\IeC {\'o}nico}{5}{subsection.1.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.3}ReadSD}{3}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.1.4}Aceler\IeC {\'o}metro}{6}{subsection.1.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.4}AccelInit}{3}{subsection.1.2.4}
+\contentsline {section}{\numberline {1.2}Compara\IeC {\c c}\IeC {\~a}o de resultados}{7}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{5}{section*.4}
+\contentsline {chapter}{\chapternumberline {2}Trabalho desenvolvido}{9}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Funcionamendo do Arduino}{9}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Fun\IeC {\c c}\IeC {\~o}es adicionais}{11}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}SD\textunderscore init}{11}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}WriteSD}{11}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}ReadSD}{11}{subsection.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.4}AccelInit}{11}{subsection.2.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.5}Accel}{12}{subsection.2.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.6}displayGPS}{12}{subsection.2.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.7}FTOA - Float to ASCII}{12}{subsection.2.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Funcionamento do Android}{13}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Base de dados}{16}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}WebSite}{16}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}home.php}{16}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}store.php}{16}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.3}listLocations.php}{17}{subsection.2.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.4}showLocation.php}{17}{subsection.2.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{19}{section*.18}

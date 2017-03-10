@@ -61,15 +61,17 @@
 \usepackage{booktabs}		% Beautiful simple tables
 \usepackage{paralist}		% To enable customizble enumerates
 
+
 %% IMPORTANT (consider removing/commenting)
 %\usepackage{colortbl}		% Use colors in background of table cells
 \usepackage[textsize=footnotesize]{todonotes}	% To register TODO notes in the text
 \setlength{\marginparwidth}{3.25cm}
 \usepackage{pifont}
-\newcommand{\cmark}{\ding{51}}%
-\newcommand{\xmark}{\ding{55}}%
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
 \usepackage{mathtools}
-
+\usepackage{placeins} 
+\usepackage{flafter}
 
 %% FOR DEMO PURPOSES ONLY --- TO BE REMOVED by final users
 \usepackage{lipsum}
@@ -182,7 +184,7 @@
 % Text chapters
 % syntax: \chapterfile{file}
 %\chapterfile{introducao}
-%\chapterfile{estado_da_arte}
+\chapterfile{estado_da_arte}
 \chapterfile{trabalho_desenvolvido}
 %\chapterfile{chapter3}
 %\chapterfile{chapter4}

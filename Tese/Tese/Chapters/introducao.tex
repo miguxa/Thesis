@@ -48,6 +48,18 @@ A partir do momento em que os dados sejam inseridos na base de dados, será nece
 \section{Descrição de especificações}
 \label{sec:descrição_de_especificações}
 
+\subsection{Arduino}
+\label{sub: arduino}
+
+Para que o código Arduino possa ser executado, este deve estar separado em três grupos chave: \textbf{uma zona de declarações} e \textbf{duas funções}, sendo que as duas funções têm os nomes de \emph{setup} e \emph{loop}.
+\begin{itemize}
+\item Na \textbf{zona de declarações} devem ser declaradas as bibliotecas que vão ser utilizadas durante o código. Estas bibliotecas são conjuntos de funções previamente definidas por um utilizador, que são habitualmente  utilizadas e portanto são agrupadas num ficheiro para que outros as possam executar sempre que necessário. Também na zona de inicialização são declaradas variáveis globais, as quais conseguem armazenar um valor durante as várias execuções da função \emph{loop} que será descrita mais à frente.
+
+\item Tal como o nome indica, a \textbf{função \emph{setup}} é a função de preparação e inicialização do código. É aqui que se devem fazer declarações elementos físicos que serão utilizados como \emph{leds} ou botões ou executar funções que apenas devem correr uma vez, por exemplo, para activar sistemas ou dispositivos.
+
+\item A \textbf{função \emph{loop}} é uma função que é executada enquanto o Arduino estiver ligado e onde devem ser chamadas as funções centrais do código. No caso de existirem variáveis criadas dentro desta função, elas são inicializadas sempre que a função chega ao fim, pelo que é benéfico que existam algumas variáveis globais no sistema de modo a acompanhar a evolução do mesmo e transportar informação entre os vários ciclos de execução da função \emph{loop}
+\end{itemize}
+
 \subsection{Acelerómetro}
 \label{subsec:acelerometro}
 Um acelerómetro é um dispositivo eletromagnético que mede forças de aceleração. Estas forças podem ser constantes ou variáveis, como a força da gravidade ou uma mudança de direção do acelerómetro respetivamente. Medindo a aceleração gravítica, é possível saber se um automóvel está a subir ou a descer e através da medição de uma aceleração variável é possível detetar quando um condutor passa por um buraco na estrada. Os acelerómetros podem apresentar diversos modos de funcionamento, que não se vão mostrar relevantes para a execução deste projeto. O que vai ser tido em conta são as funcionalidades que cada um pode apresentar, nomeadamente o número de eixos em que é possível obter medições, a variação máxima das forças que nele são aplicadas e a sua sensibilidade em relação às forças medidas.
