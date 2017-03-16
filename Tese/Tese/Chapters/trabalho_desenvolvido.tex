@@ -200,3 +200,28 @@ Alinhado com cada irregularidade, existe uma hiperligação para a página showL
 	\caption{Página \emph{web} listlocations.php}
 	\label{fig:listlocations.php}
 \end{figure}
+
+\section{Montagem do sistema}
+\label{sec:montagem_do_sistema}
+
+O sistema final foi montado numa PCB compatível com o Arduino Mega, apesar de ter sido utilizado um Arduino Uno.
+A utilização desta PCB deve-se ao tamanho da mesma, sendo assim possível espaçar os componentes mais facilmente, evitando interferências entre eles e que possibilita uma melhor gestão das ligações.
+Foi também necessário utilizar dois reguladores de tensão para converter a tensão de entrada de 12V do automóvel para 5.0V e 3.3V.
+Apesar do Arduino já conter reguladores semelhantes, existe uma limitação de 200mA na corrente de alimentação, a qual não é suficiente para alimentar o sistema.
+São também necessários dois reguladores pois existem componentes que necessitam de ser alimentados a 5.0V e outros a 3.3V pelo que o regulador LM7805 faz a conversão de 12V para 5.0V e o regulador LM3940 faz a conversão de 5.0V para 3.3V.
+As figuras \ref{fig:esquematico_do_sistema} e \ref{fig:montagem_real_do_sistema} representam um esquema da montagem e a montagem real do sistema, respectivamente.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=15cm]{esquema}
+	\caption{Esquemático do sistema}
+	\label{fig:esquematico_do_sistema}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=15cm]{montagem}
+	\caption{Montagem real do sistema}
+	\label{fig:montagem_real_do_sistema}
+\end{figure}
+

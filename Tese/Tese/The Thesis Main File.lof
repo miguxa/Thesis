@@ -8,30 +8,68 @@
 \defcounter {refsection}{0}\relax 
 \select@language {portuguese}
 \defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Montagem com duas c\IeC {\^a}meras\relax }}{2}{figure.caption.3}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Montagem com duas c\IeC {\^a}meras}}{2}{figure.caption.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Sensor Kinect}}{3}{figure.caption.4}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Sensor Kinect}}{3}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Matriz de dete\IeC {\c c}\IeC {\~a}o de um buraco}}{4}{figure.caption.5}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Matriz de dete\IeC {\c c}\IeC {\~a}o de um buraco}}{4}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o da linha em superf\IeC {\'\i }cie lisa e num buraco}}{4}{figure.caption.6}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Compara\IeC {\c c}\IeC {\~a}o da linha em superf\IeC {\'\i }cie lisa e num buraco}}{4}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Sensor Ultrassom\relax }}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Sensor Ultrassom}}{6}{figure.caption.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Dire\IeC {\c c}\IeC {\~a}o dos eixos de um aceler\IeC {\'o}metro\relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Dire\IeC {\c c}\IeC {\~a}o dos eixos de um aceler\IeC {\'o}metro}}{7}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Arduino\relax }}{10}{figure.caption.11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Sensor Venus638FLPx}}{10}{figure.caption.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Formatos de apresenta\IeC {\c c}\IeC {\~a}o de coordenadas\relax }}{13}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Formato de mensagem RMC\relax }}{10}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Android\relax }}{15}{figure.caption.13}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Formato de mensagem de configura\IeC {\c c}\IeC {\~a}o do recetor gps\relax }}{11}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces P\IeC {\'a}gina \emph {web} home.php\relax }}{17}{figure.caption.14}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Funcionamento de um aceler\IeC {\'o}metro capacitivo}}{12}{figure.caption.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces informa\IeC {\c c}\IeC {\~a}o tipo adicionada na base de dados\relax }}{17}{figure.caption.15}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces M\IeC {\'o}dulo bluetooth}}{14}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces P\IeC {\'a}gina \emph {web} listlocations.php\relax }}{18}{figure.caption.16}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Log\IeC {\'o}tipo do sistema Wi-Fi}}{15}{figure.caption.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Funcionamento de um aceler\IeC {\'o}metro capacitivo}}{16}{figure.caption.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Andy, a mascote do sistema operativo Android}}{17}{figure.caption.21}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Arduino\relax }}{20}{figure.caption.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Formatos de apresenta\IeC {\c c}\IeC {\~a}o de coordenadas\relax }}{23}{figure.caption.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Android\relax }}{25}{figure.caption.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces P\IeC {\'a}gina \emph {web} home.php\relax }}{27}{figure.caption.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces informa\IeC {\c c}\IeC {\~a}o tipo adicionada na base de dados\relax }}{27}{figure.caption.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces P\IeC {\'a}gina \emph {web} listlocations.php\relax }}{28}{figure.caption.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Esquem\IeC {\'a}tico do sistema\relax }}{29}{figure.caption.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Montagem real do sistema\relax }}{29}{figure.caption.29}

@@ -32,9 +32,11 @@ O sistema é bastante preciso, permitindo a deteção de buracos com profundidad
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[height=6cm]{duas_cameras}
-	\caption{Montagem com duas câmeras}
+	\caption[Montagem com duas câmeras]{Montagem com duas câmeras \footnotemark}
 	\label{fig:montagem_com_duas_cameras}
 \end{figure}
+
+\footnotetext{\cite{Zhang}}
 
 Em \cite{Chan2014} é apresentada uma melhoria a este sistema, no que toca ao processamento em tempo real, sendo que foram possíveis avaliar cinco imagens por segundo, uma a cada 200 milissegundos.
 Juntando estes dois projetos é possível obter-se uma solução viável em termos de processamento e deteção mas que necessita de duas câmeras e um processador com vários núcleos para todo o processamento, tornando assim a sua montagem bastante dispendiosa.
@@ -55,7 +57,7 @@ Ainda assim existe a grande desvantagem do sistema só ter sido testado de forma
 	\label{fig:sensor_kinect}
 \end{figure}
 
-\footnotetext{https://developer.microsoft.com/en-us/windows/kinect}
+\footnotetext{http://developer.microsoft.com/en-us/windows/kinect}
 
 \subsection{Camera vídeo com iluminação artificial}
 \label{subsec: camera_video_com_iluminacao_artificial}
@@ -108,11 +110,13 @@ Também existe o mesmo problema que em \cite{Hegde2015} quando avaliada a instal
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[height=6cm]{ultrassom}
-	\caption{Sensor Ultrassom}
+	\caption[Sensor Ultrassom]{Sensor Ultrassom \footnotemark}
 	\label{fig:sensor_ultrassom}
 \end{figure}
 
-\subsection{Acelerómetro}
+\footnotetext{http://www.3bscientific.es/sensor-de-movimento-de-ultrassom-u11361,p\textunderscore 559\textunderscore 14224.html}
+
+\subsection{Acelerómetro}\
 \label{subsec: acelerometro}
 Esta será a abordagem a ser utilizada e aquela em que os artigos analisados se mostram mais relevantes, devido à semelhança com o projeto que se pretende desenvolver. Em \cite{Mednis2011} é utilizado o acelerómetro do telefone e são apresentados vários algoritmos para a determinação do que é ou não um buraco na estrada. São também feitas algumas comparações sobre os resultados que diferentes telefones apresentam, dependendo do seu acelerómetro, tendo em conta a frequência de amostragem e o desvio padrão do eixo Z.
 Neste trabalho foi concluído que diferentes telemóveis recolhem diferentes informações no mesmo percurso, sendo crítico que o acelerómetro não esteja incluído no telemóvel para que exista consistência nos dados recolhidos por diferentes utilizadores.
@@ -131,9 +135,11 @@ Ainda assim é mencionado que para trabalho futuro é proposto um melhoramento d
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[height=4.5cm]{eixos_acelerometro}
-	\caption{Direção dos eixos de um acelerómetro}
+	\caption[Direção dos eixos de um acelerómetro]{Direção dos eixos de um acelerómetro \footnotemark}
 	\label{fig:direcao_dos_eixos_de_um_acelerometro}
 \end{figure}
+
+\footnotetext{https://i.stack.imgur.com/EstPt.jpg}
 
 \section{Comparação de resultados} % (fold)
 \label{sec:comapracao_de_resultados}

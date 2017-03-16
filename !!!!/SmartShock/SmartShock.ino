@@ -47,7 +47,6 @@ void loop()
     digitalWrite(4, HIGH);
     delay(300);
     digitalWrite(4, LOW);
-    delay(300);
 
     String S;
     S = S + ret;
@@ -104,7 +103,6 @@ void WriteSD (String aux) {
     digitalWrite(3, HIGH);
     delay(500);
     digitalWrite(3, LOW);
-    delay(500);
     fich.print(aux);
     fich.close();
   }
