@@ -72,6 +72,7 @@
 \usepackage{mathtools}
 \usepackage{placeins} 
 \usepackage{flafter}
+\usepackage{xr}
 
 %% FOR DEMO PURPOSES ONLY --- TO BE REMOVED by final users
 \usepackage{lipsum}
@@ -115,14 +116,14 @@
 \authordegree{Licenciado em Engenharia Eletrotécnica e de Computadores}
 
 % Date
-\datemonth{Setembro}
-\dateyear{2016}
+\datemonth{Março}
+\dateyear{2017}
 
 
 % Advisers
 % use "\\&" if necessary to break the lines in the apprpriate place
 % use [f] for female and [m] for male
-\adviser[m]{José Manuel Matos Ribeiro da Fonseca}{Professor Associado}{Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa} 
+\adviser[m]{José Manuel Matos Ribeiro da Fonseca}{Professor Auxiliar com Agregação}{Faculdade de Ciências e Tecnologia da Universidade Nova de Lisboa} 
 % you may use "\newline" to force a new line
 % \adviser[m]{John Doe Male Adviser Name}{Associate\\& Professor}{Some University Somewhere}
 % \adviser[m]{John Doe Third Adviser Name}{Associate\\& Professor}{Some University Somewhere}
@@ -161,7 +162,6 @@
 % i.e., "bsc", "msc" and "phd", otherwise, it will be silently ignored
 \acknowledgementsfile{acknowledgements}
 
-
 % \quotefile{quote}		% Quote
 \abstractfile[pt]{abstract-pt}	% Abstract in Portuguese
 \abstractfile[en]{abstract-en}	% Abstract in English
@@ -172,7 +172,6 @@
 % definition of the second cover, to be printed before the copyright (to serve FCSH-UNL)
 \aftercoverfile{aftercover-unl-ims}
 
-
 % The Table of Contents is always printed.
 % The other lists below may be commented and omitted.
 \addlisttofrontmatter{\listoffigures}	% The List of Figures. Comment to omit.
@@ -180,24 +179,13 @@
 %\addlisttofrontmatter{\lstlistoflistings}	% The List of Code Listings. Comment to omit.
 \addlisttofrontmatter{\printnoidxglossaries}	% The Glossary and List of Acrnonyms
 
-
 % Text chapters
 % syntax: \chapterfile{file}
-%\chapterfile{agradecimentos}
-%\chapterfile{dedicatoria}
-%\chapterfile{introducao}
+\chapterfile{introducao}
 \chapterfile{estado_da_arte}
 \chapterfile{conceitos_teoricos}
 \chapterfile{trabalho_desenvolvido}
-%\chapterfile{chapter3}
-%\chapterfile{chapter4}
-
-
-% Text appendixes
-% sintax: \appendixfile{file}
-% Comment if not needed
-%\appendixfile{appendix1}
-
+\chapterfile{conclusao}
 
 % BibTeX bibiography files. Can be used multiple times with a single file nae each time.
 \addbibfile{bibliography.bib}
@@ -218,7 +206,7 @@
 
 %% Begining of document
 \begin{document}
-
+\nocite{*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \thesisfrontmatter	% Before the main text (TOC, etc)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -226,7 +214,7 @@
 %\printaftercover
 %\printcopyright		% Print the copyright page (will only be printed if adequate for the document type)
 \printdedicatory	% Print the dedicatory (will only be printed if adequate for the document type)
-%\printacknowledgements	% Print the acknowledgments (will only be printed if adequate for the document type)
+\printacknowledgements	% Print the acknowledgments (will only be printed if adequate for the document type)
 \printquote		% Print the quote (if file exists and is adequate for the document type)
 \printabstract		% Print abstracts (in PT and EN). The abstract in the document main language will
 			% be printed first, the abstract in the foreign language will be printed second

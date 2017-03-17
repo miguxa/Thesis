@@ -17,6 +17,32 @@
 \endgroup
 
 \sortlist[entry]{nyt/global/}
+  \entry{android}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Android is enabling opportunity}
+    \verb{url}
+    \verb http://www.android.com/everyone/enabling-opportunity/
+    \endverb
+    \field{urlday}{07}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
+  \entry{arduino}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Arduino - Introduction}
+    \verb{url}
+    \verb http://www.arduino.cc/en/Guide/Introduction
+    \endverb
+    \field{urlday}{13}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
   \entry{Chan2014}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=CCK}{%
@@ -248,6 +274,19 @@
     \field{year}{2015}
   \endentry
 
+  \entry{gps}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{How does the Global Positioning System (GPS) work ?}
+    \verb{url}
+    \verb http://www.pocketgpsworld.com/howgpsworks.php
+    \endverb
+    \field{urlday}{10}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
   \entry{Jang}{inproceedings}{}
     \name{author}{4}{}{%
       {{hash=JJ}{%
@@ -465,6 +504,32 @@
     [3]%
     }
     \field{year}{2013}
+  \endentry
+
+  \entry{php}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{title}{PHP: O que é o PHP? - Manual}
+    \verb{url}
+    \verb http://secure.php.net/manual/pt_BR/intro-whatis.php
+    \endverb
+    \field{urlday}{09}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
+  \endentry
+
+  \entry{wifi}{online}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Wi-Fi Alliance}
+    \verb{url}
+    \verb http://www.wi-fi.org/
+    \endverb
+    \field{urlday}{07}
+    \field{urlmonth}{01}
+    \field{urlyear}{2017}
   \endentry
 
   \entry{Yu2011}{inproceedings}{}

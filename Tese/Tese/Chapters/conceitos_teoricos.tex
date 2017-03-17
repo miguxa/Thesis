@@ -40,7 +40,7 @@ Uma mensagem do tipo RMC tem o aspeto da figura \ref{fig:formato_de_mensagem_rmc
 
 Foi também necessário fazer algumas configurações, utilizando um conjunto de mensagens que o recetor conseguisse entender.
 Todas as mensagens têm o formato apresentado na figura \ref{fig:formato_de_mensagem_de_configuracao_do_recetor_gps}, em que o campo <CC> representa o código da mensagem e <BB> a informação a transmitir nessa mensagem.
-As mensagens enviadas tinham os códigos "05" e "09", referentes à velocidade de comunicação do gps e ao tipo de mensagem que o gps deve ler, respetivamente.
+As mensagens enviadas tinham os códigos ``05'' e ``09'', referentes à velocidade de comunicação do gps e ao tipo de mensagem que o gps deve ler, respetivamente.
 Toda esta informação foi tirada diretamente do ficheiro de mensagens do recetor Venus638FLPx e do seu datasheet.
 
 \begin{figure}[hbtp]
@@ -84,7 +84,7 @@ Cada frase é terminada com um caracter de fim de linha e retorno e a informaç�
 \label{sec:acelerometro}
 
 Um acelerómetro é um dispositivo que mede a aceleração a que está sujeito, no caso de se encontrar estacionário na superfície terrestre, este dispositivo sofre uma aceleração vertical de 9,8 m/s$^2$ e caso se encontre em queda livre mede uma aceleração de 0 m/s$^2$.
-Por este valor ser o valor constante de aceleração gravítica, foi criada uma unidade de medida "g" para mais facilmente expressar valores de aceleração, sendo que 1 g equivale a 9,8 m/s$^2$.
+Por este valor ser o valor constante de aceleração gravítica, foi criada uma unidade de medida ``g'' para mais facilmente expressar valores de aceleração, sendo que 1 g equivale a 9,8 m/s$^2$.
 Os acelerómetros têm diversas aplicações na indústria e na ciência devido à sua elevada sensibilidade e são comummente utilizados para detetar vibrações em diversas máquinas, em telemóveis e tablets e também em aeronaves, incluindo drones, para uma melhor estabilização de voo.
 Conceptualmente, um acelerómetro comporta-se como uma massa amortecida por uma mola, sendo possível determinar o valor de aceleração sabendo o peso da massa e a constante de elasticidade da mola.
 Em termos práticos um acelerómetro pode utilizar vários métodos para determinar as suas leituras mas os dois mais comuns são os acelerómetros piezoelétricos e os capacitivos.
@@ -108,7 +108,7 @@ Para a comunicação foi utilizado o método I$^2$C mas estava também disponív
 Apesar da comunicação SPI suportar velocidades de transmissão mais elevadas, esta vantagem não se mostra relevante a 200 Hz.
 O acelerómetro em questão oferece uma biblioteca de funções de teste, entre as quais a deteção de queda livre, toque simples e toque duplo que, apesar de não serem utilizadas no projeto, foram bastante importantes aquando da aprendizagem de utilização do dispositivo.
 Para que fosse possível obter os valores de leitura do acelerómetro, foi necessário ler os valores entre os registos 50 e 55, sendo que cada par contém informação sobre um dos três eixos de deslocação.
-Os valores lidos foram então estudados utilizando um gráfico, sendo que a sua análise está descrita na secção XXX.
+Os valores lidos foram então estudados utilizando um gráfico, sendo que a sua análise está descrita na secção \ref{fig:grafico_de_uma_irregularidade_detetada}.
 
 \section{Comunicação - Bluetooth}
 \label{sec:bluetooth}
@@ -137,7 +137,7 @@ Para transmissores de classe 2, o alcance vai até 10 metros, levando a um consu
 Por último, a classe 1 tem transmissores com alcance máximo de 100 metros, sendo consumidos até 100 mW.
 O sistema Bluetooth encontra-se principalmente na classe 2 mas versões mais atuais conseguem por vezes alcançar a classe 1, com um alcance de 60 metros.
 No que diz respeito ao dispositivo utilizado, foi um HC-06 \ref{fig:modulo_bluetooth} série que não necessitou de qualquer tipo de configuração uma vez que a frequência de transmissão pré-definida é de 9600 bps.
-Foi apenas necessário alimentar este dispositivo e quando era estabelecida a ligação, uma palavra-passe tinha que ser introduzida, neste caso, "1234".
+Foi apenas necessário alimentar este dispositivo e quando era estabelecida a ligação, uma palavra-passe tinha que ser introduzida, neste caso, ``1234''.
 
 \section{Comunicação - Wi-Fi}
 \label{sec:wi-fi}
@@ -152,7 +152,7 @@ A certificação dos dispositivos Wi-Fi é feita pela aliança Wi-Fi, um conjunt
 
 \begin{figure}[hbtp]
 	\centering
-	\includegraphics[height=5cm]{wifi}
+	\includegraphics[height=3cm]{wifi}
 	\caption[Logótipo do sistema Wi-Fi]{Logótipo do sistema Wi-Fi \footnotemark}
 	\label{fig:arduino}
 \end{figure}
@@ -185,7 +185,7 @@ O Arduino pode ser alimentado via USB ou através de um conector que forneça um
 Existem também os pins GND para ligação à massa, 5V e 3.3V, que fornecem alimentação com esses valores, Analog e Digital, utilizados para ligação de sensores analógicos e digitais, respetivamente.
 Existe também um botão de reset que faz o código reiniciar, para que seja possível fazer múltiplos testes sem que seja necessário desconectar a alimentação.
 Por fim, existe um conjunto de LED's de controlo para ajudar o utilizador a saber o estado do seu projeto.
-O LED "power" indica se existe uma alimentação correta ao Arduino e os LEDs "Rx" e "Tx" fornecem informação relativa à comunicação série do Arduino com outros equipamentos, nomeadamente "Rx" acende quando a placa recebe informação e "Tx" acende quando é enviada informação.
+O LED ``power'' indica se existe uma alimentação correta ao Arduino e os LEDs ``Rx'' e ``Tx'' fornecem informação relativa à comunicação série do Arduino com outros equipamentos, nomeadamente ``Rx'' acende quando a placa recebe informação e ``Tx'' acende quando é enviada informação.
 
 \begin{figure}[hbtp]
 	\centering
@@ -224,17 +224,70 @@ Entre os mais comuns estão o Eclipse, o Android Studio e o MIT App Inventor.
 O ambiente de programação Eclipse necessita da instalação de um extra para que seja possível o desenvolvimento de código para Android e era o principal método de desenvolvimento até 2014.
 No final de 2014, a Google apresentou o Android Studio: um programa dedicado ao desenvolvimento Andorid que contém todas as opções existentes no universo Android, sendo este o principal método de desenvolvimento.
 Existe também o MIT App Inventor, que corre num \emph{browser web} e permite o desenvolvimento de aplicações sem que seja escrito código, utilizando a programação por módulos que se ligam entre si, não exigindo uma capacidade de processamento tão alta como o Android Studio.
-Para que uma aplicação possa ser executada no telemóvel, é necessário instalar o ficheiro APK da aplicação, através da loja "Google Play" ou diretamente por ligação USB a um computador, permitindo a qualquer utilizador o desenvolvimento da sua própria aplicação, o seu teste e partilha.
+Para que uma aplicação possa ser executada no telemóvel, é necessário instalar o ficheiro APK da aplicação, através da loja ``Google Play'' ou diretamente por ligação USB a um computador, permitindo a qualquer utilizador o desenvolvimento da sua própria aplicação, o seu teste e partilha.
 O sistema operativo Android é baseado em Linux, com bibliotecas, API's e algum software escrito em C e ainda algumas traduções de bibliotecas para Java que torna possível a execução das aplicações.
 Estas bibliotecas em Java são originárias e programadas a partir do OpenJDK, uma ferramenta que contém uma máquina virtual, as suas próprias bibliotecas e também um compilador.
 Em termos específicos desta dissertação, a escolha do sistema operativo Android foi simples, uma vez que existem cerca de 86\% de utilizadores do sistema Android no universo dos telemóveis.
 Além disso, as ferramentas para desenvolvimento de aplicações Android são mais acessíveis do que para iOS, o segundo sistema operativo mais frequente em telemóveis.
 
-\section{Processamento - HTML}
+\section{Linguagem de programação - C}
+\label{sec:C}
+
+A linguagem de programação C foi uma das primeiras a surgir e uma das mais utilizadas no ramo das linguagens de baixo nível.
+Em C, todo o código executável está contigo em sub-rotinas chamadas funções, que podem ter parâmetros de entrada e de saída, de forma a comunicar os seus resultados com outras funções.
+Existe um número limitado de comandos pré-definidos: for, if/else, do/while, switch, entre outros, que formam a base desta linguagem.
+É também possível fazer as operações matemáticas mais elementares, utilizando os operadores lógicos normalmente utilizados em matemática, assim como operações mais complexas através da utilização de funções já existentes.
+Existem também sequências de elementos do mesmo tipo chamados ``arrays'', que funcionam como um bloco e podem ser manipulados como uma só variável.
+Devido à sua baixa utilização de memória, é uma das linguagens mais rápida a processar código, sendo uma das principais escolhas para a criação de programas.
+Para que o código possa ser executado, é necessário um editor de texto, sem qualquer tipo de especificações e um compilador, que gera um ficheiro executável a partir do código escrito pelo programador.
+As possibilidades de programação vão desde a criação de uma máquina de calcular até ao processamento de imagem, passando pela criação de jogos ou a simples gestão de um ficheiro de clientes de uma loja.
+
+\section{Linguagem de programação - HTML}
 \label{sec:html}
 
-\section{Processamento - PHP}
+HTML é uma linguagem de marcação utilizada para a construção de páginas \emph{web}, que são interpretadas pelo navegador.
+O navegador pode ter acesso ao ficheiro se ele estiver alocado num servidor ou num ficheiro local, transformando-o numa página \emph{web} totalmente navegável.
+Esta linguagem torna possível a utilização de imagens, texto e vídeos numa página \emph{web}, bem como formulários interativos.
+As marcações de HTML são maioritariamente denominadas \emph{tags}, um tipo de dados que recebe parâmetros de entrada e os molda, consoante a sua função.
+Estas \emph{tags} costumam ser apresentadas em pares, como ``<h1>'' e ``</h1>'' que afetam todo o código que se encontre entre elas, neste caso, tornando o texto normal em cabeçalho de nível 1, mas também podem ser individuais, como ``<img>'', que determina uma imagem e todos os seus atributos.
+Outro aspeto importante em HTML é a declaração da linguagem a utilizar.
+Apesar da página ter a extensão HTML, ela suporta outras linguagens como PHP, JavaScript e também SQL, tornando esta linguagem muito mais completa e diversificada, sendo assim possível utilizar determinadas linguagens nos pontos fortes de cada uma.
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=14.4cm]{hello}
+	\caption{Exemplo de código HTML e o resultado num browser}
+	\label{fig:hello}
+\end{figure}
+
+Na figura \ref{fig:hello} é possível distinguir várias secções do código:
+O texto entre ``<html>'' e ``</html>'' descreve a página e a linguagem em que deve ser interpretado.
+Entre ``<title>'' e ``</title>'' vem o título da página que apenas aparece como título do navegador.
+Já em ``<body>'' e ``</body>'' está o texto visível, que aparece na execução da página.
+``< h2>'' e ``</h2>'' representam um cabeçalho de nível 2 e <img ... > é uma imagem, com os seus atributos declarados.
+
+\section{Linguagem de programação - PHP}
 \label{sec:php}
 
-\section{Processamento - MySQL}
+PHP é uma linguagem \emph{script} utilizada no desenvolvimento \emph{web}, que contém código executável e que é normalmente contido em código HTML, utilizando os delimitadores ``<php'' e ``?>'', permitindo que exista código executável numa página juntamente com código estático.
+Uma das suas vantagens vem ser ser executada no servidor, permitindo um processamento mais seguro do código fonte, uma vez que é impossível descobrir quais as ações executadas, pois o navegador apenas recebe o resultado do processamento do código.
+Além disso, o código PHP é bastante simples, promovendo a utilização de novo programadores, oferecendo muitas funcionalidades de modo a satisfazer programadores mais experientes.
+Esta linguagem é em muitos aspetos semelhante a C, tanto no que toca às variáveis, bem como às suas funcionalidades, possibilitando a criação de funções, vetores e variáveis que podem ter os seus valores alterados tantas vezes quantas desejadas.
+Desta forma, PHP é uma solução bastante boa para desenvolver código dinâmico em páginas \emph{web}, algo que não é possível fazer com C.
+
+\section{Base de dados - MySQL}
 \label{sec:MySQL}
+
+MySQL é um gestor de base de dados \emph{open-source} desenvolvido em C que é compatível com diversos sistemas, incluindo Linux, macOS e Windows.
+Esta base de dados permite o armazenamento de variáveis e os seus valores, não sendo possível o armazenamento de ficheiros.
+As suas funcionalidades principais incluem a inserção de dados, a sua pesquisa, atualização e remoção, tornando possível uma fácil gestão da informação que aí se encontra armazenada.
+Para que seja possível fazer pesquisa na base de dados, são necessários operadores, matemáticos que limitam a pesquisa, assim como um conjunto de instruções que determinam o objetivo da pesquisa.
+Na figura \ref{fig:sql} é possível ver duas instruções, sendo que a primeira retorna as dez primeiras instâncias em que o valor ``forca'' é inferior ao valor ``3'' e na segunda são inseridos novos parâmetros na base de dados com o nome ``coordenadas''.
+Neste trabalho foi bastante útil para que fosse possível fazer a gestão e armazenamento de todas as irregularidades detetadas.
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=14.4cm]{sql}
+	\caption{Exemplo de código SQL}
+	\label{fig:sql}
+\end{figure}
