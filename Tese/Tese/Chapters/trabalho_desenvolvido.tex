@@ -127,13 +127,26 @@ Apesar de ser possível escrever um valor numérico numa string, quando esta ope
 \section{Funcionamento do Android}
 \label{sec:funcionamento_do_android}
 
-Tal como explicado na secção \ref{sec:android}, o método escolhido para a programação Android foi a MIT App Inventor 2, no website http://ai2.appinventor.mit.edu devido à facilidade apresentada, graças a ser uma programação por blocos bem como ao facto de correr num web browser e fazendo o processamento e compilação de código no servidor em vez de ser no cliente, diminuindo bastante o processamento feito no computador local, tornando o processo de criação mais rápido.
+Tal como explicado na secção \ref{sec:android}, o método escolhido para a programação Android foi a MIT App Inventor 2, no website http://ai2.appinventor.mit.edu.
+Graças a correr num web browser, todo o processamento e compilação de código é feito no servidor em vez de ser no computador local, tornando o processo de criação mais rápido.
+Além disso, a sua programação por blocos torna o processo muito mais compreensível uma vez que os blocos existentes mostram quais as funcionalidades de cada tipo de dados, desde números a vetores.
+Este modo de programação mostrou-se muito prático dada a inexperiência de desenvolvimento de aplicações para telemóvel.
+A existência de apenas quatro botões torna esta aplicação bastante fácil de utilizar, pois cada botão tem a sua função devidamente identificada, tal como é possível ver na figura \ref{fig:Aspeto_da_aplicação_Smart_Shock}.
+
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=5cm]{AppVisual}
+	\caption{Aspeto da aplicação Smart Shock}
+	\label{fig:Aspeto_da_aplicação_Smart_Shock}
+\end{figure}
 
 A base do código da aplicação é um ciclo while que corre desde que a aplicação esteja aberta, semelhante à função \emph{loop} do Arduino.
 Dentro deste ciclo existem duas condições: uma que verifica se o GPS do telemóvel está a detetar coordenadas e outra que verifica a ligação ao módulo \emph{Bluetooth} do Arduino, bem como um procedimento que verifica a existência de dados armazenados no telemóvel para futuro envio para a base de dados.
 O GPS do telemóvel é utilizado para que seja possível reportar irregularidades existentes no asfalto sem que se esteja a conduzir, possibilitando todos os transeunte adicionar informações sobre o local em que se encontram.
 Sempre que são detetadas coordenadas disponíveis, um botão com o texto \emph{``Shock''} fica ativo e sempre que é pressionado são armazenadas as coordenadas atuais, bem como a data e hora presentes para um posterior envio para a base de dados.
 Para que estas ocorrências possam ser diferenciadas das detetadas pelo acelerómetro montado no Arduino, o código que lhe é atribuído tem um valor único, facilitando assim a diferenciação entre os dois tipos de irregularidades.
+
 No que toca à ligação a um módulo \emph{Bluetooth}, sempre que esta existe, é enviado um código para o dispositivo a que foi feita a ligação.
 Este código serve para o Arduino saber que o dispositivo que se encontra ligado tem a aplicação a correr, evitando assim que os dados recolhidos por este sejam enviados para um dispositivo desconhecido.
 Depois de ser feita a ligação, o código fica a ``escutar'' o Arduino até que ele envie alguma informação para o telemóvel e quando tal acontece, os vários conjuntos de dados  recebidos são divididos para uma lista temporária.
@@ -142,9 +155,12 @@ Esta ligação é verificada a partir de um erro produzido automaticamente pelo 
 O envio de dados para a base de dados é feito através do método \emph{POST}, sendo desta forma possível ocultar os dados enviados, sendo esta uma vantagem no caso de no futuro serem desenvolvidas contas de utilizador em que certas informações devem permanecer confidenciais.
 Se a ligação à \emph{internet} não existir, os dados são armazenados no telemóvel para um futuro envio, sendo necessário pressionar um botão existente na aplicação.
 Este botão serve também para informar o utilizador que tem dados armazenados no dispositivo, uma vez que o botão nem sempre se encontra ativo.
+
 No que toca à seleção de dispositivos \emph{Bluetooth}, é mostrada uma lista dos dispositivos com que o telemóvel está emparelhado.
 No caso de ser a primeira vez que um determinado telemóvel se liga ao Arduino, é necessário fazer o emparelhamento fora da aplicação, como para qualquer outro dispositivo.
 Quando a aplicação é terminada, é enviada uma mensagem para o Arduino de modo a que este saiba que não é possível enviar mais informação sobre irregularidades e armazene todas as deteções nesse cartão de memória.
+Na figura \ref{fig:Fluxograma_referente_ao_código_android} é possível compreender qual o ciclo de funcionamento da aplicação, sendo que no lado esquerdo se encontra o ramo principal e o ciclo que está sempre em funcionamento enquanto a aplicação estiver aberta.
+Já do lado direito é possível ver quais os procedimentos realizados quando os botões ``Shock'' e ``Enviar'' são pressionados.
 
 \begin{figure}[hbtp]
 	\centering
@@ -153,6 +169,7 @@ Quando a aplicação é terminada, é enviada uma mensagem para o Arduino de mod
 	\label{fig:Fluxograma_referente_ao_código_android}
 \end{figure}
 
+Em \ref{cha:codigo_da_aplicacao} são apresentados alguns dos blocos construidos para o funcionamento da aplicação para uma melhor compreensão do funcionamento do App Inventor.
 \newpage
 
 \section{Base de dados}
@@ -197,8 +214,8 @@ Esta página \emph{web} é bastante semelhante à \emph{home.php}, sendo que aqu
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=15cm]{dados}
-	\caption{informação tipo adicionada na base de dados}
+	\includegraphics[width=10cm]{dados}
+	\caption{Informação tipo adicionada na base de dados}
 	\label{fig:informacao_tipo_adicionada_na_base_de_dados}
 \end{figure}
 
@@ -250,3 +267,38 @@ A montagem da figura \ref{fig:montagem_real_do_sistema} foi então instalada num
 	\label{fig:carro}
 \end{figure}
 
+\section{Validação de resultados}
+\label{sec:validacao}
+
+De modo a fazer uma validação do sistema e dos seus resultados, o sistema foi parcialmente montado num veículo de testes, mantendo o acelerómetro no seu interior para que fossem inseridas irregularidades manualmente, apesar do bom estado do pavimento.
+Este teste serviu para confirmar o bom funcionamento de todo o sistema, ou seja, o acelerómetro e o GPS, a comunicação Bluetooth e 3G e também a base de dados e web site para consulta de dados inseridos.
+Na figura \ref{fig:validacao} é possível consultar o percurso deste teste.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[height=10cm]{Validacao}
+	\caption{Percurso de validação de resultados}
+	\label{fig:validacao}
+\end{figure}
+
+Após concluir que todo o sistema estava a funcionar corretamente, o acelerómetro foi montado no automóvel e foram adquiridos dados ao longo de vários dias para que o a base de dados ficasse mais completa.
+Apesar de não existir uma análise destes dados, o sistema mostrou funcionar em perfeitas condições, fazendo deteções regularmente sempre que o veículo passava por alguma irregularidade.
+Na análise do mapa, é possível verificar que algumas deteções se encontram fora das estradas, algo impossível de acontecer no cenário real.
+Ainda assim, o afastamento nunca é superior a 5 metros, a escala menor do mapa, sendo esse um valor aceitável neste tipo de sistemas pois à escala humana facilmente se identificam todas irregularidades que estejam a 5 metros de distância de um determinado ponto.
+
+\section{Resultados obtidos}
+\label{sec:resultados}
+
+Tal como esperado, o sistema apresentou resultados positivos quanto à deteção de irregularidades no asfalto.
+O acelerómetro é um sistema fiável no que toca a este tipo de deteção e a sua calibração é praticamente inexistente tendo em conta a montagem proposta, tornando este sistema bastante fácil de usar e apelativo.
+O recetor GPS também apresentou resultados bastante fiáveis e consistentes ao longo de todos os testes feitos, mesmo aqueles em que o sistema não se encontrava totalmente montado.
+
+Também a aplicação mostrou ser bastante útil como ponto intermédio de comunicação.
+O seu desenho simples torna muito intuitiva a utilização sendo apenas necessário selecionar o dispositivo com que se deseja comunicar.
+Para a comunicação à base de dados é apenas necessário que exista ligação à Internet, não existindo qualquer diferença quanto ao modo de ligação, seja ele Wi-Fi ou 3G.
+É ainda possível determinar que, através do App Inventor, a construção da aplicação foi bastante rápida e intuitiva, reduzindo significativamente o tempo de desenvolvimento e de teste da mesma.
+
+Por fim, a base de dados fez um armazenamento de dados sem qualquer tipo de problemas.
+A configuração da mesma foi bastante fácil e a sua consulta em SQL é totalmente adequada aos requisitos deste projeto.
+A construção das páginas \emph{web} à volta dos dados da aplicação serviu para que a consulta de dados fosse mais prática.
+A utilização do Google Maps e das suas funcionalidades possibilitou a utilização de um mapa interativo para que fosse mais direta a identificação da localização das irregularidades detetadas.

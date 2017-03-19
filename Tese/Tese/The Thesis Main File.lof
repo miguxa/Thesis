@@ -46,7 +46,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Formato de mensagem RMC\relax }}{12}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Formato de mensagem de configura\IeC {\c c}\IeC {\~a}o do recetor gps\relax }}{13}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Formato de mensagem de configura\IeC {\c c}\IeC {\~a}o do recetor GPS\relax }}{13}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Funcionamento de um aceler\IeC {\'o}metro capacitivo}}{14}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
@@ -72,18 +72,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Formatos de apresenta\IeC {\c c}\IeC {\~a}o de coordenadas\relax }}{30}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Android\relax }}{32}{figure.caption.29}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Aspeto da aplica\IeC {\c c}\IeC {\~a}o Smart Shock\relax }}{30}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces P\IeC {\'a}gina \emph {web} home.php\relax }}{34}{figure.caption.30}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Android\relax }}{32}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces informa\IeC {\c c}\IeC {\~a}o tipo adicionada na base de dados\relax }}{34}{figure.caption.31}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces P\IeC {\'a}gina \emph {web} home.php\relax }}{34}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces P\IeC {\'a}gina \emph {web} listlocations.php\relax }}{35}{figure.caption.32}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Informa\IeC {\c c}\IeC {\~a}o tipo adicionada na base de dados\relax }}{34}{figure.caption.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Esquem\IeC {\'a}tico do sistema\relax }}{36}{figure.caption.33}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces P\IeC {\'a}gina \emph {web} listlocations.php\relax }}{35}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Montagem real do sistema\relax }}{36}{figure.caption.34}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Esquem\IeC {\'a}tico do sistema\relax }}{36}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Instala\IeC {\c c}\IeC {\~a}o no ve\IeC {\'\i }culo de testes\relax }}{37}{figure.caption.35}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Montagem real do sistema\relax }}{36}{figure.caption.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Instala\IeC {\c c}\IeC {\~a}o no ve\IeC {\'\i }culo de testes\relax }}{37}{figure.caption.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Percurso de valida\IeC {\c c}\IeC {\~a}o de resultados\relax }}{38}{figure.caption.37}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Ciclo principal da aplica\IeC {\c c}\IeC {\~a}o\relax }}{43}{figure.caption.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Gest\IeC {\~a}o de mensagens de erro\relax }}{44}{figure.caption.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Inicializa\IeC {\c c}\IeC {\~a}o de vari\IeC {\'a}veis e a\IeC {\c c}\IeC {\~o}es dos bot\IeC {\~o}es ``Desligar'' e ``Dispositivos''\relax }}{44}{figure.caption.42}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.4}{\ignorespaces A\IeC {\c c}\IeC {\~a}o do bot\IeC {\~a}o ``Shock'' e remo\IeC {\c c}\IeC {\~a}o do ficheiro do telem\IeC {\'o}vel\relax }}{45}{figure.caption.43}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.5}{\ignorespaces A\IeC {\c c}\IeC {\~a}o do bot\IeC {\~a}o ``Enviar''\relax }}{45}{figure.caption.44}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Transforma\IeC {\c c}\IeC {\~a}o de vari\IeC {\'a}veis para envio para a base de dados\relax }}{46}{figure.caption.45}

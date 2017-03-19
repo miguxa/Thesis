@@ -8,15 +8,15 @@ O Sistema de Posicionamento Global (GPS – Global Positioning System) é uma re
 Este sistema tem o nome de Navstar e é financiado e gerido pelo Departamento da Defesa dos Estados Unidos da América.
 Este é um dos vários sistemas de posicionamento existentes mundialmente, pois existem também os sistemas GLONASS da Rússia, o COMPASS desenvolvido pela China e o GALILEO da União Europeia, cada um deles com diferentes níveis de desenvolvimento e testes.
 Como o sistema militar que é, inicialmente foi desenvolvido apenas para utilização militar mas em 1983 foi permitida a sua utilização por parte de civis, sendo que na época o sinal era degradado e continha um erro de +/- 100 metros, algo que foi eliminado no ano de 2010.
-Os satélites GPS transmitem sinais para os receptores GPS, os quais são elementos passivos no sistema pois não transmitem qualquer tipo de informação, tornando-se este um sistema de comunicação unilateral.
+Os satélites GPS transmitem sinais para os recetores GPS, os quais são elementos passivos no sistema pois não transmitem qualquer tipo de informação, tornando-se este um sistema de comunicação unilateral.
 Este serviço de localização necessita de uma visão desimpedida do céu e apenas no exterior consegue apresentar bons resultados, as quais dependem de relógios atómicos presentes nos satélites que proporcionam ao sistema a sua elevada precisão.
-Cada satélite GPS transmite informação relativa ao seu posicionamento relativo ao planeta, bem como a hora actual.
+Cada satélite GPS transmite informação relativa ao seu posicionamento relativo ao planeta, bem como a hora atual.
 Todas as operações realizadas pelos satélites encontram-se sincronizadas para que o seu sinal constante seja transmitido nos mesmos instantes de tempo.
-Os sinais emitidos pelos satélites são enviados à velocidade da luz para os receptores GPS e utilizando o tempo de transmissão desse sinal é possível determinar a distância a que cada satélite se encontra do receptor.
-Assim que o receptor ler a informação de pelo menos quatro satélites é possível calcular a sua posição em três dimensões.
+Os sinais emitidos pelos satélites são enviados à velocidade da luz para os recetores GPS e utilizando o tempo de transmissão desse sinal é possível determinar a distância a que cada satélite se encontra do recetor.
+Assim que o recetor ler a informação de pelo menos quatro satélites é possível calcular a sua posição em três dimensões.
 A todo o momento existem pelo menos 24 satélites GPS em funcionamento que realizam duas órbitas por dia a uma altura de 18 500 km e a uma velocidade próxima de 14 000 km/h.
-Cada receptor recebe informação sobre o local em que um satélite se encontra num determinado momento do dia e com essa informação consegue determinar que se encontra algures numa superfície esférica em que o centro é o próprio satélite.
-Cruzando os pontos de pelo menos quatro satélites, o receptor determina o local em que todas as esferas se intersectam e desta forma concluí a sua própria posição com um erro de +/- 10m.
+Cada recetor recebe informação sobre o local em que um satélite se encontra num determinado momento do dia e com essa informação consegue determinar que se encontra algures numa superfície esférica em que o centro é o próprio satélite.
+Cruzando os pontos de pelo menos quatro satélites, o recetor determina o local em que todas as esferas se intersectam e desta forma concluí a sua própria posição com um erro de +/- 10 m.
 
 \begin{figure}[hbtp]
 	\centering
@@ -27,7 +27,7 @@ Cruzando os pontos de pelo menos quatro satélites, o receptor determina o local
 
 \footnotetext{http://www.sparkfun.com/products/11058}
 
-O receptor GPS utilizado foi o Venus638FLPx que recebe mensagens normalizada NMEA (explicada mais à frente) a uma taxa padrão de 9600 bps que pode ser alterada para 115200 bps e é alimentado a uma tensão de 3.3 V.
+O recetor GPS utilizado foi o Venus638FLPx que recebe mensagens normalizada NMEA (explicada mais à frente) a uma taxa padrão de 9600 bps que pode ser alterada para 115200 bps e é alimentado a uma tensão de 3.3 V.
 Por definição padrão, este recetor GPS recebe cinco tipos de mensagem NMEA, das quais apenas uma é utilizada neste projeto, pois apenas ela refere todos os valores desejados obter: latitude, longitude, data e hora.
 Uma mensagem do tipo RMC tem o aspeto da figura \ref{fig:formato_de_mensagem_rmc} sendo que a tabela \ref{tab:nmea_rmc} descreve o seu significado.
 
@@ -40,13 +40,13 @@ Uma mensagem do tipo RMC tem o aspeto da figura \ref{fig:formato_de_mensagem_rmc
 
 Foi também necessário fazer algumas configurações, utilizando um conjunto de mensagens que o recetor conseguisse entender.
 Todas as mensagens têm o formato apresentado na figura \ref{fig:formato_de_mensagem_de_configuracao_do_recetor_gps}, em que o campo <CC> representa o código da mensagem e <BB> a informação a transmitir nessa mensagem.
-As mensagens enviadas tinham os códigos ``05'' e ``09'', referentes à velocidade de comunicação do gps e ao tipo de mensagem que o gps deve ler, respetivamente.
+As mensagens enviadas tinham os códigos ``05'' e ``09'', referentes à velocidade de comunicação do GPS e ao tipo de mensagem que o GPS deve ler, respetivamente.
 Toda esta informação foi tirada diretamente do ficheiro de mensagens do recetor Venus638FLPx e do seu datasheet.
 
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[width=7cm]{mensagemgps}
-	\caption{Formato de mensagem de configuração do recetor gps}
+	\caption{Formato de mensagem de configuração do recetor GPS}
 	\label{fig:formato_de_mensagem_de_configuracao_do_recetor_gps}
 \end{figure}
 
@@ -132,7 +132,7 @@ A sequência destes intervalos de comunicação determina que o mestre transmite
 \footnotetext{https://www.adafruit.com/product/2479}
 
 O padrão de Bluetooth tem uma ligação direta entre potência e alcance e esse alcance determina em que classe de dispositivo rádio o transmissor se encontra.
-Um transmissor de classe 3 tem um alcance até 1 e consome o máximo de 1mW.
+Um transmissor de classe 3 tem um alcance até 1 e consome o máximo de 1 mW.
 Para transmissores de classe 2, o alcance vai até 10 metros, levando a um consumo máximo de 2,5 mW.
 Por último, a classe 1 tem transmissores com alcance máximo de 100 metros, sendo consumidos até 100 mW.
 O sistema Bluetooth encontra-se principalmente na classe 2 mas versões mais atuais conseguem por vezes alcançar a classe 1, com um alcance de 60 metros.
@@ -168,9 +168,9 @@ Outro mecanismo de redução de interferências é o SSID, um identificador de s
 
 3G, abreviatura de terceira geração, é a terceira geração de tecnologia de telecomunicações móveis sem fio e assenta num conjunto de normas e serviços de utilização de telecomunicações móveis, cumprindo normas IMT-2000.
 Esta tecnologia tem como principais focos a realização de chamadas por telemóveis, o acesso à Internet sem fios e também transmissão de televisão sem fios.
-Estas redes permitem a transferência de informação a velocidades sempre superiores a 200 Kbs e podem atingir velocidades de vários Mbs, uma velocidade bastante elevada na área de comunicação sem fios.
+Estas redes permitem a transferência de informação a velocidades sempre superiores a 200 Kbps e podem atingir velocidades de vários Mbps, uma velocidade bastante elevada na área de comunicação sem fios.
 Gerações anteriores à terceira foram criadas no inicio dos anos 80 e surge uma nova geração com espaçamentos de cerca de 10 anos.
-Esta tecnologia, apesar de ter processos bastante diferentes da Wi-Fi, apresenta resultados semelhantes, pois permite a ligação à internet através de um telemóvel, tornando possível o envio dos dados recolhidos pelo acelerómetro para uma página \emph{web}.
+Esta tecnologia, apesar de ter processos bastante diferentes da Wi-Fi, apresenta resultados semelhantes, pois permite a ligação à Internet através de um telemóvel, tornando possível o envio dos dados recolhidos pelo acelerómetro para uma página \emph{web}.
 
 \section{Processamento - Arduino}
 \label{sec:arduino}
@@ -204,7 +204,7 @@ Nestes ecrãs é possível detetar diversos gestos como deslizar, bater e aperta
 O sistema Android dispõe também de um sistema televisivo, automóvel e de relógios, que ainda se encontram numa fase de desenvolvimento inicial mas apresentam resultados promissores.
 De modo a fazer uma melhor leitura dos gestos que o utilizador realiza, o sistema Android é também capaz de ler informação de acelerómetros, giroscópios ou recetores GPS que façam parte do telemóvel, dando respostas visuais pelo ecrã mas também sensoriais ao nível do som e vibração do dispositivo.
 O ecrã inicial do Android utiliza atalhos e \emph{widgets}, sendo que um atalho inicia a aplicação referente enquanto que um \emph{widget} fornece informação em tempo real, como o estado do tempo ou emails que sejam recebidos pelo utilizador.
-No cimo deste ecrã inicial existe uma barra que fornece informação sobre o dispositivo e as suas conexões, que pode ser arrastada para baixo, expondo informação relevante sobre as aplicações, atualizações e até algumas definições que sejam habitualmente alteradas como o brilho do ecrã ou a ligação à internet.
+No cimo deste ecrã inicial existe uma barra que fornece informação sobre o dispositivo e as suas conexões, que pode ser arrastada para baixo, expondo informação relevante sobre as aplicações, atualizações e até algumas definições que sejam habitualmente alteradas como o brilho do ecrã ou a ligação à Internet.
 
 \begin{figure}[hbtp]
 	\centering
@@ -222,7 +222,7 @@ Estas são normalmente desenvolvidas em Java mas podem ser combinadas com códig
 A programação destas aplicações é feita num SDK (software de desenvolvimento) que normalmente inclui ferramentas de desenvolvimento, um detetor de erros, algumas bibliotecas, um compilador e um emulador, para que seja possível simular a utilização de um telemóvel no computador.
 Entre os mais comuns estão o Eclipse, o Android Studio e o MIT App Inventor.
 O ambiente de programação Eclipse necessita da instalação de um extra para que seja possível o desenvolvimento de código para Android e era o principal método de desenvolvimento até 2014.
-No final de 2014, a Google apresentou o Android Studio: um programa dedicado ao desenvolvimento Andorid que contém todas as opções existentes no universo Android, sendo este o principal método de desenvolvimento.
+No final de 2014, a Google apresentou o Android Studio: um programa dedicado ao desenvolvimento Android que contém todas as opções existentes no universo Android, sendo este o principal método de desenvolvimento.
 Existe também o MIT App Inventor, que corre num \emph{browser web} e permite o desenvolvimento de aplicações sem que seja escrito código, utilizando a programação por módulos que se ligam entre si, não exigindo uma capacidade de processamento tão alta como o Android Studio.
 Para que uma aplicação possa ser executada no telemóvel, é necessário instalar o ficheiro APK da aplicação, através da loja ``Google Play'' ou diretamente por ligação USB a um computador, permitindo a qualquer utilizador o desenvolvimento da sua própria aplicação, o seu teste e partilha.
 O sistema operativo Android é baseado em Linux, com bibliotecas, API's e algum software escrito em C e ainda algumas traduções de bibliotecas para Java que torna possível a execução das aplicações.
