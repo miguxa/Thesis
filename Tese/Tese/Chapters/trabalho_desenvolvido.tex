@@ -2,8 +2,8 @@
 \label{cha:trabalho desenvolvido}
 
 A solução proposta para a resolução do problema apresentado em \ref{cha:introdução} é um sistema separado em três fases, cada uma delas ligada a um elemento físico: o Arduino, o telemóvel e a base de dados (alocada num computador). 
-Na figura \ref{fig:arquitetura} é possível ver um esquema da arquitetura do sistema desenvolvido
-Assim surgem as seguintes secções, referentes às três fases do sistema.
+Na figura \ref{fig:arquitetura} é possível ver um esquema da arquitetura do sistema desenvolvido.
+Assim as seguintes secções são referentes às três fases do sistema.
 
 \begin{figure}[hbtp]
 	\centering
@@ -15,6 +15,7 @@ Assim surgem as seguintes secções, referentes às três fases do sistema.
 \section{Funcionamendo do Arduino}
 \label{sec:funcionamento_do_arduino}
 O código Arduino está dividido em três partes: inicialização, setup e loop, sendo que a inicialização e setup são apenas executadas uma vez enquanto que loop é executada até que o Arduino seja desligado ou alguma parte do código force uma paragem.
+No apêndice \ref{cha:codigo_da_aplicacao} é possível ver o código desenvolvido para o Arduino, o qual é explicado de seguida.
 
 \begin{itemize}
 \item Na zona de declarações são incluídas as bibliotecas referentes ao acelerómetro, ao cartão de memória e ao GPS.
@@ -22,7 +23,7 @@ São também definidos os modos de escrita no cartão de memória, os portos de 
 Além disso, são criadas variáveis globais de controlo do código, variáveis de passagem de parâmetros entre vários ciclos da função \emph{loop} e declaração de constantes que serão utilizadas diversas vezes ao longo do código, facilitando a alteração do seu valor em todo o código, caso tal se mostre necessário.
 
 \item Na função \emph{setup} são declaradas as bandas de comunicação entre o Arduino e o telemóvel e entre o GPS e o Arduino.
-São também inicializados dois \emph{leds} como elementos de saída de informação e um botão como entrada de informação e é atribuído o estado de “desligado” a ambos os \emph{leds}.
+São também inicializados dois \emph{leds} como elementos de saída de informação e um botão como entrada de informação ao qual foi atribuído o estado de “desligado” a ambos os \emph{leds}.
 Por fim, são executadas as funções de inicialização do leitor do cartão de memória e do acelerómetro, SD\textunderscore init e AccelInit respectivamente, ambas explicadas mais á frente.
 
 \begin{figure}[hbtp]
@@ -38,7 +39,7 @@ Caso tal se verifique, essa informação é lida e comparada, para que seja poss
 Na hipótese desta alteração se verificar, é avaliada se a ligação foi estabelecida ou cortada, sendo que, no caso de ser estabelecida, é executada a função ReadSD para leitura do cartão de memória e um \emph{led} de controlo é aceso.
 Caso contrário, o mesmo \emph{led} de controlo é desligado. 
 De seguida são lidos os valores de aceleração dos eixos X, Y e Z, provenientes do acelerómetro, armazenados e comparados com a leitura anterior para verificação da existência de alguma irregularidade no asfalto.
-A maneira como esta comparação será explicada mais à frente.
+A maneira como esta comparação é realizada será explicada mais à frente.
 Caso seja detectada alguma irregularidade, um dos \emph{leds} de controlo pisca e são armazenados, numa variável \textbf{S}, os valores do nível da irregularidade, bem como o grupo data-hora proveniente do GPS.
 Seguidamente é verificada a ligação à aplicação e caso esta exista, os valores de \textbf{S} são enviados directamente para o telemóvel.
 Se a ligação não existir, os valores de \textbf{S} são transferidos para o cartão de memória para que possam ser transmitidos para o telemóvel assim que exista uma ligação estável com o mesmo.
@@ -52,7 +53,7 @@ Por fim, os valores actuais do acelerómetro são armazenados para que possam se
 \label{sub:sd_init}
 
 Esta função serve para inicializar o leitor de cartões SD.
-Nela é chamada a função \emph{begin} da biblioteca \emph{SD} e verificada a resposta dessa mesma função.
+Nesta é chamada a função \emph{begin} da biblioteca \emph{SD} e verificada a resposta dessa mesma função.
 Caso a resposta seja o valor 10, um \emph{led} de controlo pisca para que o utilizador saiba que a inicialização ocorreu com sucesso e é verificada a existência de um ficheiro com informação previamente armazenada sobre irregularidades detetadas anteriormente.
 Caso exista esse ficheiro, este é aberto de modo a que se possam juntar novos valores de irregularidades detetadas, caso contrário, o ficheiro é criado para futuros armazenamentos.
 
@@ -67,7 +68,7 @@ No final resta apenas fechar o ficheiro para que tudo fique guardado devidamente
 \subsection{ReadSD}
 \label{sub:readsd}
 
-Semelhante à função de escrita, a função de leitura tenta abrir um ficheiro com o nome pretendido embora, neste caso, se o ficheiro desejado não existir, não é criado um novo pois se este não existe significa que não existem dados pendentes para envio.
+Semelhante à função de escrita, a função de leitura tenta abrir um ficheiro com o nome pretendido, embora neste caso, se o ficheiro desejado não existir, não é criado um novo pois se este não existir significa que não existem dados pendentes para envio.
 Quando um ficheiro é lido com sucesso, os seus valores são enviados pela porta série do Arduino para o telemóvel, o ficheiro é fechado e eliminado, de modo a que não sejam enviados dados duplicados.
 O código está protegido de modo a que os dados sejam apenas enviados para um telemóvel com a aplicação desenvolvida pois previamente foi recebida uma mensagem de controlo enviada pela própria aplicação, informando o estado da ligação, evitando que os dados sejam enviados para ligações desconhecidas.
 
@@ -75,14 +76,14 @@ O código está protegido de modo a que os dados sejam apenas enviados para um t
 \label{sub:accelInit}
 
 Nesta função o acelerómetro é ligado e são determinados os valores de sensibilidade do mesmo.
-É também feita uma inicialização de valores para queda livre e batida que não são utilizados para esta dissertação.
+É também feita a inicialização de valores para queda livre e batida que não são utilizados na dissertação.
 Esta funcionalidade foi mantida para possíveis aplicações futuras e uma deteção mais pormenorizada das irregularidades.
 Seguidamente, um \emph{led} de controlo pisca para o utilizador saber que a inicialização foi bem sucedida.
 
 \subsection{Accel}
 \label{sub:accel}
 
-Na função \emph{Accel} é feito o processamento dos valores de aceleração dos três eixos do acelerómetro para determinar a classificação da irregularidade detetada.
+Na função \emph{Accel} é realizado o processamento dos valores de aceleração dos três eixos do acelerómetro para determinar a classificação da irregularidade detetada.
 Embora o processo seja simples, é eficaz e semelhante ao método \textbf{Z-DIFF} apresentado em \cite{Mednis2011}, mas aplicado aos três eixos de aceleração.
 O método baseia-se em detetar a existência de desvios superiores a um limite previamente determinado, tendo sido considerados valores múltiplos de 100 nesta dissertação.
 Assim, é feita uma subtração de valores sucessivos de aceleração dos eixos e avaliado o valor absoluto dessa diferença.
@@ -114,7 +115,7 @@ Tal como se pode verificar, existem seis parâmetros neste formato, nomeadamente
 Um formato mais simples é o DD – Decimal Degree (Graus Decimais em Português), também apresentado na figura \ref{fig:formatos_de_apresentacao_de_coordenadas}, no ponto (2).
 Neste formato existem apenas quatro parâmetros (graus e hemisfério) que podem ser reduzidos a dois, se forem considerados graus negativos, representando o hemisfério a que a latitude ou longitude se referem, sendo assim necessário enviar menos dados para representar a mesma quantidade de informação, tornando o processo mais rápido.
 A conversão de DDS para DD é simples, sendo apenas necessário dividir a parte dos minutos decimais por 60 (convertendo minutos para graus) e somar esse valor aos graus já existentes.
-Como os valores que são recebidos do GPS vêm em strings, é necessário convertê-los para formato numérico, através da função atoi (ASCII to Integer, ASCCI para inteiro em português) que já existe nas bibliotecas do Arduino e posteriormente voltar a converter para formato de string.
+Como os valores que são recebidos do GPS vêm em \emph{strings}, é necessário convertê-los para formato numérico, através da função atoi (ASCII to Integer, ASCCI para inteiro em português) que já existe nas bibliotecas do Arduino e posteriormente voltar a converter para formato de \emph{string}.
 Apesar de ser possível escrever um valor numérico numa string, quando esta operação é feita, apenas duas casas decimais são utilizadas e para que as coordenadas possam apresentar um elevado grau de precisão são necessárias quatro casas decimais, sendo assim necessária a criação desta nova função de modo a reter tantas casas decimais quanto as desejadas.
 
 \begin{figure}[!htbp]
@@ -128,7 +129,7 @@ Apesar de ser possível escrever um valor numérico numa string, quando esta ope
 \label{sec:funcionamento_do_android}
 
 Tal como explicado na secção \ref{sec:android}, o método escolhido para a programação Android foi a MIT App Inventor 2, no website http://ai2.appinventor.mit.edu.
-Graças a correr num web browser, todo o processamento e compilação de código é feito no servidor em vez de ser no computador local, tornando o processo de criação mais rápido.
+Por correr num web browser, todo o processamento e compilação de código é feito no servidor e não no computador local, tornando o processo de criação mais rápido.
 Além disso, a sua programação por blocos torna o processo muito mais compreensível uma vez que os blocos existentes mostram quais as funcionalidades de cada tipo de dados, desde números a vetores.
 Este modo de programação mostrou-se muito prático dada a inexperiência de desenvolvimento de aplicações para telemóvel.
 A existência de apenas quatro botões torna esta aplicação bastante fácil de utilizar, pois cada botão tem a sua função devidamente identificada, tal como é possível ver na figura \ref{fig:Aspeto_da_aplicação_Smart_Shock}.
@@ -141,22 +142,22 @@ A existência de apenas quatro botões torna esta aplicação bastante fácil de
 	\label{fig:Aspeto_da_aplicação_Smart_Shock}
 \end{figure}
 
-A base do código da aplicação é um ciclo while que corre desde que a aplicação esteja aberta, semelhante à função \emph{loop} do Arduino.
+A base do código da aplicação é um ciclo \emph{while} que corre desde que a aplicação seja executada, semelhante à função \emph{loop} do Arduino.
 Dentro deste ciclo existem duas condições: uma que verifica se o GPS do telemóvel está a detetar coordenadas e outra que verifica a ligação ao módulo \emph{Bluetooth} do Arduino, bem como um procedimento que verifica a existência de dados armazenados no telemóvel para futuro envio para a base de dados.
-O GPS do telemóvel é utilizado para que seja possível reportar irregularidades existentes no asfalto sem que se esteja a conduzir, possibilitando todos os transeunte adicionar informações sobre o local em que se encontram.
+O GPS do telemóvel é utilizado para que seja possível reportar irregularidades existentes no asfalto mesmo que não se esteja a conduzir, possibilitando todos os transeunte adicionar informações sobre o local em que se encontram.
 Sempre que são detetadas coordenadas disponíveis, um botão com o texto \emph{``Shock''} fica ativo e sempre que é pressionado são armazenadas as coordenadas atuais, bem como a data e hora presentes para um posterior envio para a base de dados.
 Para que estas ocorrências possam ser diferenciadas das detetadas pelo acelerómetro montado no Arduino, o código que lhe é atribuído tem um valor único, facilitando assim a diferenciação entre os dois tipos de irregularidades.
 
-No que toca à ligação a um módulo \emph{Bluetooth}, sempre que esta existe, é enviado um código para o dispositivo a que foi feita a ligação.
+No que toca à ligação a um módulo \emph{Bluetooth}, sempre que esta existe, é enviado um código para o dispositivo ao qual foi feita a ligação.
 Este código serve para o Arduino saber que o dispositivo que se encontra ligado tem a aplicação a correr, evitando assim que os dados recolhidos por este sejam enviados para um dispositivo desconhecido.
-Depois de ser feita a ligação, o código fica a ``escutar'' o Arduino até que ele envie alguma informação para o telemóvel e quando tal acontece, os vários conjuntos de dados  recebidos são divididos para uma lista temporária.
-Após a divisão ser feita, a lista é percorrida percorrida e os dados são enviados para o cartão de memória do telemóvel ou para a base de dados, dependendo da existência de ligação Wi-Fi.
+Depois de ser feita a ligação, o código fica a ``escutar'' o Arduino até que o mesmo envie alguma informação para o telemóvel e quando tal acontece, os vários conjuntos de dados  recebidos são divididos para uma lista temporária.
+Após a divisão ser feita, a lista é percorrida e os dados são enviados para o cartão de memória do telemóvel ou para a base de dados, dependendo da existência de ligação Wi-Fi.
 Esta ligação é verificada a partir de um erro produzido automaticamente pelo sistema Android, sendo emitida uma mensagem de erro com um código específico.
-O envio de dados para a base de dados é feito através do método \emph{POST}, sendo desta forma possível ocultar os dados enviados, sendo esta uma vantagem no caso de no futuro serem desenvolvidas contas de utilizador em que certas informações devem permanecer confidenciais.
-Se a ligação à \emph{internet} não existir, os dados são armazenados no telemóvel para um futuro envio, sendo necessário pressionar um botão existente na aplicação.
+O envio de dados para a base de dados é feito através do método \emph{POST}, tornando possível ocultar os dados enviados, sendo esta uma vantagem no caso de no futuro serem desenvolvidas contas de utilizador em que certas informações devem permanecer confidenciais.
+Se a ligação à Internet não existir, os dados são armazenados no telemóvel para um futuro envio, sendo necessário pressionar um botão existente na aplicação.
 Este botão serve também para informar o utilizador que tem dados armazenados no dispositivo, uma vez que o botão nem sempre se encontra ativo.
 
-No que toca à seleção de dispositivos \emph{Bluetooth}, é mostrada uma lista dos dispositivos com que o telemóvel está emparelhado.
+Quanto à seleção de dispositivos \emph{Bluetooth}, é mostrada uma lista dos dispositivos com que o telemóvel está emparelhado.
 No caso de ser a primeira vez que um determinado telemóvel se liga ao Arduino, é necessário fazer o emparelhamento fora da aplicação, como para qualquer outro dispositivo.
 Quando a aplicação é terminada, é enviada uma mensagem para o Arduino de modo a que este saiba que não é possível enviar mais informação sobre irregularidades e armazene todas as deteções nesse cartão de memória.
 Na figura \ref{fig:Fluxograma_referente_ao_código_android} é possível compreender qual o ciclo de funcionamento da aplicação, sendo que no lado esquerdo se encontra o ramo principal e o ciclo que está sempre em funcionamento enquanto a aplicação estiver aberta.
@@ -169,25 +170,28 @@ Já do lado direito é possível ver quais os procedimentos realizados quando os
 	\label{fig:Fluxograma_referente_ao_código_android}
 \end{figure}
 
-Em \ref{cha:codigo_da_aplicacao} são apresentados alguns dos blocos construidos para o funcionamento da aplicação para uma melhor compreensão do funcionamento do App Inventor.
+No apêndice \ref{cha:codigo_da_aplicacao} são apresentados alguns dos blocos construidos para o funcionamento da aplicação para uma melhor compreensão do funcionamento do App Inventor.
 \newpage
 
 \section{Base de dados}
 \label{sec:Base_de_dados}
 
-De modo a que seja possível consultar as irregularidades , foi necessário desenvolver uma base de dados onde ficassem armazenadas as coordenadas, data, hora e intensidade da irregularidade detectadas.
+De modo a que seja possível consultar as irregularidades, foi necessário desenvolver uma base de dados onde ficassem armazenadas as coordenadas, data, hora e intensidade da irregularidade detectadas.
 Esta base de dados foi desenvolvida em MySQL e contém cinco campos, sendo eles o ID (campo de identificação de cada entrada), a intensidade da irregularidade, a latitude e a longitude da irregularidade e também o conjunto data-hora, utilizando apenas uma variável.
 Esta base de dados pode ainda ser consultada e alterada por um administrador da mesma, caso este ache necessário de modo a inserir novas funcionalidades no projeto.
 
 \section{WebSite}
 \label{sec:website}
 
+No apêndice \ref{cha:codigo_do_site} é possível ver o código das páginas referidas no texto que se segue.
+Através desse texto é possível recriar todo o sistema desenvolvido.
+
 \subsection{home.php}
 \label{sub:home.php}
 
 Esta é a página principal da parte \emph{web} desta dissertação.
 Nela é possível ver-se o logótipo e o nome utilizados neste projeto e também um mapa que contém todas as irregularidades detetadas ou inseridas manualmente, referindo a intensidade das mesmas.
-Para que essas irregularidades possam ser mostradas, é percorrida toda a base de dados através de uma \emph{query} (questão, em português) de MySQL em que são devolvidos os valores de latitude, longitude e intensidade.
+Para que essas irregularidades possam ser mostradas, é percorrida toda a base de dados através de uma \emph{query} (pesquisa, em português) de MySQL em que são devolvidos os valores de latitude, longitude e intensidade.
 Depois, utilizando uma pequena interface desenvolvida pela Google, todos os pontos são marcados no mapa, sendo que no seu sinalizador está indicada a intensidade da irregularidade, como se pode ver na figura \ref{fig:home.php}.
 No caso de existirem várias irregularidades muito próximas fisicamente, a interface agrupa-as automaticamente, informando quantas se encontram nessa zona.
 A cor destes agrupamentos é alterada consoante o número de itens aglomerados, tornando assim mais fácil a deteção de locais com elevado número de ocorrências.
@@ -197,13 +201,13 @@ A cor destes agrupamentos é alterada consoante o número de itens aglomerados, 
 
 A página store não contém nenhuma componente gráfica para consulta de informação pois destina-se apenas ao armazenamento de dados na base de dados.
 Quando o telemóvel envia dados, é este o destino e como tal, tem que existir algum processamento dos dados recebidos.
-A informação recebida tem o aspecto da figura \ref{fig:informacao_tipo_adicionada_na_base_de_dados} e vem em quatro strings: força, latitude, longitude e data-hora, sendo portanto necessário fazer uma conversão para o formato correcto e consequente armazenamento em variáveis locais.
-De seguida é feita uma query MySQL para que seja possível fazer o armazenamento na base de dados, sendo emitida uma mensagem de controlo para o telemóvel de modo a dar informação sobre o sucesso ou falha deste armazenamento.
+A informação recebida tem o aspeto da figura \ref{fig:informacao_tipo_adicionada_na_base_de_dados} e vem em quatro \emph{strings}: força, latitude, longitude e data-hora, sendo portanto necessário fazer uma conversão para o formato correto e consequente armazenamento em variáveis locais.
+De seguida é feita uma \emph{query} MySQL para que seja possível fazer o armazenamento na base de dados, sendo emitida uma mensagem de controlo para o telemóvel de modo a dar informação sobre o sucesso ou falha deste armazenamento.
 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[height=13cm]{home}
-	\caption{Página \emph{web} home.php}
+	\caption{Página \emph{web home.php}}
 	\label{fig:home.php}
 \end{figure}
 
@@ -222,16 +226,16 @@ Esta página \emph{web} é bastante semelhante à \emph{home.php}, sendo que aqu
 \subsection{showLocation.php}
 \label{sub:showLocation.php}
 
-Esta página tem a finalidade de consultar todas as irregularidades num formato numérico, ao invés da página Home.php, em que as irregularidades são apresentadas num mapa.
-Tal como apresentado na figura \ref{fig:listlocations.php}, nesta página é possível consultar a toda a informação referente a uma irregularidade, incluindo a data e hora em que foi detetada, ao invés da página Home.php.
+Esta página tem a finalidade de consultar todas as irregularidades num formato numérico, ao invés da página \emph{home.php}, em que as irregularidades são apresentadas num mapa.
+Tal como apresentado na figura \ref{fig:listlocations.php}, nesta página é possível consultar a toda a informação referente a uma irregularidade, incluindo a data e hora em que foi detetada.
 Para que seja necessário visualizar a lista de irregularidades, é necessário colocar no endereço o número da página que se deseja visualizar, sendo o valor pré-definido “1”.
 Cada uma destas páginas mostra dez entradas da lista de irregularidades e no fundo da página é mostrado um navegador para as diferentes páginas. 
-Alinhado com cada irregularidade, existe uma hiperligação para a página showLocation.php em que é mostrado no mapa a localização da irregularidade seleccionada para uma melhor compreensão dos valores de latitude e longitude.
+Alinhado com cada irregularidade, existe uma hiperligação para a página \emph{showLocation.php} em que é mostrado no mapa a localização da irregularidade selecionada para uma melhor compreensão dos valores de latitude e longitude.
 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=15cm]{listlocations}
-	\caption{Página \emph{web} listlocations.php}
+	\caption{Página \emph{web listlocations.php}}
 	\label{fig:listlocations.php}
 \end{figure}
 
@@ -240,10 +244,10 @@ Alinhado com cada irregularidade, existe uma hiperligação para a página showL
 
 O sistema final foi montado numa PCB compatível com o Arduino Mega, apesar de ter sido utilizado um Arduino Uno.
 A utilização desta PCB deve-se ao tamanho da mesma, sendo assim possível espaçar os componentes mais facilmente, evitando interferências entre eles e que possibilita uma melhor gestão das ligações.
-Foi também necessário utilizar dois reguladores de tensão para converter a tensão de entrada de 12V do automóvel para 5.0V e 3.3V.
-Apesar do Arduino já conter reguladores semelhantes, existe uma limitação de 200mA na corrente de alimentação, a qual não é suficiente para alimentar o sistema.
-São também necessários dois reguladores pois existem componentes que necessitam de ser alimentados a 5.0V e outros a 3.3V pelo que o regulador LM7805 faz a conversão de 12V para 5.0V e o regulador LM3940 faz a conversão de 5.0V para 3.3V.
-As figuras \ref{fig:esquematico_do_sistema} e \ref{fig:montagem_real_do_sistema} representam um esquema da montagem e a montagem real do sistema, respectivamente.
+Foi também necessário utilizar dois reguladores de tensão para converter a tensão de entrada de $12 V$ do automóvel para $5.0 V$ e $3.3 V$.
+Apesar do Arduino já conter reguladores semelhantes, existe uma limitação de $200 mA$ na corrente de alimentação, a qual não é suficiente para alimentar o sistema.
+São também necessários dois reguladores visto existirem componentes que necessitam de ser alimentados a $5.0 V$ e outros a $3.3 V$ pelo que o regulador LM7805 faz a conversão de $12 V$ para $5.0 V$ e o regulador LM3940 faz a conversão de $5.0 V$ para $3.3 V$.
+As figuras \ref{fig:esquematico_do_sistema} e \ref{fig:montagem_real_do_sistema} representam um esquema da montagem e a montagem real do sistema, respetivamente.
 A montagem da figura \ref{fig:montagem_real_do_sistema} foi então instalada num veículo de testes para validação dos resultados, abaixo do amortecedor para evitar a deterioração dos dados recolhidos, como mostra a figura \ref{fig:carro}.
 
 \begin{figure}[htbp]
@@ -255,7 +259,7 @@ A montagem da figura \ref{fig:montagem_real_do_sistema} foi então instalada num
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=15cm]{montagem}
+	\includegraphics[width=10cm]{montagem}
 	\caption{Montagem real do sistema}
 	\label{fig:montagem_real_do_sistema}
 \end{figure}
@@ -263,7 +267,7 @@ A montagem da figura \ref{fig:montagem_real_do_sistema} foi então instalada num
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[height=10cm]{carro}
-	\caption{Instalação no veículo de testes}
+	\caption{Instalação do sensor no veículo de testes}
 	\label{fig:carro}
 \end{figure}
 
@@ -281,7 +285,7 @@ Na figura \ref{fig:validacao} é possível consultar o percurso deste teste.
 	\label{fig:validacao}
 \end{figure}
 
-Após concluir que todo o sistema estava a funcionar corretamente, o acelerómetro foi montado no automóvel e foram adquiridos dados ao longo de vários dias para que o a base de dados ficasse mais completa.
+Após concluir que todo o sistema estava a funcionar corretamente, o acelerómetro foi montado no automóvel e foram adquiridos dados ao longo de vários dias para que a base de dados ficasse mais completa.
 Apesar de não existir uma análise destes dados, o sistema mostrou funcionar em perfeitas condições, fazendo deteções regularmente sempre que o veículo passava por alguma irregularidade.
 Na análise do mapa, é possível verificar que algumas deteções se encontram fora das estradas, algo impossível de acontecer no cenário real.
 Ainda assim, o afastamento nunca é superior a 5 metros, a escala menor do mapa, sendo esse um valor aceitável neste tipo de sistemas pois à escala humana facilmente se identificam todas irregularidades que estejam a 5 metros de distância de um determinado ponto.
@@ -290,10 +294,10 @@ Ainda assim, o afastamento nunca é superior a 5 metros, a escala menor do mapa,
 \label{sec:resultados}
 
 Tal como esperado, o sistema apresentou resultados positivos quanto à deteção de irregularidades no asfalto.
-O acelerómetro é um sistema fiável no que toca a este tipo de deteção e a sua calibração é praticamente inexistente tendo em conta a montagem proposta, tornando este sistema bastante fácil de usar e apelativo.
+O acelerómetro é um sistema fiável no que diz respeito a este tipo de deteção e a sua calibração é praticamente inexistente tendo em conta a montagem proposta, tornando este sistema bastante fácil de usar e apelativo.
 O recetor GPS também apresentou resultados bastante fiáveis e consistentes ao longo de todos os testes feitos, mesmo aqueles em que o sistema não se encontrava totalmente montado.
 
-Também a aplicação mostrou ser bastante útil como ponto intermédio de comunicação.
+A aplicação também mostrou ser útil como ponto intermédio de comunicação.
 O seu desenho simples torna muito intuitiva a utilização sendo apenas necessário selecionar o dispositivo com que se deseja comunicar.
 Para a comunicação à base de dados é apenas necessário que exista ligação à Internet, não existindo qualquer diferença quanto ao modo de ligação, seja ele Wi-Fi ou 3G.
 É ainda possível determinar que, através do App Inventor, a construção da aplicação foi bastante rápida e intuitiva, reduzindo significativamente o tempo de desenvolvimento e de teste da mesma.

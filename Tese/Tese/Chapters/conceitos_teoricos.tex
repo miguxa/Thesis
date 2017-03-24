@@ -7,7 +7,7 @@
 O Sistema de Posicionamento Global (GPS – Global Positioning System) é uma rede utilizada mundialmente pela população para determinação da localização na superfície do globo terrestre. 
 Este sistema tem o nome de Navstar e é financiado e gerido pelo Departamento da Defesa dos Estados Unidos da América.
 Este é um dos vários sistemas de posicionamento existentes mundialmente, pois existem também os sistemas GLONASS da Rússia, o COMPASS desenvolvido pela China e o GALILEO da União Europeia, cada um deles com diferentes níveis de desenvolvimento e testes.
-Como o sistema militar que é, inicialmente foi desenvolvido apenas para utilização militar mas em 1983 foi permitida a sua utilização por parte de civis, sendo que na época o sinal era degradado e continha um erro de +/- 100 metros, algo que foi eliminado no ano de 2010.
+Apesar de ter sido desenvolvido para fins militares, em 1983 foi permitida a sua utilização por parte de civis, sendo que na época o sinal era degradado e continha um erro de +/- 100 metros, algo que foi eliminado no ano de 2010.
 Os satélites GPS transmitem sinais para os recetores GPS, os quais são elementos passivos no sistema pois não transmitem qualquer tipo de informação, tornando-se este um sistema de comunicação unilateral.
 Este serviço de localização necessita de uma visão desimpedida do céu e apenas no exterior consegue apresentar bons resultados, as quais dependem de relógios atómicos presentes nos satélites que proporcionam ao sistema a sua elevada precisão.
 Cada satélite GPS transmite informação relativa ao seu posicionamento relativo ao planeta, bem como a hora atual.
@@ -27,8 +27,8 @@ Cruzando os pontos de pelo menos quatro satélites, o recetor determina o local 
 
 \footnotetext{http://www.sparkfun.com/products/11058}
 
-O recetor GPS utilizado foi o Venus638FLPx que recebe mensagens normalizada NMEA (explicada mais à frente) a uma taxa padrão de 9600 bps que pode ser alterada para 115200 bps e é alimentado a uma tensão de 3.3 V.
-Por definição padrão, este recetor GPS recebe cinco tipos de mensagem NMEA, das quais apenas uma é utilizada neste projeto, pois apenas ela refere todos os valores desejados obter: latitude, longitude, data e hora.
+O recetor GPS utilizado foi o Venus638FLPx que recebe mensagens normalizadas NMEA (explicada em ~\ref{sub:nmea}) a uma taxa padrão de 9600 bps que pode ser alterada para 115200 bps e é alimentado a uma tensão de 3.3 V.
+Por definição padrão, este recetor GPS recebe cinco tipos de mensagens NMEA, das quais apenas uma é utilizada neste projeto, pois apenas ela refere todos os valores desejados obter: latitude, longitude, data e hora.
 Uma mensagem do tipo RMC tem o aspeto da figura \ref{fig:formato_de_mensagem_rmc} sendo que a tabela \ref{tab:nmea_rmc} descreve o seu significado.
 
 \begin{figure}[hbtp]
@@ -85,7 +85,7 @@ Cada frase é terminada com um caracter de fim de linha e retorno e a informaç�
 
 Um acelerómetro é um dispositivo que mede a aceleração a que está sujeito, no caso de se encontrar estacionário na superfície terrestre, este dispositivo sofre uma aceleração vertical de 9,8 m/s$^2$ e caso se encontre em queda livre mede uma aceleração de 0 m/s$^2$.
 Por este valor ser o valor constante de aceleração gravítica, foi criada uma unidade de medida ``g'' para mais facilmente expressar valores de aceleração, sendo que 1 g equivale a 9,8 m/s$^2$.
-Os acelerómetros têm diversas aplicações na indústria e na ciência devido à sua elevada sensibilidade e são comummente utilizados para detetar vibrações em diversas máquinas, em telemóveis e tablets e também em aeronaves, incluindo drones, para uma melhor estabilização de voo.
+Os acelerómetros têm diversas aplicações na indústria e na ciência devido à sua elevada sensibilidade e são regularmente utilizados para detetar vibrações em diversas máquinas, em telemóveis e tablets e também em aeronaves, incluindo drones, para uma melhor estabilização de voo.
 Conceptualmente, um acelerómetro comporta-se como uma massa amortecida por uma mola, sendo possível determinar o valor de aceleração sabendo o peso da massa e a constante de elasticidade da mola.
 Em termos práticos um acelerómetro pode utilizar vários métodos para determinar as suas leituras mas os dois mais comuns são os acelerómetros piezoelétricos e os capacitivos.
 Acelerómetros piezoelétricos medem aceleração diretamente proporcional a uma força a partir de certos tipos de cristais.
@@ -93,7 +93,7 @@ Acelerómetros piezoelétricos medem aceleração diretamente proporcional a uma
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[height=5cm]{capacitivo}
-	\caption[Funcionamento de um acelerómetro capacitivo]{Funcionamento de um acelerómetro capacitivo \footnotemark}
+	\caption[Ilustração de um acelerómetro capacitivo]{Ilustração de um acelerómetro capacitivo \footnotemark}
 	\label{fig:capacitivo}
 \end{figure}
 \footnotetext{https://www.youtube.com/watch?v=i2U49usFo10}
@@ -104,7 +104,7 @@ São compostos por duas zonas eletricamente condutoras e isoladas uma da outra q
 A separação entre estas zonas é tão pequena, que quando existe algum movimento, a distância entre ambas é alterada, alterando assim o valor de capacitância do sistema, que se traduz facilmente para uma variação de tensão.
 Para este projeto foi utilizado um acelerómetro ADXL345 capacitivo, capaz de medir variações de aceleração até  $\pm$ 16g.
 Para a sua utilização foi necessário determinar a velocidade de transmissão com o valor de 9600 bps, tal como os restantes dispositivos do sistema e também a frequência de leitura de valores, nomeadamente 200 Hz.
-Para a comunicação foi utilizado o método I$^2$C mas estava também disponível a opção de transmissão por SPI, sendo que a escolha foi tomada devido a serem necessárias menos ligações em I$^2$C.
+Para a comunicação foi utilizado o método I$^2$C todavia, estava também disponível a opção de transmissão por SPI, sendo que a escolha foi tomada devido a serem necessárias menos ligações em I$^2$C.
 Apesar da comunicação SPI suportar velocidades de transmissão mais elevadas, esta vantagem não se mostra relevante a 200 Hz.
 O acelerómetro em questão oferece uma biblioteca de funções de teste, entre as quais a deteção de queda livre, toque simples e toque duplo que, apesar de não serem utilizadas no projeto, foram bastante importantes aquando da aprendizagem de utilização do dispositivo.
 Para que fosse possível obter os valores de leitura do acelerómetro, foi necessário ler os valores entre os registos 50 e 55, sendo que cada par contém informação sobre um dos três eixos de deslocação.
@@ -119,7 +119,7 @@ A tecnologia Bluetooth é gerida pelo Grupo de Interesse Especial (SIG - Special
 O sistema Bluetooth divide os dados que deseja enviar em pacotes e transmite cada um desses pacotes num dos 80 canais Bluetooth, cada um deles com uma largura de banda de 1 MHz, alternando a seleção de cada canal cerca de 800 vezes por segundo, utilizando a tecnologia (AFH).
 Existe também um modo de baixo consumo que utiliza canais de 2 MHz, o que faz um total de 40 canais.
 Este sistema funciona assente numa estrutura master-slave, em que um mestre (ou dispositivo primário) pode comunicar com um máximo de sete escravos (ou dispositivos secundários), sendo que todos os escravos estão sincronizados com o mestre, através do seu relógio interno.
-O relógio do mestre conta intervalos de tempo de 312,5 $\mu$s junta dois intervalos de tempo para fazer intervalo de comunicação de 625 $\mu$s.
+O relógio do mestre conta intervalos de tempo de $312,5 \mu s$, juntando dois intervalos de tempo para fazer intervalo de comunicação de $625 \mu s$.
 A sequência destes intervalos de comunicação determina que o mestre transmite nos intervalos pares e recebe informação nos ímpares e por analogia o escravo recebe nos intervalos pares e envia nos ímpares.
 É também de salientar que um dispositivo dentro de um sistema não é sempre escravo ou mestre, pois pode mudar o seu estatuto, dependendo da funcionalidade que lhe é atribuída e que um escravo pode ter mais que um mestre.
 
@@ -132,7 +132,7 @@ A sequência destes intervalos de comunicação determina que o mestre transmite
 \footnotetext{https://www.adafruit.com/product/2479}
 
 O padrão de Bluetooth tem uma ligação direta entre potência e alcance e esse alcance determina em que classe de dispositivo rádio o transmissor se encontra.
-Um transmissor de classe 3 tem um alcance até 1 e consome o máximo de 1 mW.
+Um transmissor de classe 3 tem um alcance até 1 metro e consome o máximo de 1 mW.
 Para transmissores de classe 2, o alcance vai até 10 metros, levando a um consumo máximo de 2,5 mW.
 Por último, a classe 1 tem transmissores com alcance máximo de 100 metros, sendo consumidos até 100 mW.
 O sistema Bluetooth encontra-se principalmente na classe 2 mas versões mais atuais conseguem por vezes alcançar a classe 1, com um alcance de 60 metros.
@@ -144,7 +144,7 @@ Foi apenas necessário alimentar este dispositivo e quando era estabelecida a li
 
 Wi-Fi é uma tecnologia de ligação local sem fios baseada nos padrões IEEE 802.11, uma norma que regula a comunicação sem fios em determinadas frequências rádio.
 Entre os dispositivos que utilizam esta tecnologia estão os computadores, consolas de jogos, tablets e telemóveis e também impressoras, mas outros dispositivos como televisões e automóveis começam também a integrar esta tecnologia.
-A ligação à Internet pode ser feita através de WLAN, uma rede local que usa ondas de rádio, através de um router, dispositivo que obtém ligação à Internet via cabo Ethernet.
+A ligação à Internet pode ser feita através de WLAN, uma rede local que usa ondas de rádio, através de um \emph{router}, dispositivo que obtém ligação à Internet via cabo Ethernet.
 Como esta tecnologia opera em frequências que não necessitam de licença, o apelo à sua utilização é bastante elevado, sendo apenas necessário equipamento homologado pela entidade responsável do país vendedor do dispositivo, que usualmente segue normas internacionais.
 A tecnologia Wi-Fi utiliza habitualmente as frequências de 2,4 GHz e 5 GHz e tem um alcance médio de 20 metros para interiores, caso não existam obstáculos pelo caminho, como paredes, o que pode limitar o alcance a apenas uma sala.
 No que toca ao exterior, a cobertura Wi-Fi pode atingir vários quilómetros caso sejam utilizados repetidores de sinal, normalmente instalados com grandes antenas.
@@ -159,7 +159,7 @@ A certificação dos dispositivos Wi-Fi é feita pela aliança Wi-Fi, um conjunt
 \footnotetext{http://www.wi-fi.org/}
 
 Existem também pontos de acesso espalhados por várias cidades, que fornecem uma rede gratuita para os cidadãos, nomeadamente em Lisboa e em Sintra, assim como em universidades, através da rede Eduroam, comum à maioria das universidades portuguesas, permitindo o acesso a qualquer estudante, independentemente da universidade em que esteja, mesmo não sendo estudante nesse estabelecimento de ensino.
-Quanto ao nível de interferências, existem bastantes graças à existência de vários pontos de acesso que sobrepões as suas redes, assim como pela utilização das mesmas frequências por outras comunicações como o Bluetooth ou o ZigBee.
+Quanto ao nível de interferências, existem bastantes, graças à existência de vários pontos de acesso que sobrepões as suas redes, assim como pela utilização das mesmas frequências por outras comunicações como o Bluetooth ou o ZigBee.
 Ainda assim, estas interferências são usualmente colmatadas com a rápida transmissão de dados, sendo que informação não recebida é rapidamente reenviada.
 Outro mecanismo de redução de interferências é o SSID, um identificador de serviço que permite identificar o emissor e recetor de determinada informação.
 
@@ -169,7 +169,7 @@ Outro mecanismo de redução de interferências é o SSID, um identificador de s
 3G, abreviatura de terceira geração, é a terceira geração de tecnologia de telecomunicações móveis sem fio e assenta num conjunto de normas e serviços de utilização de telecomunicações móveis, cumprindo normas IMT-2000.
 Esta tecnologia tem como principais focos a realização de chamadas por telemóveis, o acesso à Internet sem fios e também transmissão de televisão sem fios.
 Estas redes permitem a transferência de informação a velocidades sempre superiores a 200 Kbps e podem atingir velocidades de vários Mbps, uma velocidade bastante elevada na área de comunicação sem fios.
-Gerações anteriores à terceira foram criadas no inicio dos anos 80 e surge uma nova geração com espaçamentos de cerca de 10 anos.
+Gerações anteriores a esta foram criadas no inicio dos anos 80 e cada nova geração surge com espaçamentos de cerca de 10 anos.
 Esta tecnologia, apesar de ter processos bastante diferentes da Wi-Fi, apresenta resultados semelhantes, pois permite a ligação à Internet através de um telemóvel, tornando possível o envio dos dados recolhidos pelo acelerómetro para uma página \emph{web}.
 
 \section{Processamento - Arduino}
@@ -179,18 +179,18 @@ O Arduino é uma plataforma \emph{open-source} utilizada  para projetos de eletr
 Esta plataforma é muito popular devido à sua facilidade de programação, tanto pela linguagem utilizada (C++) como pelo \emph{hardware} em sim, uma vez que é apenas necessário ligar a placa ao computador via USB.
 Um dos seus pontos fortes está na capacidade de poder interagir com botões, motores, câmeras, \emph{LEDs}, telemóveis, entre tantas outras coisas.
 Esta diversidade, aliada  ao baixo custo do sistema, tem levado aos crescimento da comunidade que, contribui com código e instruções de utilização para diversos projetos desenvolvidos.
-A placa mais comum é o Arduino Uno [\ref{fig:arduino}], pois contém um número de pins suficiente para construir a maior parte dos projetos iniciais, sendo que para projetos mais avançados são normalmente utilizados o Arduino Nano, devido ao seu pequeno tamanho, e o Arduino Mega que tem mais pins e um processamento mais rápido.
+A placa mais comum é o Arduino Uno mostrado na figura \ref{fig:arduino}, pois contém um número de pins suficiente para construir a maior parte dos projetos iniciais, sendo que para projetos mais avançados são normalmente utilizados o Arduino Nano, devido ao seu pequeno tamanho, e o Arduino Mega que tem mais pins e um maior poder de processamento.
 Todas as placas têm pins em comum entre si, alterando a quantidade desses pins dependendo do tamanho da placa.
 O Arduino pode ser alimentado via USB ou através de um conector que forneça uma tensão dentro de limites específicos, normalmente entre 7 e 12 V.
 Existem também os pins GND para ligação à massa, 5V e 3.3V, que fornecem alimentação com esses valores, Analog e Digital, utilizados para ligação de sensores analógicos e digitais, respetivamente.
 Existe também um botão de reset que faz o código reiniciar, para que seja possível fazer múltiplos testes sem que seja necessário desconectar a alimentação.
-Por fim, existe um conjunto de LED's de controlo para ajudar o utilizador a saber o estado do seu projeto.
+Por fim, existe um conjunto de LEDs de controlo para ajudar o utilizador a saber o estado do seu projeto.
 O LED ``power'' indica se existe uma alimentação correta ao Arduino e os LEDs ``Rx'' e ``Tx'' fornecem informação relativa à comunicação série do Arduino com outros equipamentos, nomeadamente ``Rx'' acende quando a placa recebe informação e ``Tx'' acende quando é enviada informação.
 
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[height=5cm]{Arduino}
-	\caption[Funcionamento de um acelerómetro capacitivo]{Funcionamento de um acelerómetro capacitivo \footnotemark}
+	\caption[Arduino Uno]{Arduino Uno \footnotemark}
 	\label{fig:arduino}
 \end{figure}
 \footnotetext{http://www.arduino.cc/en/Main/ArduinoBoardUno}
@@ -198,7 +198,7 @@ O LED ``power'' indica se existe uma alimentação correta ao Arduino e os LEDs 
 \section{Processamento - Android}
 \label{sec:android}
 
-O sistema Android é um sistema operativo para telemóveis desenvolvido pela Google, que utiliza Linux na sua base e tem como principal objetivo o desenvolvimento de aplicação para telemóveis e tablets que disponham de ecrã táctil.
+O sistema Android é um sistema operativo para telemóveis desenvolvido pela Google, que utiliza Linux na sua base e tem como principal objetivo o desenvolvimento de aplicações para telemóveis e tablets que disponham de ecrã táctil.
 Nestes ecrãs é possível detetar diversos gestos como deslizar, bater e apertar, de modo a manipular objetos que estejam visíveis no ecrã, dando também a possibilidade de utilizar o teclado existente no ecrã.
 É também possível adicionar outros componentes de hardware para controlar as aplicações, através de ligação USB ou Bluetooth, de modo a aumentar as possibilidades de interação com o utilizador.
 O sistema Android dispõe também de um sistema televisivo, automóvel e de relógios, que ainda se encontram numa fase de desenvolvimento inicial mas apresentam resultados promissores.
@@ -221,8 +221,8 @@ As aplicações são o que possibilitam uma utilização mais complexa de um dis
 Estas são normalmente desenvolvidas em Java mas podem ser combinadas com código C ou C++, tornando o código mais simples em algumas operações que se desejem realizar.
 A programação destas aplicações é feita num SDK (software de desenvolvimento) que normalmente inclui ferramentas de desenvolvimento, um detetor de erros, algumas bibliotecas, um compilador e um emulador, para que seja possível simular a utilização de um telemóvel no computador.
 Entre os mais comuns estão o Eclipse, o Android Studio e o MIT App Inventor.
-O ambiente de programação Eclipse necessita da instalação de um extra para que seja possível o desenvolvimento de código para Android e era o principal método de desenvolvimento até 2014.
-No final de 2014, a Google apresentou o Android Studio: um programa dedicado ao desenvolvimento Android que contém todas as opções existentes no universo Android, sendo este o principal método de desenvolvimento.
+O ambiente de programação Eclipse necessita da instalação de um extra para que seja possível o desenvolvimento de código para Android e era o ambiente de desenvolvimento oficial até 2014.
+No final de 2014, a Google apresentou o Android Studio: um programa dedicado ao desenvolvimento Android que contém todas as opções existentes no universo Android, sendo este o principal ambiente de desenvolvimento.
 Existe também o MIT App Inventor, que corre num \emph{browser web} e permite o desenvolvimento de aplicações sem que seja escrito código, utilizando a programação por módulos que se ligam entre si, não exigindo uma capacidade de processamento tão alta como o Android Studio.
 Para que uma aplicação possa ser executada no telemóvel, é necessário instalar o ficheiro APK da aplicação, através da loja ``Google Play'' ou diretamente por ligação USB a um computador, permitindo a qualquer utilizador o desenvolvimento da sua própria aplicação, o seu teste e partilha.
 O sistema operativo Android é baseado em Linux, com bibliotecas, API's e algum software escrito em C e ainda algumas traduções de bibliotecas para Java que torna possível a execução das aplicações.
@@ -234,12 +234,12 @@ Além disso, as ferramentas para desenvolvimento de aplicações Android são ma
 \label{sec:C}
 
 A linguagem de programação C foi uma das primeiras a surgir e uma das mais utilizadas no ramo das linguagens de baixo nível.
-Em C, todo o código executável está contigo em sub-rotinas chamadas funções, que podem ter parâmetros de entrada e de saída, de forma a comunicar os seus resultados com outras funções.
+Em C, todo o código executável está contido em sub-rotinas denominadas funções, que podem ter parâmetros de entrada e de saída, de forma a comunicar os seus resultados com outras funções.
 Existe um número limitado de comandos pré-definidos: for, if/else, do/while, switch, entre outros, que formam a base desta linguagem.
 É também possível fazer as operações matemáticas mais elementares, utilizando os operadores lógicos normalmente utilizados em matemática, assim como operações mais complexas através da utilização de funções já existentes.
-Existem também sequências de elementos do mesmo tipo chamados ``arrays'', que funcionam como um bloco e podem ser manipulados como uma só variável.
+Existem também sequências de elementos do mesmo tipo chamados ``arrays'', que funcionam como um bloco e podem ser manipulados como uma única variável.
 Devido à sua baixa utilização de memória, é uma das linguagens mais rápida a processar código, sendo uma das principais escolhas para a criação de programas.
-Para que o código possa ser executado, é necessário um editor de texto, sem qualquer tipo de especificações e um compilador, que gera um ficheiro executável a partir do código escrito pelo programador.
+Para que o código possa ser criada é necessário um editor de texto, sem qualquer tipo de especificações e para que possa ser criado um ficheiro executável é indispensável um compilador, que gera um ficheiro executável a partir do código escrito pelo programador.
 As possibilidades de programação vão desde a criação de uma máquina de calcular até ao processamento de imagem, passando pela criação de jogos ou a simples gestão de um ficheiro de clientes de uma loja.
 
 \section{Linguagem de programação - HTML}
@@ -270,7 +270,7 @@ Já em ``<body>'' e ``</body>'' está o texto visível, que aparece na execuçã
 \label{sec:php}
 
 PHP é uma linguagem \emph{script} utilizada no desenvolvimento \emph{web}, que contém código executável e que é normalmente contido em código HTML, utilizando os delimitadores ``<php'' e ``?>'', permitindo que exista código executável numa página juntamente com código estático.
-Uma das suas vantagens vem ser ser executada no servidor, permitindo um processamento mais seguro do código fonte, uma vez que é impossível descobrir quais as ações executadas, pois o navegador apenas recebe o resultado do processamento do código.
+Uma das suas vantagens vem ser executada no servidor, permitindo um processamento mais seguro do código fonte, uma vez que é impossível descobrir quais as ações executadas, pois o navegador apenas recebe o resultado do processamento do código.
 Além disso, o código PHP é bastante simples, promovendo a utilização de novo programadores, oferecendo muitas funcionalidades de modo a satisfazer programadores mais experientes.
 Esta linguagem é em muitos aspetos semelhante a C, tanto no que toca às variáveis, bem como às suas funcionalidades, possibilitando a criação de funções, vetores e variáveis que podem ter os seus valores alterados tantas vezes quantas desejadas.
 Desta forma, PHP é uma solução bastante boa para desenvolver código dinâmico em páginas \emph{web}, algo que não é possível fazer com C.

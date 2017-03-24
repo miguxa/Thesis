@@ -26,7 +26,7 @@
   otherlistsat=front,   % front(*), back
   aftercover=false,     % false=don't true=include the aftercover file (even if exists)
 	linkscolor=black,  % darkblue, black (Set to 'black' for PRINTING)
-  printcommittee=true,  % set to 'false' from submitted versins who should not have 
+  printcommittee=false,  % set to 'false' from submitted versins who should not have 
                         % the list of committee memebers
 	spine=false,          % (Set to 'true' for PRINTING the book spine)
 	biblatex={            % Options for biblatex (see biblatex documentation)
@@ -41,7 +41,7 @@
     11pt,               % 10pt, 11pt(*), 12pt
     final,              % draft, final  <= Replace 'draft' with 'final' in final version
   },
-  media=screen,         % screen(*), paper
+  media=paper,         % screen(*), paper
           % behavior to be defined in school options based in "\unlthesis@opt@media"
           % definitions for screen: left and right margins are equal, colored links
           % definitions for paper: left and right margins are different, black links
@@ -107,7 +107,7 @@
 
 % Title of the dissertation/thesis
 % Use "\\" to break the title into two or more lines
-\title{Detecção e registo automático de \\irregularidades no asfalto}
+\title{Deteção e registo automático de \\irregularidades no asfalto}
 \subtitle{Utilizando comunicação bluetooth e wi-fi}
 
 % Autor
@@ -187,7 +187,9 @@
 \chapterfile{trabalho_desenvolvido}
 \chapterfile{conclusao}
 
+\appendixfile{anexoArduino}
 \appendixfile{anexoApp}
+\appendixfile{anexoSite}
 
 % BibTeX bibiography files. Can be used multiple times with a single file nae each time.
 \addbibfile{bibliography.bib}

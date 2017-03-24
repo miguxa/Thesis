@@ -20,14 +20,14 @@ Nesta secção serão descritos os trabalhos e as tecnologias utilizadas em cada
 
 \subsection{Câmera vídeo}
 \label{subsec: camera_video}
-No que toca às câmeras de vídeo, os trabalhos aqui referidos não são diretamente comparáveis com aquele que foi desenvolvido e é aqui apresentado, uma vez que utiliza uma tecnologia para a deteção e reconhecimento de buracos no asfalto bastante diferente da que foi utilizada nesta dissertação.
-Ainda assim são trabalhos que se enquadram no tema e dos quais foram retiradas ideias para metodologias de comunicação entre os vários componentes da montagem.
+No que toca às câmeras de vídeo, os trabalhos aqui referidos não são diretamente comparáveis com o trabalho que é aqui apresentado, uma vez que utiliza uma tecnologia para a deteção e reconhecimento de buracos no asfalto bastante diferente da que foi utilizada nesta dissertação.
+Ainda assim, são trabalhos que se enquadram no tema e dos quais foram retiradas ideias para metodologias de comunicação entre os vários componentes da montagem.
 De todos artigos estudados, três são aqueles que mostram abordagens mais interessantes, pois apresentam soluções diferentes entre si.
 Em \cite{Zhang} e \cite{Chan2014} são utilizadas duas câmeras e apresentados algoritmos muito semelhantes, com resultados bastante positivos, sendo possível determinar uma relação entre estes trabalhos devido às várias colaborações já existentes entre os autores.
 A solução proposta em \cite{Zhang} utiliza duas câmeras para criar uma imagem a três dimensões de modo a conseguir detetar um buraco no asfalto mas também calcular a sua profundidade.
 Cruzando a imagem de ambas as câmeras, é possível encontrar os pontos comuns no asfalto de modo a sobrepor as imagens para o cálculo do desvio que existe entre elas de forma a criar um mapa virtual da superfície e do buraco.
 Depois da criação do mapa é possível determinar qual o plano da estrada e também os pontos que se encontram abaixo desse plano, onde se encontram localizados os buracos.
-O sistema é bastante preciso, permitindo a deteção de buracos com profundidades maiores que 4 cm mas apresenta problemas de transmissão em tempo real uma vez que é necessário bastante processamento para fazer a sobreposição das imagens e também o mapeamento da superfície.
+O sistema é bastante preciso, permitindo a deteção de buracos com profundidades maiores que $4 cm$ mas apresenta problemas de transmissão em tempo real uma vez que é necessário bastante processamento para fazer a sobreposição das imagens e também o mapeamento da superfície.
 
 \begin{figure}[htbp]
 	\centering
@@ -39,13 +39,13 @@ O sistema é bastante preciso, permitindo a deteção de buracos com profundidad
 \footnotetext{\cite{Zhang}}
 
 Em \cite{Chan2014} é apresentada uma melhoria a este sistema, no que toca ao processamento em tempo real, sendo que foram possíveis avaliar cinco imagens por segundo, uma a cada 200 milissegundos.
-Juntando estes dois projetos é possível obter-se uma solução viável em termos de processamento e deteção mas que necessita de duas câmeras e um processador com vários núcleos para todo o processamento, tornando assim a sua montagem bastante dispendiosa.
+Conjugando estes dois projetos é possível obter-se uma solução viável em termos de processamento e deteção mas que necessita de duas câmeras e um processador com vários núcleos para todo o processamento, tornando assim a sua montagem bastante dispendiosa.
 
-Numa solução diferente, em \cite{Moazzam2013} é descrito um processo de deteção de buracos utilizando um sensor Kinect \footnote{https://developer.microsoft.com/en-us/windows/kinect} que só tem uma câmera mas tem um sensor de infravermelhos para determinar a distância a que se encontra de um objeto.
+Em \cite{Moazzam2013} é descrita uma solução diferente baseada num processo de deteção de buracos utilizando um sensor Kinect \footnote{https://developer.microsoft.com/en-us/windows/kinect} que só tem uma câmera mas tem um sensor de infravermelhos para determinar a distância a que se encontra de um objeto.
 O sensor Kinect calcula a distância até um obstáculo e faz o mapeamento dessas distâncias, criando um mapa virtual do solo.
 De seguida, as coordenadas X e Y do mapa são convertidas para o mundo real, de modo a obter as coordenadas reais.
 São então feitos diversos cálculos para determinar as áreas de diferentes profundidades do buraco para que seja possível saber o volume que o buraco ocupa no asfalto.
-Por fim os buracos são classificados com base nas curvas de relação área-profundidade, área ao nível do asfalto e profundidade máxima
+Por fim, os buracos são classificados com base nas curvas de relação área-profundidade, área ao nível do asfalto e profundidade máxima.
 Esta solução tem resultados semelhantes aos de \cite{Zhang} e \cite{Chan2014} e para a sua implementação são necessários menos cálculos, uma vez que o software Kinect está otimizado.
 Além disso, embora não seja apresentado, é de esperar que esta opção seja menos dispendiosa que as anteriores graças ao preço do Kinect e que não seja necessário um processador tão potente.
 Ainda assim existe a grande desvantagem do sistema só ter sido testado de forma imóvel, não existindo dados para a instalação em automóvel.
@@ -75,8 +75,8 @@ Apesar de mostrar bons resultados, são salientadas nas conclusões que existem 
 \end{figure}
 \footnotetext{\cite{Yu2011}}
 
-Já em \cite{He2011} as linhas vermelhas projetadas no solo são provenientes de uma luz \emph{led} de baixa potência, também perpendiculares à estrada. Este sistema utiliza duas câmeras para fazer a deteção da linha, aumentando a precisão no que toca à classificação do buraco quanto à sua profundidade.
-De modo a diminuir ruído existente na imagem, é utilizado o método de Otsu para deteção da linha, bem como uma avaliação dos \emph{pixeis} da vizinhança para que possam ser eliminados falsas deteções, uma vez que a linha é composta por vários \emph{pixeis} de cor semelhante.
+Já em \cite{He2011} as linhas vermelhas projetadas no solo são provenientes de uma luz \emph{led} de baixa potência, também perpendiculares à estrada. Este sistema utiliza duas câmeras para fazer a deteção da linha, aumentando a precisão da classificação do buraco quanto à sua profundidade.
+De modo a diminuir ruído existente na imagem, é utilizado o método de Otsu para deteção da linha, bem como uma avaliação dos pixeis da vizinhança para que possam ser eliminados falsas deteções, uma vez que a linha é composta por vários pixeis de cor semelhante.
 Por fim a coloração da imagem é invertida, e é feita uma dilatação e uma contração para uma melhor definição da linha detetada.
 Este sistema consegue apresentar erros inferiores a 2 mm em termos de profundidade quando comparado com instrumentação de alta precisão para medição de irregularidades.
 
@@ -92,13 +92,14 @@ Este sistema consegue apresentar erros inferiores a 2 mm em termos de profundida
 \subsection{Sensor ultrassónico}
 \label{subsec:sensor_ultrassonico}
 Outra abordagem completamente diferente é a utilização de sensores ultrassom.
-Um sensor ultrassónico é um dispositivo utilizado para medir a distância a um objeto que utiliza ondas sonoras. Este dispositivo mede a distância enviando uma onda sonora com uma frequência específica e aguarda que a onda sonora retorne.
+Um sensor ultrassónico é um dispositivo utilizado para medir a distância a um objeto através de ondas sonoras.
+Este dispositivo mede a distância enviando uma onda sonora com uma frequência específica e aguarda que a onda sonora retorne.
 Ao gravar o tempo decorrido entre emissão da onda sonora e a onda sonora de retorno, é possível calcular a distância entre o sensor e o objeto.
-Uma vez que se sabe que o som viaja através do ar a cerca de 344 m/s, é possível multiplicar o tempo de viagem da onda sonora por 344 metros para encontrar a distância total da viagem da onda sonora, sendo que este valor representa a distância de ida e volta da onda pelo que para encontrar a distância até o objeto, basta dividir esta distância por dois.
+Uma vez que se sabe que o som viaja através do ar a cerca de $344 m/s$, é possível multiplicar o tempo de viagem da onda sonora por 344 metros para encontrar a distância total da viagem da onda sonora, sendo que este valor representa a distância de ida e volta da onda pelo que para encontrar a distância até o objeto, basta dividir esta distância por dois.
 Esta é uma opção semelhante à que foi tomada neste projeto na medida em que é quase obrigatório passar por um buraco para fazer a sua deteção, ao contrário da análise de imagens em que é possível evitá-los. 
 Em \cite{Hegde2015} é mostrado um protótipo que permite a deteção de buracos através de um sensor ultrassónico testado num protótipo autónomo que comunica com outro veículo de modo a ambos ajustarem as suas velocidades dependendo da qualidade da estrada, diminuindo-a sempre que são detetados buracos.
 Para a comunicação foi utilizado um módulo ZigBee que permite estender a comunicação a mais veículos em trabalhos futuros.
-O sistema apresentou bons resultados em estradas simuladas mas foi necessário fazer uma calibração específica para este protótipo, sendo que é referido nas conclusões a necessidade de um ajuste aos valores de deteção, consoante o veículo onde o sistema se encontra montado.
+O sistema apresentou bons resultados em estradas simuladas mas foi necessário fazer uma calibração específica para este protótipo, sendo que nas conclusões é referida a necessidade de um ajuste aos valores de deteção, consoante o veículo onde o sistema se encontra montado.
 Este fator é um grande inconveniente pois depende de cada veículo e da qualidade das suspensões pois caso a suspensão seja muito sensível poderão ser detetados falsos positivos.
 \cite{Madli2015} é um projeto mais elaborado, em que uma montagem semelhante é utilizada num veículo e o conceito é testado em estradas reais.
 Este sistema tem também a vantagem de detetar elevações no asfalto, através de uma diminuição da distância entre o sensor e o asfalto, ao contrário do que acontece num buraco em que a distância aumenta.
@@ -127,14 +128,14 @@ Neste trabalho, foi também desenvolvida uma aplicação em Android para que os 
 Tal como mencionado nas conclusões, este trabalho não apresentou resultados promissores uma vez que teve uma taxa de sucesso de apenas 75\% graças à utilização do acelerómetro do telemóvel.
 Em \cite{Chen2011} foi criado um elemento que contém GPS e acelerómetro e ainda um microprocessador para processar os dados adquiridos. É um sistema muito bem construido e que apresenta vários resultados em estradas de diferentes condições mas poderá ser mais caro do que o pretendido desenvolver neste projeto. No artigo apresentado em \cite{Jang} é apresentada a comunicação entre vários veículos quanto à sua deteção de buracos. Esta ideia é bastante interessante uma vez que possibilita a comunicação em tempo real e caminha na direção das \emph{Smart Cities} e da IoT (Internet of Things - Internet das Coisas em Português).
 O sistema é composto por um par de acelerómetros instalado no \emph{tablier} do automóvel e uma antena GPS no seu exterior para a obtenção de coordenadas.
-O sistema apresenta resultados bastante precisos mas tem um elevado nível de processamento, pelo que foi necessário um processador mais potente para a gestão dos dados detetados, levando a que o preço total da montagem fosse mais elevado do que o desejado. 
+Esta solução apresenta resultados bastante precisos mas tem um elevado nível de processamento, pelo que foi necessário um processador mais potente para a gestão dos dados detetados, levando a que o preço total da montagem fosse mais elevado do que o desejado. 
 Por fim, é ainda de salientar o trabalho em \cite{Kattan2014} que apresenta uma metodologia semelhante à que foi tomada neste trabalho no que diz respeito à comunicação com uma base de dados mas com pouco desenvolvimento e uma curta fase de testes, sendo que as deteções de buracos tiveram uma taxa de sucesso de apenas 61\% devido à colocação do telemóvel no \emph{tablier} do veículo e à baixa qualidade do algoritmo de deteção.
 Foi também utilizado o GPS do telemóvel que apresentou algumas falhas devido à sua baixa precisão e potência, sendo que em alguns casos não era possível obter a localização do utilizador.
 Ainda assim é mencionado que para trabalho futuro é proposto um melhoramento deste algoritmo bem como uma nova solução para a deteção de coordenadas.
 
 \begin{figure}[hbtp]
 	\centering
-	\includegraphics[height=4.5cm]{eixos_acelerometro}
+	\includegraphics[height=4cm]{eixos_acelerometro}
 	\caption[Direção dos eixos de um acelerómetro]{Direção dos eixos de um acelerómetro \footnotemark}
 	\label{fig:direcao_dos_eixos_de_um_acelerometro}
 \end{figure}

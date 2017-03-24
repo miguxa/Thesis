@@ -30,11 +30,11 @@ Este documento irá fornecer, da forma mais detalhada possível, uma pequena int
 
 O sistema desenvolvido tem como principal objetivo a deteção de irregularidades no asfalto, mantendo sempre um custo de produção bastante reduzido, assim como o consumo de energia. Como tal, primeiro é necessário identificar quais os componentes essenciais para que seja possível o desenvolvimento do projeto, entre os quais se destacam o acelerómetro e o GPS, bem como módulos de comunicação \emph{Bluetooth} e \emph{wi-fi}/\emph{3G}.
 
-\subsection{Componentes montados no veículo}
+\subsection{Componentes integrados no veículo}
 \label{subsec: componentes_montados_no_veiculo}
 
 De modo a poder obter dados mais precisos, será considerada a utilização de um acelerómetro externo ao telemóvel, preso ao quadro do veículo, abaixo do amortecedor.
-Esta montagem torna possível obter diretamente as leituras quando um condutor passa numa irregularidade, fazendo com que a recolha de dados seja consistente uma vez que instalado, o acelerómetro não necessita de calibração posterior.
+Esta montagem torna possível obter diretamente as leituras quando um veículo passa numa irregularidade, fazendo com que a recolha de dados seja consistente uma vez que instalado, o acelerómetro não necessita de calibração posterior.
 Para que seja possível conhecer a localização da irregularidade, um recetor GPS está instalado na viatura e sempre que detetada uma irregularidade, as coordenadas são lidas e armazenadas.
 Os dados obtidos são enviados para o telemóvel assim que exista uma ligação através de um Arduino que seja capaz de estabelecer comunicação \emph{Bluetooth}.
 
