@@ -33,7 +33,7 @@ O sistema desenvolvido tem como principal objetivo a deteção de irregularidade
 \subsection{Componentes integrados no veículo}
 \label{subsec: componentes_montados_no_veiculo}
 
-De modo a poder obter dados mais precisos, será considerada a utilização de um acelerómetro externo ao telemóvel, preso ao quadro do veículo, abaixo do amortecedor.
+De modo a poder obter dados mais precisos, será considerada a utilização de um acelerómetro externo ao telemóvel, preso ao chassi do veículo, abaixo do amortecedor.
 Esta montagem torna possível obter diretamente as leituras quando um veículo passa numa irregularidade, fazendo com que a recolha de dados seja consistente uma vez que instalado, o acelerómetro não necessita de calibração posterior.
 Para que seja possível conhecer a localização da irregularidade, um recetor GPS está instalado na viatura e sempre que detetada uma irregularidade, as coordenadas são lidas e armazenadas.
 Os dados obtidos são enviados para o telemóvel assim que exista uma ligação através de um Arduino que seja capaz de estabelecer comunicação \emph{Bluetooth}.
@@ -42,4 +42,4 @@ Os dados obtidos são enviados para o telemóvel assim que exista uma ligação 
 \label{subsec: componentes_do_telemovel}
 
 No telemóvel apenas é necessário armazenar dados para um posterior envio para uma base de dados, através da antena Wi-Fi ou 3G existente no aparelho.
-É também possível a comunicação de irregularidades manualmente, sendo utilizado o GPS do telemóvel neste caso.
+É também possível a comunicação de irregularidades manualmente, sendo utilizado o GPS do telemóvel neste caso. Para poder realizar este procedimento, foi desenvolvida uma App utilizando o MIT App Inventor 2.

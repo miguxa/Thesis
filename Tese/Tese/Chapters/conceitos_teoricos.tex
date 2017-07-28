@@ -9,10 +9,10 @@ Este sistema tem o nome de Navstar e é financiado e gerido pelo Departamento da
 Este é um dos vários sistemas de posicionamento existentes mundialmente, pois existem também os sistemas GLONASS da Rússia, o COMPASS desenvolvido pela China e o GALILEO da União Europeia, cada um deles com diferentes níveis de desenvolvimento e testes.
 Apesar de ter sido desenvolvido para fins militares, em 1983 foi permitida a sua utilização por parte de civis, sendo que na época o sinal era degradado e continha um erro de +/- 100 metros, algo que foi eliminado no ano de 2010.
 Os satélites GPS transmitem sinais para os recetores GPS, os quais são elementos passivos no sistema pois não transmitem qualquer tipo de informação, tornando-se este um sistema de comunicação unilateral.
-Este serviço de localização necessita de uma visão desimpedida do céu e apenas no exterior consegue apresentar bons resultados, as quais dependem de relógios atómicos presentes nos satélites que proporcionam ao sistema a sua elevada precisão.
+Este serviço de localização necessita de uma visão desimpedida do céu e apenas no exterior consegue apresentar bons resultados, os quais dependem de relógios atómicos presentes nos satélites que proporcionam ao sistema a sua elevada precisão.
 Cada satélite GPS transmite informação relativa ao seu posicionamento relativo ao planeta, bem como a hora atual.
 Todas as operações realizadas pelos satélites encontram-se sincronizadas para que o seu sinal constante seja transmitido nos mesmos instantes de tempo.
-Os sinais emitidos pelos satélites são enviados à velocidade da luz para os recetores GPS e utilizando o tempo de transmissão desse sinal é possível determinar a distância a que cada satélite se encontra do recetor.
+Os sinais emitidos pelos satélites são enviados à velocidade da luz para os recetores GPS e utilizando o tempo de percurso desse sinal é possível determinar a distância a que cada satélite se encontra do recetor.
 Assim que o recetor ler a informação de pelo menos quatro satélites é possível calcular a sua posição em três dimensões.
 A todo o momento existem pelo menos 24 satélites GPS em funcionamento que realizam duas órbitas por dia a uma altura de 18 500 km e a uma velocidade próxima de 14 000 km/h.
 Cada recetor recebe informação sobre o local em que um satélite se encontra num determinado momento do dia e com essa informação consegue determinar que se encontra algures numa superfície esférica em que o centro é o próprio satélite.
@@ -41,7 +41,7 @@ Uma mensagem do tipo RMC tem o aspeto da figura \ref{fig:formato_de_mensagem_rmc
 Foi também necessário fazer algumas configurações, utilizando um conjunto de mensagens que o recetor conseguisse entender.
 Todas as mensagens têm o formato apresentado na figura \ref{fig:formato_de_mensagem_de_configuracao_do_recetor_gps}, em que o campo <CC> representa o código da mensagem e <BB> a informação a transmitir nessa mensagem.
 As mensagens enviadas tinham os códigos ``05'' e ``09'', referentes à velocidade de comunicação do GPS e ao tipo de mensagem que o GPS deve ler, respetivamente.
-Toda esta informação foi tirada diretamente do ficheiro de mensagens do recetor Venus638FLPx e do seu datasheet.
+Toda esta informação foi retirada diretamente do datasheet do recetor Venus638FLPx.
 
 \begin{figure}[hbtp]
 	\centering
@@ -103,7 +103,7 @@ Já os acelerómetros capacitivos (\ref{fig:capacitivo}) utilizam um sistema sem
 São compostos por duas zonas eletricamente condutoras e isoladas uma da outra que contêm alguma carga.
 A separação entre estas zonas é tão pequena, que quando existe algum movimento, a distância entre ambas é alterada, alterando assim o valor de capacitância do sistema, que se traduz facilmente para uma variação de tensão.
 Para este projeto foi utilizado um acelerómetro ADXL345 capacitivo, capaz de medir variações de aceleração até  $\pm$ 16g.
-Para a sua utilização foi necessário determinar a velocidade de transmissão com o valor de 9600 bps, tal como os restantes dispositivos do sistema e também a frequência de leitura de valores, nomeadamente 200 Hz.
+Para a sua utilização foi necessário determinar a velocidade de transmissão com o valor de 9600 bps, tal como os restantes dispositivos do sistema e também a frequência de amostragem de valores, nomeadamente 200 Hz.
 Para a comunicação foi utilizado o método I$^2$C todavia, estava também disponível a opção de transmissão por SPI, sendo que a escolha foi tomada devido a serem necessárias menos ligações em I$^2$C.
 Apesar da comunicação SPI suportar velocidades de transmissão mais elevadas, esta vantagem não se mostra relevante a 200 Hz.
 O acelerómetro em questão oferece uma biblioteca de funções de teste, entre as quais a deteção de queda livre, toque simples e toque duplo que, apesar de não serem utilizadas no projeto, foram bastante importantes aquando da aprendizagem de utilização do dispositivo.
@@ -116,7 +116,7 @@ Os valores lidos foram então estudados utilizando um gráfico, sendo que a sua 
 Bluetooth é um padrão de tecnologia sem fio utilizada para troca de dados a curtas distâncias que utiliza ondas rádio UHF, nomeadamente com a utilização de uma frequência que se encontra entre 2400 e 2480 MHz.
 Esta tecnologia permite a ligação entre vários dispositivos, até um máximo de sete, sendo uma das primeiras tecnologias a surgir que permitiu a ligação entre mais de dois dispositivos.
 A tecnologia Bluetooth é gerida pelo Grupo de Interesse Especial (SIG - Special Interesse Group em inglês) e conta com a colaboração de mais de 30.000 empresas parceiras, que têm atividade nas áreas de telecomunicação, computação e redes.
-O sistema Bluetooth divide os dados que deseja enviar em pacotes e transmite cada um desses pacotes num dos 80 canais Bluetooth, cada um deles com uma largura de banda de 1 MHz, alternando a seleção de cada canal cerca de 800 vezes por segundo, utilizando a tecnologia (AFH).
+O sistema Bluetooth divide os dados que deseja enviar em pacotes e transmite cada um desses pacotes num dos 80 canais Bluetooth, cada um deles com uma largura de banda de 1 MHz, alternando a seleção de cada canal cerca de 800 vezes por segundo, utilizando a tecnologia AFH - Adaptive Frequency Hopping.
 Existe também um modo de baixo consumo que utiliza canais de 2 MHz, o que faz um total de 40 canais.
 Este sistema funciona assente numa estrutura master-slave, em que um mestre (ou dispositivo primário) pode comunicar com um máximo de sete escravos (ou dispositivos secundários), sendo que todos os escravos estão sincronizados com o mestre, através do seu relógio interno.
 O relógio do mestre conta intervalos de tempo de $312,5 \mu s$, juntando dois intervalos de tempo para fazer intervalo de comunicação de $625 \mu s$.
@@ -150,23 +150,15 @@ A tecnologia Wi-Fi utiliza habitualmente as frequências de 2,4 GHz e 5 GHz e te
 No que toca ao exterior, a cobertura Wi-Fi pode atingir vários quilómetros caso sejam utilizados repetidores de sinal, normalmente instalados com grandes antenas.
 A certificação dos dispositivos Wi-Fi é feita pela aliança Wi-Fi, um conjunto de entidades espalhadas por todo o mundo que garantem a utilização do protocolo 802.11 definido pelo IEEE, bem como os padrões de segurança WPA e WPA2 e o padrão de autenticação EAP.
 
-\begin{figure}[hbtp]
-	\centering
-	\includegraphics[height=3cm]{wifi}
-	\caption[Logótipo do sistema Wi-Fi]{Logótipo do sistema Wi-Fi \footnotemark}
-	\label{fig:arduino}
-\end{figure}
-\footnotetext{http://www.wi-fi.org/}
-
 Existem também pontos de acesso espalhados por várias cidades, que fornecem uma rede gratuita para os cidadãos, nomeadamente em Lisboa e em Sintra, assim como em universidades, através da rede Eduroam, comum à maioria das universidades portuguesas, permitindo o acesso a qualquer estudante, independentemente da universidade em que esteja, mesmo não sendo estudante nesse estabelecimento de ensino.
 Quanto ao nível de interferências, existem bastantes, graças à existência de vários pontos de acesso que sobrepões as suas redes, assim como pela utilização das mesmas frequências por outras comunicações como o Bluetooth ou o ZigBee.
 Ainda assim, estas interferências são usualmente colmatadas com a rápida transmissão de dados, sendo que informação não recebida é rapidamente reenviada.
 Outro mecanismo de redução de interferências é o SSID, um identificador de serviço que permite identificar o emissor e recetor de determinada informação.
 
-\section{Comunicação - 3G}
+\section{Comunicação - Redes móveis (3G)}
 \label{sec:3g}
 
-3G, abreviatura de terceira geração, é a terceira geração de tecnologia de telecomunicações móveis sem fio e assenta num conjunto de normas e serviços de utilização de telecomunicações móveis, cumprindo normas IMT-2000.
+3G, abreviatura de terceira geração, é a terceira geração de tecnologia de telecomunicações móveis sem fios e assenta num conjunto de normas e serviços de utilização de telecomunicações móveis, cumprindo normas IMT-2000.
 Esta tecnologia tem como principais focos a realização de chamadas por telemóveis, o acesso à Internet sem fios e também transmissão de televisão sem fios.
 Estas redes permitem a transferência de informação a velocidades sempre superiores a 200 Kbps e podem atingir velocidades de vários Mbps, uma velocidade bastante elevada na área de comunicação sem fios.
 Gerações anteriores a esta foram criadas no inicio dos anos 80 e cada nova geração surge com espaçamentos de cerca de 10 anos.
@@ -176,7 +168,7 @@ Esta tecnologia, apesar de ter processos bastante diferentes da Wi-Fi, apresenta
 \label{sec:arduino}
 
 O Arduino é uma plataforma \emph{open-source} utilizada  para projetos de eletrónica que contém um micro-controlador programável através de um \emph{software} dedicado.
-Esta plataforma é muito popular devido à sua facilidade de programação, tanto pela linguagem utilizada (C++) como pelo \emph{hardware} em sim, uma vez que é apenas necessário ligar a placa ao computador via USB.
+Esta plataforma é muito popular devido à sua facilidade de programação, tanto pela linguagem utilizada (C++) como pelo \emph{hardware} em si, uma vez que é apenas necessário ligar a placa ao computador via USB.
 Um dos seus pontos fortes está na capacidade de poder interagir com botões, motores, câmeras, \emph{LEDs}, telemóveis, entre tantas outras coisas.
 Esta diversidade, aliada  ao baixo custo do sistema, tem levado aos crescimento da comunidade que, contribui com código e instruções de utilização para diversos projetos desenvolvidos.
 A placa mais comum é o Arduino Uno mostrado na figura \ref{fig:arduino}, pois contém um número de pins suficiente para construir a maior parte dos projetos iniciais, sendo que para projetos mais avançados são normalmente utilizados o Arduino Nano, devido ao seu pequeno tamanho, e o Arduino Mega que tem mais pins e um maior poder de processamento.
@@ -206,19 +198,11 @@ De modo a fazer uma melhor leitura dos gestos que o utilizador realiza, o sistem
 O ecrã inicial do Android utiliza atalhos e \emph{widgets}, sendo que um atalho inicia a aplicação referente enquanto que um \emph{widget} fornece informação em tempo real, como o estado do tempo ou emails que sejam recebidos pelo utilizador.
 No cimo deste ecrã inicial existe uma barra que fornece informação sobre o dispositivo e as suas conexões, que pode ser arrastada para baixo, expondo informação relevante sobre as aplicações, atualizações e até algumas definições que sejam habitualmente alteradas como o brilho do ecrã ou a ligação à Internet.
 
-\begin{figure}[hbtp]
-	\centering
-	\includegraphics[height=5cm]{andy}
-	\caption[Andy, a mascote do sistema operativo Android]{Andy, a mascote do sistema operativo Android\footnotemark}
-	\label{fig:andy}
-\end{figure}
-\footnotetext{http://www.android.com}
-
 \subsection{Aplicações}
 \label{sub:aplicacoes}
 
 As aplicações são o que possibilitam uma utilização mais complexa de um dispositivo com o sistema operativo Android instalado.
-Estas são normalmente desenvolvidas em Java mas podem ser combinadas com código C ou C++, tornando o código mais simples em algumas operações que se desejem realizar.
+Estas são normalmente desenvolvidas em Java mas podem ser combinadas com código C ou C++.
 A programação destas aplicações é feita num SDK (software de desenvolvimento) que normalmente inclui ferramentas de desenvolvimento, um detetor de erros, algumas bibliotecas, um compilador e um emulador, para que seja possível simular a utilização de um telemóvel no computador.
 Entre os mais comuns estão o Eclipse, o Android Studio e o MIT App Inventor.
 O ambiente de programação Eclipse necessita da instalação de um extra para que seja possível o desenvolvimento de código para Android e era o ambiente de desenvolvimento oficial até 2014.
@@ -241,30 +225,6 @@ Existem também sequências de elementos do mesmo tipo chamados ``arrays'', que 
 Devido à sua baixa utilização de memória, é uma das linguagens mais rápida a processar código, sendo uma das principais escolhas para a criação de programas.
 Para que o código possa ser criada é necessário um editor de texto, sem qualquer tipo de especificações e para que possa ser criado um ficheiro executável é indispensável um compilador, que gera um ficheiro executável a partir do código escrito pelo programador.
 As possibilidades de programação vão desde a criação de uma máquina de calcular até ao processamento de imagem, passando pela criação de jogos ou a simples gestão de um ficheiro de clientes de uma loja.
-
-\section{Linguagem de programação - HTML}
-\label{sec:html}
-
-HTML é uma linguagem de marcação utilizada para a construção de páginas \emph{web}, que são interpretadas pelo navegador.
-O navegador pode ter acesso ao ficheiro se ele estiver alocado num servidor ou num ficheiro local, transformando-o numa página \emph{web} totalmente navegável.
-Esta linguagem torna possível a utilização de imagens, texto e vídeos numa página \emph{web}, bem como formulários interativos.
-As marcações de HTML são maioritariamente denominadas \emph{tags}, um tipo de dados que recebe parâmetros de entrada e os molda, consoante a sua função.
-Estas \emph{tags} costumam ser apresentadas em pares, como ``<h1>'' e ``</h1>'' que afetam todo o código que se encontre entre elas, neste caso, tornando o texto normal em cabeçalho de nível 1, mas também podem ser individuais, como ``<img>'', que determina uma imagem e todos os seus atributos.
-Outro aspeto importante em HTML é a declaração da linguagem a utilizar.
-Apesar da página ter a extensão HTML, ela suporta outras linguagens como PHP, JavaScript e também SQL, tornando esta linguagem muito mais completa e diversificada, sendo assim possível utilizar determinadas linguagens nos pontos fortes de cada uma.
-
-\begin{figure}[hbtp]
-	\centering
-	\includegraphics[width=14.4cm]{hello}
-	\caption{Exemplo de código HTML e o resultado num browser}
-	\label{fig:hello}
-\end{figure}
-
-Na figura \ref{fig:hello} é possível distinguir várias secções do código:
-O texto entre ``<html>'' e ``</html>'' descreve a página e a linguagem em que deve ser interpretado.
-Entre ``<title>'' e ``</title>'' vem o título da página que apenas aparece como título do navegador.
-Já em ``<body>'' e ``</body>'' está o texto visível, que aparece na execução da página.
-``< h2>'' e ``</h2>'' representam um cabeçalho de nível 2 e <img ... > é uma imagem, com os seus atributos declarados.
 
 \section{Linguagem de programação - PHP}
 \label{sec:php}
@@ -291,3 +251,27 @@ Neste trabalho foi bastante útil para que fosse possível fazer a gestão e arm
 	\caption{Exemplo de código SQL}
 	\label{fig:sql}
 \end{figure}
+
+\section{Linguagem de marcação - HTML}
+\label{sec:html}
+
+HTML é uma linguagem de marcação utilizada para a construção de páginas \emph{web}, que são interpretadas pelo navegador.
+O navegador pode ter acesso ao ficheiro se ele estiver alocado num servidor ou num ficheiro local, transformando-o numa página \emph{web} totalmente navegável.
+Esta linguagem torna possível a utilização de imagens, texto e vídeos numa página \emph{web}, bem como formulários interativos.
+As marcações de HTML são maioritariamente denominadas \emph{tags}, um tipo de dados que recebe parâmetros de entrada e os molda, consoante a sua função.
+Estas \emph{tags} costumam ser apresentadas em pares, como ``<h1>'' e ``</h1>'' que afetam todo o código que se encontre entre elas, neste caso, tornando o texto normal em cabeçalho de nível 1, mas também podem ser individuais, como ``<img>'', que determina uma imagem e todos os seus atributos.
+Outro aspeto importante em HTML é a declaração da linguagem a utilizar.
+Apesar da página ter a extensão HTML, ela suporta outras linguagens como PHP, JavaScript e também SQL, tornando esta linguagem muito mais completa e diversificada, sendo assim possível utilizar determinadas linguagens nos pontos fortes de cada uma.
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=14.4cm]{hello}
+	\caption{Exemplo de código HTML e o resultado num browser}
+	\label{fig:hello}
+\end{figure}
+
+Na figura \ref{fig:hello} é possível distinguir várias secções do código:
+O texto entre ``<html>'' e ``</html>'' descreve a página e a linguagem em que deve ser interpretado.
+Entre ``<title>'' e ``</title>'' vem o título da página que apenas aparece como título do navegador.
+Já em ``<body>'' e ``</body>'' está o texto visível, que aparece na execução da página.
+``< h2>'' e ``</h2>'' representam um cabeçalho de nível 2 e <img ... > é uma imagem, com os seus atributos declarados.
