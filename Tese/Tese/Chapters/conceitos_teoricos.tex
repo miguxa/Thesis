@@ -122,6 +122,7 @@ Este sistema funciona assente numa estrutura master-slave, em que um mestre (ou 
 O relógio do mestre conta intervalos de tempo de $312,5 \mu s$, juntando dois intervalos de tempo para fazer intervalo de comunicação de $625 \mu s$.
 A sequência destes intervalos de comunicação determina que o mestre transmite nos intervalos pares e recebe informação nos ímpares e por analogia o escravo recebe nos intervalos pares e envia nos ímpares.
 É também de salientar que um dispositivo dentro de um sistema não é sempre escravo ou mestre, pois pode mudar o seu estatuto, dependendo da funcionalidade que lhe é atribuída e que um escravo pode ter mais que um mestre.
+O padrão de Bluetooth tem uma ligação direta entre potência e alcance e esse alcance determina em que classe de dispositivo rádio o transmissor se encontra.
 
 \begin{figure}[hbtp]
 	\centering
@@ -131,7 +132,6 @@ A sequência destes intervalos de comunicação determina que o mestre transmite
 \end{figure}
 \footnotetext{https://www.adafruit.com/product/2479}
 
-O padrão de Bluetooth tem uma ligação direta entre potência e alcance e esse alcance determina em que classe de dispositivo rádio o transmissor se encontra.
 Um transmissor de classe 3 tem um alcance até 1 metro e consome o máximo de 1 mW.
 Para transmissores de classe 2, o alcance vai até 10 metros, levando a um consumo máximo de 2,5 mW.
 Por último, a classe 1 tem transmissores com alcance máximo de 100 metros, sendo consumidos até 100 mW.

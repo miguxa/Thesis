@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  30 JUL 2017 03:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.28)  30 JUL 2017 10:42
 entering extended mode
 **"./The Thesis Main File.tex"
 ("The Thesis Main File.tex"
@@ -2889,13 +2889,13 @@ Package babel Info: Redefining portuges shorthand "|
 File: Chapters/Figures/bluetooth.jpg Graphic file (type jpg)
 
 <use Chapters/Figures/bluetooth.jpg>
-Package pdftex.def Info: Chapters/Figures/bluetooth.jpg used on input line 128.
+Package pdftex.def Info: Chapters/Figures/bluetooth.jpg used on input line 129.
 
 (pdftex.def)             Requested size: 169.64337pt x 142.26378pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 135.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 141.
+(babel)             in language  on input line 135.
  [15]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 142.
@@ -3572,10 +3572,6 @@ Package rerunfilecheck Info: File `"The Thesis Main File".out' has not changed.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
-
 Package logreq Info: Writing requests to '"The Thesis Main File".run.xml'.
 \openout1 = `"The Thesis Main File.run.xml"'.
 
@@ -3583,7 +3579,7 @@ Package logreq Info: Writing requests to '"The Thesis Main File".run.xml'.
 Here is how much of TeX's memory you used:
  40942 strings out of 493323
  726810 string characters out of 3139057
- 1311181 words of memory out of 3000000
+ 1311182 words of memory out of 3000000
  43191 multiletter control sequences out of 15000+200000
  184301 words of font info for 304 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3600,7 +3596,7 @@ es/MiKTeX 2.9/fonts/type1/public/kpfonts/jkpmsc8a.pfb><C:/Program Files/MiKTeX
 e1/public/kpfonts/jkpttmn8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/he
 lvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on "The Thesis Main File.pdf" (76 pages, 6761631 bytes).
+Output written on "The Thesis Main File.pdf" (76 pages, 6761656 bytes).
 PDF statistics:
  1001 PDF objects out of 1200 (max. 8388607)
  207 named destinations out of 1000 (max. 500000)
