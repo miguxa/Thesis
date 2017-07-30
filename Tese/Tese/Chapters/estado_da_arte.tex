@@ -110,7 +110,7 @@ Também existe o mesmo problema que em \cite{Hegde2015} quando avaliada a instal
 
 \begin{figure}[hbtp]
 	\centering
-	\includegraphics[height=6cm]{ultrassom}
+	\includegraphics[height=5.5cm]{ultrassom}
 	\caption[Sensor Ultrassom]{Sensor Ultrassom \footnotemark}
 	\label{fig:sensor_ultrassom}
 \end{figure}
@@ -121,8 +121,16 @@ Também existe o mesmo problema que em \cite{Hegde2015} quando avaliada a instal
 \label{subsec: acelerometro}
 Esta será a abordagem a ser utilizada e aquela em que os artigos analisados se mostram mais relevantes, devido à semelhança com o projeto que se pretende desenvolver. Em \cite{Mednis2011} é utilizado o acelerómetro do telefone e são apresentados vários algoritmos para a determinação do que é ou não um buraco na estrada. São também feitas algumas comparações sobre os resultados que diferentes telefones apresentam, dependendo do seu acelerómetro, tendo em conta a frequência de amostragem e o desvio padrão do eixo Z.
 Neste trabalho foi concluído que diferentes telemóveis recolhem diferentes informações no mesmo percurso, sendo crítico que o acelerómetro não esteja incluído no telemóvel para que exista consistência nos dados recolhidos por diferentes utilizadores.
-Foram também avaliados quatro métodos de análise de aceleração para determinar deteções de buracos, sendo que o método \emph{"Z-DIFF"} foi o que apresentou melhores resultados.
+Foram também avaliados quatro métodos de análise de aceleração para determinar deteções de buracos, sendo que o método \emph{"Z-DIFF"} foi o que apresentou melhores resultados (ver figura \ref{fig:metodos}).
 Graças a esta análise, foi desenvolvido código que pudesse fazer uma análise semelhante à proposta neste trabalho pois este método apresentou resultados positivos em 92\% dos casos.
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[height=5.5cm]{metodos}
+	\caption[Métodos de deteção de \cite{Mednis2011}]{Métodos de deteção de \cite{Mednis2011}}
+	\label{fig:metodos}
+\end{figure}
+
 No que diz respeito a \cite{Fouad}, é um documento semelhante ao anterior mas adiciona um giroscópio para melhor deteção de buracos. Embora os resultados apresentados sejam bons, terá que ser tido em conta o processamento extra necessário para a utilização dos dados do giroscópio que não parece adicionar muito mais sensibilidade ao sistema.
 Neste trabalho, foi também desenvolvida uma aplicação em Android para que os dados recolhidos possam ser armazenados e consultados pelos utilizadores, apesar de não existir comunicação com outros elementos, como uma base de dados para cruzamento de dados com outros utilizadores.
 Tal como mencionado nas conclusões, este trabalho não apresentou resultados promissores uma vez que teve uma taxa de sucesso de apenas 75\% graças à utilização do acelerómetro do telemóvel.
@@ -132,15 +140,6 @@ Esta solução apresenta resultados bastante precisos mas tem um elevado nível 
 Por fim, é ainda de salientar o trabalho em \cite{Kattan2014} que apresenta uma metodologia semelhante à que foi tomada neste trabalho no que diz respeito à comunicação com uma base de dados mas com pouco desenvolvimento e uma curta fase de testes, sendo que as deteções de buracos tiveram uma taxa de sucesso de apenas 61\% devido à colocação do telemóvel no \emph{tablier} do veículo e à baixa qualidade do algoritmo de deteção.
 Foi também utilizado o GPS do telemóvel que apresentou algumas falhas devido à sua baixa precisão e potência, sendo que em alguns casos não era possível obter a localização do utilizador.
 Ainda assim é mencionado que para trabalho futuro é proposto um melhoramento deste algoritmo bem como uma nova solução para a deteção de coordenadas.
-
-\begin{figure}[hbtp]
-	\centering
-	\includegraphics[height=4cm]{eixos_acelerometro}
-	\caption[Direção dos eixos de um acelerómetro]{Direção dos eixos de um acelerómetro \footnotemark}
-	\label{fig:direcao_dos_eixos_de_um_acelerometro}
-\end{figure}
-
-\footnotetext{https://i.stack.imgur.com/EstPt.jpg}
 
 \section{Comparação de resultados} % (fold)
 \label{sec:comapracao_de_resultados}

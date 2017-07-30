@@ -202,17 +202,42 @@ No cimo deste ecrã inicial existe uma barra que fornece informação sobre o di
 \label{sub:aplicacoes}
 
 As aplicações são o que possibilitam uma utilização mais complexa de um dispositivo com o sistema operativo Android instalado.
-Estas são normalmente desenvolvidas em Java mas podem ser combinadas com código C ou C++.
+Estas são normalmente desenvolvidas em Java mas podem ser combinadas com código C ou C++, como é possível ver na figura \ref{fig:android}.
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[height=7cm]{android}
+	\caption[Código exemplo Android]{Código exemplo Android}
+	\label{fig:android}
+\end{figure}
+
 A programação destas aplicações é feita num SDK (software de desenvolvimento) que normalmente inclui ferramentas de desenvolvimento, um detetor de erros, algumas bibliotecas, um compilador e um emulador, para que seja possível simular a utilização de um telemóvel no computador.
 Entre os mais comuns estão o Eclipse, o Android Studio e o MIT App Inventor.
 O ambiente de programação Eclipse necessita da instalação de um extra para que seja possível o desenvolvimento de código para Android e era o ambiente de desenvolvimento oficial até 2014.
 No final de 2014, a Google apresentou o Android Studio: um programa dedicado ao desenvolvimento Android que contém todas as opções existentes no universo Android, sendo este o principal ambiente de desenvolvimento.
-Existe também o MIT App Inventor, que corre num \emph{browser web} e permite o desenvolvimento de aplicações sem que seja escrito código, utilizando a programação por módulos que se ligam entre si, não exigindo uma capacidade de processamento tão alta como o Android Studio.
+Existe também o MIT App Inventor 2, que corre num \emph{browser web} e permite o desenvolvimento de aplicações sem que seja escrito código, utilizando a programação por módulos que se ligam entre si, não exigindo uma capacidade de processamento tão alta como o Android Studio.
 Para que uma aplicação possa ser executada no telemóvel, é necessário instalar o ficheiro APK da aplicação, através da loja ``Google Play'' ou diretamente por ligação USB a um computador, permitindo a qualquer utilizador o desenvolvimento da sua própria aplicação, o seu teste e partilha.
 O sistema operativo Android é baseado em Linux, com bibliotecas, API's e algum software escrito em C e ainda algumas traduções de bibliotecas para Java que torna possível a execução das aplicações.
 Estas bibliotecas em Java são originárias e programadas a partir do OpenJDK, uma ferramenta que contém uma máquina virtual, as suas próprias bibliotecas e também um compilador.
 Em termos específicos desta dissertação, a escolha do sistema operativo Android foi simples, uma vez que existem cerca de 86\% de utilizadores do sistema Android no universo dos telemóveis.
 Além disso, as ferramentas para desenvolvimento de aplicações Android são mais acessíveis do que para iOS, o segundo sistema operativo mais frequente em telemóveis.
+
+\subsection{MIT App Inventor 2}
+\label{subsec:MIT_AI2}
+
+O MIT App Inventor 2 (AI2) é uma plataforma de \emph{open source} criada pela Google e mantida atualmente pelo Massachusetts Institute of Technology.
+Esta ferramenta permite que qualquer pessoa crie aplicações para o sistema operativo Android, mesmo que não tenha um conhecimento muito aprofundado de linguagens de programação. 
+Graças à sua programação por blocos, o desenvolvimento de aplicações torna-se muito mais rápido e intuitivo, promovendo a utilização de tecnologia junto daqueles que são usualmente utilizadores, motivando-os a ser também criadores.
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[height=8cm]{ai2_exemplo}
+	\caption[Código exemplo AI2]{Código exemplo AI2}
+	\label{fig:AI2}
+\end{figure}
+
+Tal como é possível ver na figura \ref{fig:AI2}, não existe código relacionado com a criação da imagem, do botão ou da label.
+O único código que existe está relacionado com as ações que cada um dos elementos, o que torna o desenvolvimento de uma aplicação significativamente mais simples.
 
 \section{Linguagem de programação - C}
 \label{sec:C}
@@ -239,7 +264,8 @@ Desta forma, PHP é uma solução bastante boa para desenvolver código dinâmic
 \label{sec:MySQL}
 
 MySQL é um gestor de base de dados \emph{open-source} desenvolvido em C que é compatível com diversos sistemas, incluindo Linux, macOS e Windows.
-Esta base de dados permite o armazenamento de variáveis e os seus valores, não sendo possível o armazenamento de ficheiros.
+Esta base de dados permite o armazenamento de variáveis e os seus valores em tabelas, em que cada linha contém um identificador único, de modo a identificar cada uma das entradas na tabela.
+Desta forma, é possível determinar quais as linhas da tabela que se pretendem consultar, facilitando a leitura de dados que estejam armazenados.
 As suas funcionalidades principais incluem a inserção de dados, a sua pesquisa, atualização e remoção, tornando possível uma fácil gestão da informação que aí se encontra armazenada.
 Para que seja possível fazer pesquisa na base de dados, são necessários operadores, matemáticos que limitam a pesquisa, assim como um conjunto de instruções que determinam o objetivo da pesquisa.
 Na figura \ref{fig:sql} é possível ver duas instruções, sendo que a primeira retorna as dez primeiras instâncias em que o valor ``forca'' é inferior ao valor ``3'' e na segunda são inseridos novos parâmetros na base de dados com o nome ``coordenadas''.

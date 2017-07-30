@@ -57,6 +57,13 @@ Nesta é chamada a função \emph{begin} da biblioteca \emph{SD} e verificada a 
 Caso a resposta seja o valor 10, um \emph{led} de controlo pisca para que o utilizador saiba que a inicialização ocorreu com sucesso e é verificada a existência de um ficheiro com informação previamente armazenada sobre irregularidades detetadas anteriormente.
 Caso exista esse ficheiro, este é aberto de modo a que se possam juntar novos valores de irregularidades detetadas, caso contrário, o ficheiro é criado para futuros armazenamentos.
 
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=9cm]{SDInit}
+	\caption{Código da função SDInit}
+	\label{fig:SDInit}
+\end{figure}
+
 \subsection{WriteSD}
 \label{sub:writesd}
 
@@ -65,12 +72,28 @@ A função \emph{open} da biblioteca do SD está desenhada de forma a que, quand
 Para que possa ser mais fácil ao utilizador saber se a abertura e escrita do ficheiro foi feita com sucesso, um \emph{led} pisca duas vezes.
 No final resta apenas fechar o ficheiro para que tudo fique guardado devidamente.
 
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=10cm]{WriteSD}
+	\caption{Código da função WriteSD}
+	\label{fig:WriteSD}
+\end{figure}
+
 \subsection{ReadSD}
 \label{sub:readsd}
 
 Semelhante à função de escrita, a função de leitura tenta abrir um ficheiro com o nome pretendido, embora neste caso, se o ficheiro desejado não existir, não é criado um novo pois se este não existir significa que não existem dados pendentes para envio.
 Quando um ficheiro é lido com sucesso, os seus valores são enviados pela porta série do Arduino para o telemóvel, o ficheiro é fechado e eliminado, de modo a que não sejam enviados dados duplicados.
 O código está protegido de modo a que os dados sejam apenas enviados para um telemóvel com a aplicação desenvolvida pois previamente foi recebida uma mensagem de controlo enviada pela própria aplicação, informando o estado da ligação, evitando que os dados sejam enviados para ligações desconhecidas.
+
+\begin{figure}[!hbtp]
+	\centering
+	\includegraphics[width=9cm]{ReadSD}
+	\caption{Código da função ReadSD}
+	\label{fig:ReadSD}
+\end{figure}
+
+\vspace{3cm}
 
 \subsection{AccelInit}
 \label{sub:accelInit}
@@ -79,6 +102,13 @@ Nesta função o acelerómetro é ligado e são determinados os valores de sensi
 É também feita a inicialização de valores para queda livre e batida que não são utilizados na dissertação.
 Esta funcionalidade foi mantida para possíveis aplicações futuras e uma deteção mais pormenorizada das irregularidades.
 Seguidamente, um \emph{led} de controlo pisca para o utilizador saber que a inicialização foi bem sucedida.
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=10cm]{AccelInit}
+	\caption{Código da função AccelInit}
+	\label{fig:SDInit}AccelInit
+\end{figure}
 
 \subsection{Accel}
 \label{sub:accel}
@@ -92,7 +122,7 @@ Na figura \ref{fig:grafico_de_uma_irregularidade_detetada} é possível ver o gr
 
 \begin{figure}[hbtp]
 	\centering
-	\includegraphics[width=14cm]{irregularidade}
+	\includegraphics[width=10cm]{irregularidade}
 	\caption{Gráfico de uma irregularidade detetada}
 	\label{fig:grafico_de_uma_irregularidade_detetada}
 \end{figure}
@@ -105,6 +135,13 @@ A função é chamada dentro da função \emph{loop} de modo a registar tanto o 
 Quando é chamada, faz uma leitura dos valores que o sensor GPS recebe dos satélites e percorre-os até encontrar o texto ``GPRMC'', a partir do qual vem toda a informação necessária e armazena todos esses valores num vetor de strings (sequências de caracteres).
 O passo seguinte consiste em percorrer o vetor e retirar apenas os segmentos relevantes, pela ordem desejada, neste caso, começando pela latitude e longitude, seguindo-se a data e por fim a hora.
 Quando estes quatro parâmetros são armazenados, a função muda o valor de uma variável de controlo e o código prossegue.
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=15cm]{vetorGPS}
+	\caption{Código da função vetorGPS}
+	\label{fig:vetorGPS}
+\end{figure}
 
 \subsection{FTOA - Float to ASCII}
 \label{sub:FTOA}
@@ -179,6 +216,9 @@ No apêndice \ref{cha:codigo_da_aplicacao} são apresentados alguns dos blocos c
 De modo a que seja possível consultar as irregularidades, foi necessário desenvolver uma base de dados onde ficassem armazenadas as coordenadas, data, hora e intensidade da irregularidade detectadas.
 Esta base de dados foi desenvolvida em MySQL e contém cinco campos, sendo eles o ID (campo de identificação de cada entrada), a intensidade da irregularidade, a latitude e a longitude da irregularidade e também o conjunto data-hora, utilizando apenas uma variável.
 Esta base de dados pode ainda ser consultada e alterada por um administrador da mesma, caso este ache necessário de modo a inserir novas funcionalidades no projeto.
+Para este projeto foi utilizado o xampp, uma plataforma que permite criar um servidor apache local, hospedado na máquina do utilizador.
+Deste modo, tanto a base de dados como o servidor estão a correr localmente, facilitando os acessos e testes, visto que estes se podem realizar sem que seja necessária qualquer tipo de ligação à internet.
+Esta plataforma permite também ao utilizador criar o seu próprio servidor, uma vez que pode permitir o acesso à sua máquina, desde que torne o acesso público, abrindo um acesso na rede em que está ligado, a partir de uma exceção da firewall.
 
 \section{WebSite}
 \label{sec:website}
@@ -193,6 +233,8 @@ Esta é a página principal da parte \emph{web} desta dissertação.
 Nela é possível ver-se o logótipo e o nome utilizados neste projeto e também um mapa que contém todas as irregularidades detetadas ou inseridas manualmente, referindo a intensidade das mesmas.
 Para que essas irregularidades possam ser mostradas, é percorrida toda a base de dados através de uma \emph{query} (pesquisa, em português) de MySQL em que são devolvidos os valores de latitude, longitude e intensidade.
 Depois, utilizando a API Google Maps, todos os pontos são marcados no mapa, sendo que no seu sinalizador está indicada a intensidade da irregularidade, como se pode ver na figura \ref{fig:home.php}.
+A integração com a API é bastante simples, uma vez que é apenas necessário conter um array com as coordenadas dos pontos, bem como a etiqueta que se quer atribuir a cada ponto marcado.
+Por fim, basta aceder à API utilizando uma chave de acesso que pode ser obtida gratuitamente através do Google Maps.
 No caso de existirem várias irregularidades muito próximas fisicamente, a interface agrupa-as automaticamente, informando quantas se encontram nessa zona.
 A cor destes agrupamentos é alterada consoante o número de itens aglomerados, tornando assim mais fácil a deteção de locais com elevado número de ocorrências.
 

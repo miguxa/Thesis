@@ -64,72 +64,74 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.4}Comunica\IeC {\c c}\IeC {\~a}o - Wi-Fi}{16}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Comunica\IeC {\c c}\IeC {\~a}o - 3G}{17}{section.3.5}
+\contentsline {section}{\numberline {3.5}Comunica\IeC {\c c}\IeC {\~a}o - Redes m\IeC {\'o}veis (3G)}{17}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Processamento - Arduino}{18}{section.3.6}
+\contentsline {section}{\numberline {3.6}Processamento - Arduino}{17}{section.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Processamento - Android}{19}{section.3.7}
+\contentsline {section}{\numberline {3.7}Processamento - Android}{18}{section.3.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.7.1}Aplica\IeC {\c c}\IeC {\~o}es}{19}{subsection.3.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.8}Linguagem de programa\IeC {\c c}\IeC {\~a}o - C}{20}{section.3.8}
+\contentsline {subsection}{\numberline {3.7.2}MIT App Inventor 2}{20}{subsection.3.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.9}Linguagem de programa\IeC {\c c}\IeC {\~a}o - HTML}{21}{section.3.9}
+\contentsline {section}{\numberline {3.8}Linguagem de programa\IeC {\c c}\IeC {\~a}o - C}{21}{section.3.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.10}Linguagem de programa\IeC {\c c}\IeC {\~a}o - PHP}{21}{section.3.10}
+\contentsline {section}{\numberline {3.9}Linguagem de programa\IeC {\c c}\IeC {\~a}o - PHP}{21}{section.3.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.11}Base de dados - MySQL}{22}{section.3.11}
+\contentsline {section}{\numberline {3.10}Base de dados - MySQL}{22}{section.3.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.11}Linguagem de marca\IeC {\c c}\IeC {\~a}o - HTML}{22}{section.3.11}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {4}Trabalho desenvolvido}{25}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Funcionamendo do Arduino}{25}{section.4.1}
+\contentsline {section}{\numberline {4.1}Funcionamento do Arduino}{25}{section.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Fun\IeC {\c c}\IeC {\~o}es adicionais}{27}{section.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.1}SD\textunderscore init}{27}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}WriteSD}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}WriteSD}{28}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}ReadSD}{27}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}ReadSD}{28}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}AccelInit}{28}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.4}AccelInit}{29}{subsection.4.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.5}Accel}{28}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Accel}{29}{subsection.4.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.6}displayGPS}{29}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.6}displayGPS}{30}{subsection.4.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.7}FTOA - Float to ASCII}{29}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.7}FTOA - Float to ASCII}{31}{subsection.4.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Funcionamento do Android}{30}{section.4.3}
+\contentsline {section}{\numberline {4.3}Funcionamento do Android}{31}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Base de dados}{33}{section.4.4}
+\contentsline {section}{\numberline {4.4}Base de dados}{35}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}WebSite}{33}{section.4.5}
+\contentsline {section}{\numberline {4.5}WebSite}{35}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}home.php}{33}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.1}home.php}{35}{subsection.4.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.2}store.php}{33}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.2}store.php}{36}{subsection.4.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.3}listLocations.php}{34}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.3}listLocations.php}{36}{subsection.4.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.4}showLocation.php}{34}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.4}showLocation.php}{37}{subsection.4.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Montagem do sistema}{35}{section.4.6}
+\contentsline {section}{\numberline {4.6}Montagem do sistema}{38}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Valida\IeC {\c c}\IeC {\~a}o de resultados}{36}{section.4.7}
+\contentsline {section}{\numberline {4.7}Valida\IeC {\c c}\IeC {\~a}o de resultados}{38}{section.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Resultados obtidos}{37}{section.4.8}
+\contentsline {section}{\numberline {4.8}Resultados obtidos}{40}{section.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Conclus\IeC {\~o}es}{39}{chapter.5}
+\contentsline {chapter}{\chapternumberline {5}Conclus\IeC {\~o}es}{43}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Trabalho futuro}{39}{section.5.1}
+\contentsline {section}{\numberline {5.1}Trabalho futuro}{43}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Confer\IeC {\^e}ncias}{40}{section.5.2}
+\contentsline {section}{\numberline {5.2}Confer\IeC {\^e}ncias}{44}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{43}{section*.40}
+\contentsline {chapter}{Bibliografia}{47}{section*.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {A}C\IeC {\'o}digo da aplica\IeC {\c c}\IeC {\~a}o}{45}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}C\IeC {\'o}digo do Arduino}{49}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {B}C\IeC {\'o}digo da aplica\IeC {\c c}\IeC {\~a}o}{49}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}C\IeC {\'o}digo da aplica\IeC {\c c}\IeC {\~a}o}{53}{appendix.B}
 \defcounter {refsection}{0}\relax 
-\contentsline {appendix}{\chapternumberline {C}C\IeC {\'o}digo das p\IeC {\'a}ginas web}{53}{appendix.C}
+\contentsline {appendix}{\chapternumberline {C}C\IeC {\'o}digo das p\IeC {\'a}ginas web}{57}{appendix.C}

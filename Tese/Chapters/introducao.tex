@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% introducao.tex
+%% UNL thesis document file
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\unlthesis}{\emph{unlthesis}}
+\newcommand{\unlthesisclass}{\texttt{unlthesis.cls}}
+
+
+\chapter{Introdução}
+\label{cha:introdução}
+
+%\begin{quotation}
+%  \itshape
+%  This work is licensed under the Creative Commons Attribution-NonCommercial~4.0 International License.
+%  To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-nc/4.0/}.
+%\end{quotation}
+\section{Uma curta apresentação} % (fold)
+\label{sec:uma_curta_apresentação}
+
+Ao longo dos anos, o número de defeitos e falhas nas estradas tem vindo a aumentar, mostrando-se um problema cada vez mais importante na vida de muitos cidadãos, especialmente os que fazem da condução a sua profissão. De modo a caminhar em direção à resolução deste problema, surgiu a oportunidade de realizar o projeto aqui apresentado, em que será sugerida uma das muitas soluções possíveis, utilizando uma abordagem que está diretamente ligada ao rápido aumento de utilizadores de telemóvel bem como ao grande número de condutores em Portugal, visto que existem cerca de 19 milhões de telemóveis em Portugal\footnote{http://www.pordata.pt/Portugal/Assinantes+++equipamentos+de+utilizadores+do+servi\%C3
+\%A7o+m\%C3\%B3vel-1180} para os cerca de 11 milhões de habitantes na mesma região\footnote{http://www.pordata.pt/Portugal/Popula\%C3\%A7\%C3\%A3o+residente+total+e+por+grupo+et
+\%C3\%A1rio-10}.
+
+Surge então a necessidade de uma monitorização das vias de trânsito para a sua manutenção e reparação. Desta forma, tentando aliar a tecnologia com essa mesma necessidade, será desenvolvido um sistema que irá ser integrado em automóveis e que fará a deteção e comunicação de defeitos nas estradas com o telemóvel de cada automobilista.
+
+Este documento irá fornecer, da forma mais detalhada possível, uma pequena introdução sobre quais os componentes necessários para construir um sistema de deteção de defeitos existentes nas estradas, utilizando um acelerómetro e um telemóvel, bem como comunicação \emph{Bluetooth} e \emph{wi-fi}, de modo a estabelecer a comunicação entre os vários componentes do sistema. Serão também apresentados os diversos pontos fortes e fracos da solução tomada, fazendo a comparação com projetos já desenvolvidos e as suas respetivas soluções.
+
+\section{Montagem do sistema}
+\label{sec:montagem_do_sistema}
+
+O sistema desenvolvido tem como principal objetivo a deteção de irregularidades no asfalto, mantendo sempre um custo de produção bastante reduzido, assim como o consumo de energia. Como tal, primeiro é necessário identificar quais os componentes essenciais para que seja possível o desenvolvimento do projeto, entre os quais se destacam o acelerómetro e o GPS, bem como módulos de comunicação \emph{Bluetooth} e \emph{wi-fi}/\emph{3G}.
+
+\subsection{Componentes integrados no veículo}
+\label{subsec: componentes_montados_no_veiculo}
+
+De modo a poder obter dados mais precisos, será considerada a utilização de um acelerómetro externo ao telemóvel, preso ao chassi do veículo, abaixo do amortecedor.
+Esta montagem torna possível obter diretamente as leituras quando um veículo passa numa irregularidade, fazendo com que a recolha de dados seja consistente uma vez que instalado, o acelerómetro não necessita de calibração posterior.
+Para que seja possível conhecer a localização da irregularidade, um recetor GPS está instalado na viatura e sempre que detetada uma irregularidade, as coordenadas são lidas e armazenadas.
+Os dados obtidos são enviados para o telemóvel assim que exista uma ligação através de um Arduino que seja capaz de estabelecer comunicação \emph{Bluetooth}.
+
+\subsection{Componentes do telemóvel}
+\label{subsec: componentes_do_telemovel}
+
+No telemóvel apenas é necessário armazenar dados para um posterior envio para uma base de dados, através da antena Wi-Fi ou 3G existente no aparelho.
+É também possível a comunicação de irregularidades manualmente, sendo utilizado o GPS do telemóvel neste caso. Para poder realizar este procedimento, foi desenvolvida uma App utilizando o MIT App Inventor 2.

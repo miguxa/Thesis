@@ -38,7 +38,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Sensor Ultrassom}}{8}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Dire\IeC {\c c}\IeC {\~a}o dos eixos de um aceler\IeC {\'o}metro}}{9}{figure.caption.11}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces M\IeC {\'e}todos de dete\IeC {\c c}\IeC {\~a}o de \cite {Mednis2011}}}{9}{figure.caption.11}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
@@ -52,15 +52,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.5}{\ignorespaces M\IeC {\'o}dulo bluetooth}}{16}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Log\IeC {\'o}tipo do sistema Wi-Fi}}{17}{figure.caption.20}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Arduino Uno}}{18}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Arduino Uno}}{18}{figure.caption.21}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces C\IeC {\'o}digo exemplo Android}}{19}{figure.caption.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Andy, a mascote do sistema operativo Android}}{19}{figure.caption.22}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces C\IeC {\'o}digo exemplo AI2}}{20}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Exemplo de c\IeC {\'o}digo HTML e o resultado num browser\relax }}{22}{figure.caption.23}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Exemplo de c\IeC {\'o}digo SQL\relax }}{22}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Exemplo de c\IeC {\'o}digo SQL\relax }}{23}{figure.caption.24}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Exemplo de c\IeC {\'o}digo HTML e o resultado num browser\relax }}{23}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
@@ -68,66 +68,76 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Arduino\relax }}{26}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Gr\IeC {\'a}fico de uma irregularidade detetada\relax }}{28}{figure.caption.27}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces C\IeC {\'o}digo da fun\IeC {\c c}\IeC {\~a}o SDInit\relax }}{27}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Formatos de apresenta\IeC {\c c}\IeC {\~a}o de coordenadas\relax }}{30}{figure.caption.28}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces C\IeC {\'o}digo da fun\IeC {\c c}\IeC {\~a}o WriteSD\relax }}{28}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Aspeto da aplica\IeC {\c c}\IeC {\~a}o Smart Shock\relax }}{30}{figure.caption.29}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces C\IeC {\'o}digo da fun\IeC {\c c}\IeC {\~a}o ReadSD\relax }}{29}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Android\relax }}{32}{figure.caption.30}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces C\IeC {\'o}digo da fun\IeC {\c c}\IeC {\~a}o AccelInit\relax }}{29}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces P\IeC {\'a}gina \emph {web home.php}\relax }}{34}{figure.caption.31}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Gr\IeC {\'a}fico de uma irregularidade detetada\relax }}{30}{figure.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Informa\IeC {\c c}\IeC {\~a}o tipo adicionada na base de dados\relax }}{34}{figure.caption.32}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces C\IeC {\'o}digo da fun\IeC {\c c}\IeC {\~a}o vetorGPS\relax }}{30}{figure.caption.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces P\IeC {\'a}gina \emph {web listlocations.php}\relax }}{35}{figure.caption.33}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Formatos de apresenta\IeC {\c c}\IeC {\~a}o de coordenadas\relax }}{31}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Esquem\IeC {\'a}tico do sistema\relax }}{36}{figure.caption.34}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Aspeto da aplica\IeC {\c c}\IeC {\~a}o Smart Shock\relax }}{32}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Montagem real do sistema\relax }}{36}{figure.caption.35}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Fluxograma referente ao c\IeC {\'o}digo Android\relax }}{34}{figure.caption.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Instala\IeC {\c c}\IeC {\~a}o do sensor no ve\IeC {\'\i }culo de testes\relax }}{37}{figure.caption.36}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces P\IeC {\'a}gina \emph {web home.php}\relax }}{36}{figure.caption.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Percurso de valida\IeC {\c c}\IeC {\~a}o de resultados\relax }}{38}{figure.caption.37}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Informa\IeC {\c c}\IeC {\~a}o tipo adicionada na base de dados\relax }}{37}{figure.caption.37}
 \defcounter {refsection}{0}\relax 
-\addvspace {10pt}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces P\IeC {\'a}gina \emph {web listlocations.php}\relax }}{37}{figure.caption.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Poster apresentado na Green Business Week\relax }}{41}{figure.caption.38}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Esquem\IeC {\'a}tico do sistema\relax }}{38}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
-\addvspace {10pt}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Montagem real do sistema\relax }}{39}{figure.caption.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Zona de inicializa\IeC {\c c}\IeC {\~a}o e fun\IeC {\c c}\IeC {\~a}o setup\relax }}{45}{figure.caption.41}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Instala\IeC {\c c}\IeC {\~a}o do sensor no ve\IeC {\'\i }culo de testes\relax }}{39}{figure.caption.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Fun\IeC {\c c}\IeC {\~a}o loop\relax }}{46}{figure.caption.42}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Fun\IeC {\c c}\IeC {\~o}es accelInit e SD\textunderscore init\relax }}{46}{figure.caption.43}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Fun\IeC {\c c}\IeC {\~o}es WriteSD e ReadSD\relax }}{47}{figure.caption.44}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Fun\IeC {\c c}\IeC {\~a}o Accel\relax }}{47}{figure.caption.45}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Fun\IeC {\c c}\IeC {\~o}es getField e FTOA\relax }}{48}{figure.caption.46}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Percurso de valida\IeC {\c c}\IeC {\~a}o de resultados\relax }}{40}{figure.caption.42}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Ciclo principal da aplica\IeC {\c c}\IeC {\~a}o\relax }}{49}{figure.caption.47}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Gest\IeC {\~a}o de mensagens de erro\relax }}{50}{figure.caption.48}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Inicializa\IeC {\c c}\IeC {\~a}o de vari\IeC {\'a}veis e a\IeC {\c c}\IeC {\~o}es dos bot\IeC {\~o}es ``Desligar'' e ``Dispositivos''\relax }}{50}{figure.caption.49}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {B.4}{\ignorespaces A\IeC {\c c}\IeC {\~a}o do bot\IeC {\~a}o ``Shock'' e remo\IeC {\c c}\IeC {\~a}o do ficheiro do telem\IeC {\'o}vel\relax }}{51}{figure.caption.50}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {B.5}{\ignorespaces A\IeC {\c c}\IeC {\~a}o do bot\IeC {\~a}o ``Enviar''\relax }}{51}{figure.caption.51}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {B.6}{\ignorespaces Transforma\IeC {\c c}\IeC {\~a}o de vari\IeC {\'a}veis para envio para a base de dados\relax }}{52}{figure.caption.52}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Poster apresentado na Green Business Week\relax }}{45}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
 \addvspace {10pt}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.1}{\ignorespaces C\IeC {\'o}digo da p\IeC {\'a}gina home.php\relax }}{54}{figure.caption.53}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Zona de inicializa\IeC {\c c}\IeC {\~a}o e fun\IeC {\c c}\IeC {\~a}o setup\relax }}{49}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.2}{\ignorespaces C\IeC {\'o}digo da p\IeC {\'a}gina listlocationsphp.php\relax }}{55}{figure.caption.54}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Fun\IeC {\c c}\IeC {\~a}o loop\relax }}{50}{figure.caption.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.3}{\ignorespaces C\IeC {\'o}digo da p\IeC {\'a}gina storephp.php\relax }}{55}{figure.caption.55}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Fun\IeC {\c c}\IeC {\~o}es accelInit e SD\textunderscore init\relax }}{50}{figure.caption.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {C.4}{\ignorespaces C\IeC {\'o}digo da p\IeC {\'a}gina showlocationsphp.php\relax }}{56}{figure.caption.56}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Fun\IeC {\c c}\IeC {\~o}es WriteSD e ReadSD\relax }}{51}{figure.caption.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Fun\IeC {\c c}\IeC {\~a}o Accel\relax }}{51}{figure.caption.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Fun\IeC {\c c}\IeC {\~o}es getField e FTOA\relax }}{52}{figure.caption.51}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Ciclo principal da aplica\IeC {\c c}\IeC {\~a}o\relax }}{53}{figure.caption.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Gest\IeC {\~a}o de mensagens de erro\relax }}{54}{figure.caption.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Inicializa\IeC {\c c}\IeC {\~a}o de vari\IeC {\'a}veis e a\IeC {\c c}\IeC {\~o}es dos bot\IeC {\~o}es ``Desligar'' e ``Dispositivos''\relax }}{54}{figure.caption.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {B.4}{\ignorespaces A\IeC {\c c}\IeC {\~a}o do bot\IeC {\~a}o ``Shock'' e remo\IeC {\c c}\IeC {\~a}o do ficheiro do telem\IeC {\'o}vel\relax }}{55}{figure.caption.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {B.5}{\ignorespaces A\IeC {\c c}\IeC {\~a}o do bot\IeC {\~a}o ``Enviar''\relax }}{55}{figure.caption.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {B.6}{\ignorespaces Transforma\IeC {\c c}\IeC {\~a}o de vari\IeC {\'a}veis para envio para a base de dados\relax }}{56}{figure.caption.57}
+\defcounter {refsection}{0}\relax 
+\addvspace {10pt}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.1}{\ignorespaces C\IeC {\'o}digo da p\IeC {\'a}gina home.php\relax }}{58}{figure.caption.58}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.2}{\ignorespaces C\IeC {\'o}digo da p\IeC {\'a}gina listlocationsphp.php\relax }}{59}{figure.caption.59}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.3}{\ignorespaces C\IeC {\'o}digo da p\IeC {\'a}gina storephp.php\relax }}{59}{figure.caption.60}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {C.4}{\ignorespaces C\IeC {\'o}digo da p\IeC {\'a}gina showlocationsphp.php\relax }}{60}{figure.caption.61}

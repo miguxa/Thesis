@@ -1,0 +1,135 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {portuguese}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Lista de Figuras}{xiii}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Lista de Tabelas}{xv}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Uma curta apresenta\IeC {\c c}\IeC {\~a}o}{1}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Montagem do sistema}{2}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}Componentes integrados no ve\IeC {\'\i }culo}{2}{subsection.1.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.2}Componentes do telem\IeC {\'o}vel}{2}{subsection.1.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {2}Estado da arte}{3}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Principais metodologias}{3}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}C\IeC {\^a}mera v\IeC {\'\i }deo}{3}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}C\IeC {\^a}mera v\IeC {\'\i }deo com ilumina\IeC {\c c}\IeC {\~a}o artificial}{5}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}Sensor ultrass\IeC {\'o}nico}{7}{subsection.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.4}Aceler\IeC {\'o}metro}{8}{subsection.2.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Compara\IeC {\c c}\IeC {\~a}o de resultados}{9}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {3}Conceitos te\IeC {\'o}ricos}{11}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Sensor - GPS}{11}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}NMEA}{13}{subsection.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Sensor - Aceler\IeC {\'o}metro}{14}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Comunica\IeC {\c c}\IeC {\~a}o - Bluetooth}{15}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Comunica\IeC {\c c}\IeC {\~a}o - Wi-Fi}{16}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Comunica\IeC {\c c}\IeC {\~a}o - 3G}{17}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.6}Processamento - Arduino}{18}{section.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.7}Processamento - Android}{19}{section.3.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.7.1}Aplica\IeC {\c c}\IeC {\~o}es}{19}{subsection.3.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.8}Linguagem de programa\IeC {\c c}\IeC {\~a}o - C}{20}{section.3.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.9}Linguagem de programa\IeC {\c c}\IeC {\~a}o - HTML}{21}{section.3.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.10}Linguagem de programa\IeC {\c c}\IeC {\~a}o - PHP}{21}{section.3.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.11}Base de dados - MySQL}{22}{section.3.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}Trabalho desenvolvido}{25}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Funcionamendo do Arduino}{25}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Fun\IeC {\c c}\IeC {\~o}es adicionais}{27}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}SD\textunderscore init}{27}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}WriteSD}{27}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}ReadSD}{27}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.4}AccelInit}{28}{subsection.4.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.5}Accel}{28}{subsection.4.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.6}displayGPS}{29}{subsection.4.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.7}FTOA - Float to ASCII}{29}{subsection.4.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Funcionamento do Android}{30}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Base de dados}{33}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}WebSite}{33}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.1}home.php}{33}{subsection.4.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.2}store.php}{33}{subsection.4.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.3}listLocations.php}{34}{subsection.4.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.4}showLocation.php}{34}{subsection.4.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Montagem do sistema}{35}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.7}Valida\IeC {\c c}\IeC {\~a}o de resultados}{36}{section.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.8}Resultados obtidos}{37}{section.4.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Conclus\IeC {\~o}es}{39}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Trabalho futuro}{39}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Confer\IeC {\^e}ncias}{40}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{43}{section*.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {appendix}{\chapternumberline {A}C\IeC {\'o}digo da aplica\IeC {\c c}\IeC {\~a}o}{45}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {appendix}{\chapternumberline {B}C\IeC {\'o}digo da aplica\IeC {\c c}\IeC {\~a}o}{49}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {appendix}{\chapternumberline {C}C\IeC {\'o}digo das p\IeC {\'a}ginas web}{53}{appendix.C}
